@@ -3,16 +3,16 @@
 
 Распаковка проекта: 
 
-**npm install
+**npm install**
 
 Запуск режима разработки:
-**npm run dev
+**npm run dev***
 
 Сборка:
-**npm run build
+**npm run build**
 
 Публикация на gh-pages:
-**npm run deploy
+**npm run deploy**
 
 Страницы сайта:
 ##UI-KIT
