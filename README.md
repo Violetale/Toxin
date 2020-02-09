@@ -6,7 +6,7 @@
 **npm install**
 
 Запуск режима разработки:
-**npm run dev***
+**npm run dev**
 
 Сборка:
 **npm run build**
