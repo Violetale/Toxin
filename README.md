@@ -1,4 +1,4 @@
-#Учебный проект от FSD.
+# Учебный проект от FSD.
 Респонсив вёрстка сатйи по поиску номеров в отеле toxin.
 
 Распаковка проекта: 
@@ -18,5 +18,5 @@
 **npm run deploy**
 
 Страницы сайта:
-##UI-KIT
+## UI-KIT
 * [colors&types](https://violetale.github.io/Toxin/colors-and-types.html)
