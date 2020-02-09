@@ -1,6 +1,6 @@
-@import "utils/vars";
-@import "utils/fonts";
-@import "utils/reset";
+@import "./vars.scss";
+@import "./fonts.scss";
+@import "./reset.scss";
 /*
 html {
   line-height: $mainLineHeight;

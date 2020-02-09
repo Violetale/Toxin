@@ -2,12 +2,23 @@ extends base.pug
 block vars
     -
         //sets for header
-        const mainMenuItems=['О нас',];
-        const logIn;
-        const signIn;
+        const mainMenuItems=[aboutUs,services,vacancies,news,agreement];//список элементов меню
+        const aboutUs ={link:"#"};
+        const logIn;//текст внутри кнопки
+        const signIn;//текст внутри кнопки
         //sets for footer
         const copyright = 'Copyright © 2018 Toxin отель. Все права зачищены. ';
-        const footerText ='Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'
+        const footerText ='Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»';
+        const footerItems = []; //список колонок-эелементов в футере
+        const footerNav ={
+            title:'Навигация',
+            navItems=[]
+        };//Элементы навигации в футере
+        const footerAboutUs =
+        const subscription ={
+            title:'Подписка',
+            text:"Получайте специальные предложения и новости сервиса"};//Элемент с подпиской 
+        const socialButtons = []; //названия классов кнопок?
 block main 
 
 //include

@@ -25,13 +25,11 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: `${PATHS.src}/index.js`
-    // module: `${PATHS.src}/your-module.js`,
+    app: `${PATHS.src}index.js`
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
-    path: PATHS.dist,
-    //publicPath: '/'
+    path: PATHS.dist
   },
   optimization: {
     splitChunks: {
@@ -65,20 +63,26 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
-      }
+        name: '[name].[ext]',
+        outpuPath:`${PATHS.assets}fonts`,
+        publicPath:'../fonts/'
+      }, 
+      exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}img`)
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
-      }
+        name: '[name].[ext]',
+        outputPath: `${PATHS.assets}img`,
+        publicPath: '../img/'
+      }, exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`)
     }, {
       test: /\.scss$/,
       use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
-        {
+        'style-loader',{
+        loader: MiniCssExtractPlugin.loader,
+        options: { publicPath: '/' }
+        },{
           loader: 'css-loader',
           options: { sourceMap: true }
         }, {
@@ -116,8 +120,8 @@ module.exports = {
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      //{ from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+      //{ from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
     new HtmlWebpackPlugin({
@@ -151,9 +155,9 @@ module.exports = {
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
     // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
-    /*...PAGES.map(page => new HtmlWebpackPlugin({
+    ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
-    }))*/
+    }))
   ],
 }
