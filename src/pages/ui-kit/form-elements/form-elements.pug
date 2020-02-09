@@ -1,0 +1,21 @@
+extends ./../../../templates/base.pug
+block vars
+    -var title = 'Form elements'
+block content
+    include ./../../../primitives/logo/logo.pug
+    include ./../../../primitives/field/field.pug
+    include ./../../../primitives/bulletlist/bulletlist.pug
+    include ./../../../primitives/button/button.pug
+    include ./../../../primitives/field/field.pug
+    //
+    main.form-elements
+        +logo(true)
+        .wrapper-columns
+            section.column_elements
+                +field({textLabel:'Text field',name:'email',type:'text',placeholder:'Email'})
+                +field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
+                //dropdown-guests
+                +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
+                +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
+            section.column_elements
+            section.column_elements

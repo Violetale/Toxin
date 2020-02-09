@@ -1,0 +1,6 @@
+mixin likebutton(params)
+    -const{clicked='false',count}=params;
+    -const clickedMod = (clicked)?'likebutton_clicked':'';
+    button(type='button', class='likebutton'+' '+clickedMod)
+        //i подставить иконку
+        span.likebutton__count=count

@@ -1,0 +1,22 @@
+mixin dropdown(params={})
+    -const{textLabel ='',open=false,placeholder='',buttons=false,items=[]}=params;
+    -const openMod =(open)?' dropdown_opened':'';
+    div(class='dropdown'+' '+openMod)
+        .dropdown__label=textLabel
+            .dropdown__placeholder=placeholder
+                if openMod
+                i.material-icons 
+        div(class='dropdown__items')
+            if items
+                each item in items
+                    .dropdown__item
+                        .dropdown__item__label=item    
+                        .dropdown__item__controls
+                            .dropdown__item__controls.dropdown__item__controls_clear +
+                            .dropdown__item__controls_value 0
+                            .dropdown__item__controls.dropdown__item__controls_add -
+            if buttons
+                .dropdown__buttons
+                    .dropdown__clear-button='Очистить'
+                    .dropdown__apply-button='Принять'
+//-+dropdown({textLabel:'',open:'false',placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})

@@ -1,0 +1,59 @@
+.button{
+    cursor: pointer;
+    position: relative;
+    width: 99px;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    background: transparent;
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    #{$hover}{
+        opacity: 0.5;
+    }
+    &_full{
+        background: $purple-gradient;
+        color:white;
+    }
+    &_border{
+        border: solid 2px transparent;
+        border-radius: 22px;
+        box-shadow: 2px 1000px 1px #fff inset;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $purple-gradient;
+        background-clip: content-box, border-box;
+        background-origin: border-box;
+        color: $purple;
+    }
+    &_bigFull{
+        width: 320px;
+        height: 44px;
+        background: $purple-gradient;
+        color:#FFFFFF;
+        i{
+            color:#FFFFFF;
+        }
+    }
+    &_link{
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        color: $purple;
+        #{$hover}{
+            color: $dark-shade-50;
+        }
+
+    }
+    i{
+        width: 44px;
+        height:44px;
+        position: absolute;
+        right:0;
+        top:20%;   
+    }
+}

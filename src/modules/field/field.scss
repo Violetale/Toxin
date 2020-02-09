@@ -1,0 +1,12 @@
+.textfield{
+    display: block;
+    width: 320px;
+    height: 44px;
+    border:$secondary-border-style;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 15px;
+    #{$hover}{
+        border:$main-border-style;
+    }
+}

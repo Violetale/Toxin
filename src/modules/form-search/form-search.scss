@@ -1,0 +1,23 @@
+@import './../../modules/button/button.scss';
+@import './../../modules/dropdown/dropdown.scss';
+@import './../../modules/dropdown-date/dropdown-date.scss';
+.form-search{
+    padding:30px;
+    background: #FFFFFF;
+    width: 380px;
+    height: 374px;
+    border: $main-border-style;
+    box-sizing: border-box;
+    box-shadow: $main-box-shadow-style;
+    border-radius: 4px;
+    .form_header{
+        width:320px;
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        color:$dark-shade-100;
+}
+    
+}

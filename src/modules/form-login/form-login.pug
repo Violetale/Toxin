@@ -1,0 +1,14 @@
+include ./../../modules/field/field.pug
+include ./../../modules/button/button.pug
+mixin form-login(params)
+    -const {textTitle=''}=params;
+    form.form(class="form-login")
+        .form-login__title
+            h3.form-login__title__header=textTitle
+        .form-login__fields
+            +field({name:'email',type:'email',placeholder:'Email'})
+            +field({name:'password',type:'password',placeholder:'Пароль'})
+        +button({classButton:'bigFull',text:'Войти',arrowIcon:true})
+        footer.form-login__footer
+            span Нет аккаунта на Toxin? 
+            +button({classButton:'border',text:'Создать'})

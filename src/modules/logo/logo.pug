@@ -1,0 +1,6 @@
+mixin logo(isGray)
+  div.logo__container
+    if isGray
+      img(class='logo logo_gray',src='./assets/img/logogray.svg', alt ='logogray')
+    else
+      img(class='logo logo_with-text', src='./assets/img/logo.svg',alt='logo')

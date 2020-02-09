@@ -1,0 +1,13 @@
+include ./../../modules/dropdown/dropdown.pug
+include ./../../modules/dropdown-date/dropdown-date.pug
+include ./../../modules/button/button.pug
+mixin form-search(params)
+    -const{textTitle=""}=params;
+    form.form(class="form-search")
+        .form-search__title
+            h3.form-search__title__header=textTitle
+        .form-search__inputs
+            //+dropdown-date
+            +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
+        +button({classButton:'bigFull',text:'Подобрать номер',arrowIcon:'true'})
+

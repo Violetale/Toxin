@@ -1,0 +1,17 @@
+@import './../../modules/field/field.scss';
+@import './../../modules/button/button.scss';
+.form-login{
+    width: 380px;
+    height: 358px;
+    background: #FFFFFF;
+    border:$main-border-style;
+    box-sizing: border-box;
+    box-shadow: $main-box-shadow-style;
+    border-radius: 4px;
+    padding: 40px 30px;
+    &__footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+}

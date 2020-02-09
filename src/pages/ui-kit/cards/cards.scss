@@ -1,0 +1,17 @@
+@import './../../../assets/scss/main.scss';
+@import './../../../modules/form-login/form-login.scss';
+@import './../../../modules/form-search/form-search.scss';
+@import './../../../modules/logo/logo.scss';
+@import './../../../modules/datepicker/datepicker.scss';
+body{
+    background: #E5E5E5;
+
+.cards{
+    .wrapper-columns{
+        padding:72px 62px;
+        display:grid;
+        grid-template-columns: 380px 380px 320px;
+        grid-column-gap: 40px;
+    }
+}
+}

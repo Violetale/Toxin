@@ -1,0 +1,20 @@
+extends ./../../../templates/base.pug
+block vars
+    -var title = 'Cards'
+block content
+    include ./../../../modules/logo/logo.pug
+    include ./../../../modules/form-search/form-search.pug
+    include ./../../../modules/datepicker/datepicker.pug
+    include ./../../../modules/form-login/form-login.pug
+    main.cards
+        +logo(true)
+        .wrapper-columns
+            section.column-elements
+                +form-search({textTitle:'Найдём номера под ваши пожелания'})
+            //form-reg
+            section.column-elements
+                +form-login({textTitle:'Войти'})
+            section.column-elements
+                +datepicker
+            //card-room
+            //card-room

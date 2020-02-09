@@ -1,0 +1,8 @@
+mixin block-of-color(params)
+    -const {colorname,style,colorcode} = params;
+    div.block-of-color
+        .block-of-color__color(style='background-color:'+style)
+        .block-of-color__text
+            .block-of-color__text__name=colorname
+            .block-of-color__text__code=colorcode
+            

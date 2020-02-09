@@ -1,0 +1,10 @@
+@import './../../../assets/scss/main.scss';
+@import './../../../modules/field/field.scss';
+.form-elements{
+    .wrapper-columns{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 1440px;
+    }
+}

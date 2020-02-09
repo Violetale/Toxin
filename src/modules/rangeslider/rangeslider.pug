@@ -1,0 +1,7 @@
+//необходимо подключение jquery ui
+mixin rangeslider(params)
+    -const{texLabel,min,max,values=[]}=params;
+    .range-slider
+        label.range-slider__label
+            input.range-slider__count(type='text' readonly)
+        .range-slider__slider

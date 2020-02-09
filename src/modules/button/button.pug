@@ -1,0 +1,17 @@
+mixin button(params={})
+    - const{classButton,text='',arrowIcon=false}=params;
+    -const arrowMod = (arrowIcon)?" button-"+classButton+"_withArrow":"";
+    button(type='button',class='button'+' button_'+classButton+arrowMod)=text
+        if arrowIcon
+            i.material-icons arrow_forward
+//-кнопка с текстом
+//-принимет объект params с ключами
+//-text - текст внутри кнопки
+//-classButton -тип кнопки, может иметь следующие значения:
+//-full - кнопка,полностью залитая цветом
+//-border-белая кнопка с цветной границей
+//-bigFull-большая залитая цветом кнопка
+//-link -кнопка без границы и градиента, похожа на обычную ссылку
+//-Пример вызова:
+//-+button({classButton:'full',text:'Click me'})-//
+    

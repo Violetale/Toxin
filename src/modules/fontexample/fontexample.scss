@@ -1,0 +1,46 @@
+.example-of-font{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-bottom: 50px;
+}
+.name-font{
+    text-align: left;
+    width:37px;
+}
+.description-of-font{
+    width: 336px;
+    margin-left:30px;
+}
+.example-of-font{
+    &:nth-child(1){
+    color:$dark-shade-100;
+    font-family: $font-main;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+&:nth-child(2){
+    color:$dark-shade-100;
+    font-family: $font-main;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+}
+&:nth-child(3){
+    color:$dark-shade-100;
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+&:nth-child(4){
+    color:$dark-shade-75;
+    font-family: $font-secondary;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+}

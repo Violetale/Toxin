@@ -1,0 +1,20 @@
+include './../../modules/icon-with-text.pug'
+//-миксин принимает массив объектов с ключами icon,title,description
+//-прим.вызова:+icon-with-text-list({
+    items:[
+        {
+            icon:'icon2',
+            title:'title',
+            description:'desc'
+            },
+        {
+            icon:'icon2',
+            title:'title',
+            description:'desc'
+            }
+    ]})
+mixin icon-with-text-list(params)
+    -const{items}=params;
+    ul.icon-with-text-list
+        each item in items
+            +icon-with-text(icon:item.icon,title:item.title,description:item.description)

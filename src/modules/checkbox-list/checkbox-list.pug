@@ -1,0 +1,14 @@
+include './../../primitives/checkbox/checkbox.pug'
+include './../../primitives/icon/icon.pug'
+mixin checkboxlist()
+    -const {textLabel,items=[],expandable='false'}=params;
+    -const expandableMod = (expandable)?' checkbox_expandable':'';
+    div(class='checkbox-list'+expandable)
+        .checkbox_label=textLabel
+        if expandable 
+            i.material-icons expand_more
+        
+        ul.checkbox-list__list
+            each item in items
+            li.checkbox-list__list__item
+                +checkbox({textLabel:item.textLabel,name:item.name,value:item.value,checked:false})

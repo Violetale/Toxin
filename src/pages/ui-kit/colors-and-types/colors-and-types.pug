@@ -1,0 +1,30 @@
+extends ./../../../templates/base.pug
+block vars
+    -var title = 'Colors and  types'
+block content
+    include ./../../../modules/logo/logo.pug
+    include ./../../../modules/palette/palette.pug 
+    include ./../../../modules/fontexample/fontexample.pug
+    main.colors-and-types
+        +logo(true)
+        div.sections_wrap
+            section.colors-and-types
+                +block-of-color({'colorname':'Dark Shade 100%','style':'rgba(31,32,65,1)','colorcode':'#1F2041'})
+                +block-of-color({'colorname':'Dark Shade 75%','style':'rgba(31, 32, 65, 0.75)','colorcode':'#1F2041'})
+                +block-of-color({'colorname':'Dark Shade 50%','style':'rgba(31,32,65,0.5)','colorcode':'#1F2041'})
+                +block-of-color({'colorname':'Dark Shade 25%','style':'rgba(31,32,65,0.25)','colorcode':'#1F2041'})
+                +block-of-color({'colorname':'Dark Shade 5%','style':'rgba(31,32,65,0.05)','colorcode':'#1F2041'})
+                +block-of-color({'colorname':'Purple','style':'#BC9CFF','colorcode':'#BC9CFF'})
+                +block-of-color({'colorname':'Green','style':'#6FCF97','colorcode':'#6FCF97'})
+            section.examples-of-fonts
+                +example-of-font({name:'h1',description:'This one is the sub-section or widget title'})
+                +example-of-font({name:'h2',description:'Next one is the item title inside widgets'})
+                +example-of-font({name:'h3',description:'This is a label or CTA text'})
+                +example-of-font({name:'body',description:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+               
+
+
+
+
+
+

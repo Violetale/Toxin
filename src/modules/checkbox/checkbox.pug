@@ -1,0 +1,9 @@
+mixin checkbox(params={})
+  -const{textLabel='',name,value,checked=false,rich='false',header=''}=params;
+  -const richMod = (rich)?' checkbox_rich':'';
+  label.checkbox__wrap
+    input(type='checkbox',name=name,checked=checked, value=value)
+      if rich
+        p.checkbox__header=header
+    p.checkbox__description=textLabel
++checkbox({textLabel:'text',name:1,value:2,checked:true,rich:false})

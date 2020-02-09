@@ -1,0 +1,8 @@
+mixin radio(params={})
+    -const{textLabel,name,value}=params;
+    label.radio_wrap=textLabel
+        input(
+            type='radio',
+            name=name,
+            value=value,
+        )

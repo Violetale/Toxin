@@ -1,0 +1,46 @@
+@import './../../../assets/scss/main.scss';
+@import './../../../modules/palette/palette.scss';
+@import './../../../modules/fontexample/fontexample.scss';
+body{
+    background-color: #FFFFFF;
+}
+main{
+    width:100%;
+    max-width: 1440px;
+    margin:0 auto;
+}
+.sections_wrap{  
+    display:grid;
+    grid-template-columns:270px 300px 403px;
+    grid-template-rows: 500px;
+    grid-template-areas: 'colors . fonts';
+    padding-left:120px;
+}
+.colors-and-types{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: colors;
+}
+.examples-of-fonts{
+    grid-area: fonts;
+}
+@media #{$widthDesckop}{
+    .sections_wrap{
+        width:100%;
+        grid-template-columns:270px 403px;
+        grid-template-areas: 'colors  fonts';
+        grid-column-gap: 10%;
+    }
+}
+@media #{$widthTablet}{
+    .sections_wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .colors-and-types{
+        margin-bottom: 40px;
+    }
+}
