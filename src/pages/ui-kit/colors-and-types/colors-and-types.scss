@@ -1,5 +1,6 @@
 @import '../../../assets/scss/vars.scss';
 body{
+    padding: 30px;
     background-color: #FFFFFF;
 }
 main{
@@ -7,12 +8,13 @@ main{
     max-width: 1440px;
     margin:0 auto;
 }
-.sections_wrap{  
-    display:grid;
-    grid-template-columns:270px 300px 403px;
+.container-columns{  
+    padding: 67px;
+    
+    /*display:grid;
+    grid-template-columns:270px 427px 403px;
     grid-template-rows: 500px;
-    grid-template-areas: 'colors . fonts';
-    padding-left:120px;
+    grid-template-areas: 'colors . fonts';*/
 }
 .colors-and-types{
     display:flex;
