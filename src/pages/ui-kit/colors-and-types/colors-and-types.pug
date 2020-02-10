@@ -1,4 +1,4 @@
-extends ./../../../templates/base.pug
+extends ./../../templates/base.pug
 block vars
     -var title = 'Colors and  types'
 block content
@@ -17,9 +17,9 @@ block content
                 +block-of-color({'colorname':'Purple','style':'#BC9CFF','colorcode':'#BC9CFF'})
                 +block-of-color({'colorname':'Green','style':'#6FCF97','colorcode':'#6FCF97'})
             section.examples-of-fonts
-                +example-of-font({name:'h1',description:'This one is the sub-section or widget title'})
-                +example-of-font({name:'h2',description:'Next one is the item title inside widgets'})
-                +example-of-font({name:'h3',description:'This is a label or CTA text'})
+                +example-of-font({name:'H1',description:'This one is the sub-section or widget title'})
+                +example-of-font({name:'H2',description:'Next one is the item title inside widgets'})
+                +example-of-font({name:'H3',description:'This is a label or CTA text'})
                 +example-of-font({name:'body',description:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
                
 

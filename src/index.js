@@ -1,9 +1,8 @@
-// JS
-import './js/'
-
-// SCSS
-
+import $ from 'jquery';
+import 'jquery-ui/ui/widgets/datepicker';
 // CSS (example)
-// import './assets/css/main.css'
-import './assets/scss/main.scss';
-import './pages/ui-kit/colors-and-types/colors-and-types';
+//
+function importAll(resolve) {
+    resolve.keys().forEach(resolve);
+  }
+importAll(require.context('../src/', true, /\.js$|\.scss$/));

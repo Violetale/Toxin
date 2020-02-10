@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My template + pug",
   "main": "index.js",
-  "homepage":"https://violetale.github.io/site-toxin",
+  "homepage": "https://github.com/vedees/webpack-template-pug#readme",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js",
@@ -61,8 +61,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
+    "air-datepicker": "^2.2.3",
     "gh-pages": "^2.2.0",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
     "vue": "^2.6.11"
-  },
-  "homepage": "https://github.com/vedees/webpack-template-pug#readme"
+  }
 }

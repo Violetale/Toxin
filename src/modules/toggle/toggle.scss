@@ -1,4 +1,4 @@
-@import'./../../assets/scss/main.scss'
+@import '../../assets/scss/vars.scss';
 .switch{
     position: relative;
     display: inline-block;
@@ -30,10 +30,10 @@
 }
 input{
     &:checked +.slider-round{
-        background-color:$main-linear-gradient;
+        background-color:$purple-gradient;
     }
     &:focus + .slider-round{
-        box-shadow: 0 0 1px $main-linear-gradient;
+        box-shadow: 0 0 1px $purple-gradient;
     }
     &:checked + .slider:before {
         transform: translateX(26px);

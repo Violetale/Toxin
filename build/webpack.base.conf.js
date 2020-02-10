@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -63,18 +64,17 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]',
-        outpuPath:`${PATHS.assets}fonts`,
+        name: 'fonts/[name].[ext]',
+        outputPath:`${PATHS.assets}fonts`,
         publicPath:'../fonts/'
-      }, 
-      exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}img`)
+      },  exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}img`)
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
         outputPath: `${PATHS.assets}img`,
-        publicPath: '../img/'
+        publicPath: `../img/`
       }, exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`)
     }, {
       test: /\.scss$/,
@@ -119,15 +119,20 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
-    new CopyWebpackPlugin([
-      //{ from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      //{ from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+   new CopyWebpackPlugin([
+      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/ui-kit/colors-and-types/colors-and-types.pug`,
       filename: './colors-and-types.html',
       inject: true
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
     }),
     /*
     new HtmlWebpackPlugin({

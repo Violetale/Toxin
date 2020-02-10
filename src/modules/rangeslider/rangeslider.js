@@ -1,4 +1,3 @@
-import 'rangeslider.scss';
 //переписать код под pug
   $(function() {
     $('.range-slider__slider').slider({

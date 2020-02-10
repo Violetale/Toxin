@@ -1,3 +1,4 @@
+@import '../../assets/scss/vars.scss';
 .example-of-font{
     display: flex;
     flex-direction: row;
@@ -7,6 +8,7 @@
 .name-font{
     text-align: left;
     width:37px;
+    color: $dark-shade-25;
 }
 .description-of-font{
     width: 336px;
