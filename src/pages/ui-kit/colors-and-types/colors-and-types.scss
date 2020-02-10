@@ -1,6 +1,5 @@
 @import '../../../assets/scss/vars.scss';
 body{
-    padding: 30px;
     background-color: #FFFFFF;
 }
 main{
@@ -16,14 +15,16 @@ main{
     grid-template-rows: 500px;
     grid-template-areas: 'colors . fonts';*/
 }
-.colors-and-types{
+.column:first-child{
+    margin-left: 120px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    grid-area: colors;
+    //grid-area: colors;
 }
-.examples-of-fonts{
-    grid-area: fonts;
+.column:last-child{
+    margin-right: 124px;
+    //grid-area: fonts;
 }
 @media #{$widthDesckop}{
     .sections_wrap{

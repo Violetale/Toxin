@@ -3,7 +3,11 @@ body {
   padding: 0;
   font-family: 'Quicksand',Arial, sans-serif;
   font-size: 0.9rem ;
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.container-columns{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
