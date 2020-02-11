@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import 'jquery-ui/ui/widgets/datepicker';
+import 'air-datepicker/dist/js/datepicker.js';
+import 'air-datepicker/dist/css/datepicker.css';
 // CSS (example)
 //
 function importAll(resolve) {

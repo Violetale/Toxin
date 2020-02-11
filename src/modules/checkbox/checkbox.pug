@@ -1,5 +1,5 @@
 mixin checkbox(params={})
-  -const{textLabel='',name,value,checked=false,rich='false',header=''}=params;
+  -const{textLabel='',name,value,checked=false,rich=false,header=''}=params;
   -const richMod = (rich)?' checkbox_rich':'';
   label.checkbox__wrap
     input(type='checkbox',name=name,checked=checked, value=value)

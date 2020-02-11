@@ -1,4 +1,7 @@
 @import './../../assets/scss/vars.scss';
+.pagination{
+    font-size: 0.75rem;
+}
 .pagination__item{
     display:inline-block;
     font-size: 12px;
@@ -9,16 +12,17 @@
     vertical-align: bottom;
     text-decoration: none;
     color: $dark-shade-50;
-}
-.pagination__item_active{
-        border-radius:22px;
-        background: $purple-gradient;
-        color:white;
-        font-weight: bold;
-}
-    .pagination__item_arrow{
+
+    &_active{
+            border-radius:50%;
+            background: $purple-gradient;
+            color:white;
+            font-weight: bold;
+    }
+    &_arrow{
         background: $green-gradient;
     }
+}
 .pagination__text{
     padding: 10px;
     font-size: 14px;

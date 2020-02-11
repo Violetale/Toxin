@@ -2,9 +2,10 @@
 @import './../../../modules/form-search/form-search.scss';
 @import './../../../modules/logo/logo.scss';
 @import './../../../modules/datepicker/datepicker.scss';
+@import './../../../modules/card-room/card-room.scss';
 body{
     background: #E5E5E5;
-
+}
 .cards{
     .wrapper-columns{
         padding:72px 62px;
@@ -12,5 +13,4 @@ body{
         grid-template-columns: 380px 380px 320px;
         grid-column-gap: 40px;
     }
-}
 }

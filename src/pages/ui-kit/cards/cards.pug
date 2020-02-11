@@ -6,6 +6,8 @@ block content
     include ./../../../modules/form-search/form-search.pug
     include ./../../../modules/datepicker/datepicker.pug
     include ./../../../modules/form-login/form-login.pug
+    include ./../../../modules/card-room/card-room.pug
+    //include ./../../../modules/
     main.cards
         +logo(true)
         .wrapper-columns
@@ -16,5 +18,5 @@ block content
                 +form-login({textTitle:'Войти'})
             section.column-elements
                 +datepicker
-            //card-room
-            //card-room
+                +card-room({photoLink:'assets/img/rooms/room888.jpg',numberRoom:'888',price:'9990',isLuxe:true,rate:5,reviews:145})
+                +card-room({photoLink:'assets/img/rooms/room840.jpg'})
