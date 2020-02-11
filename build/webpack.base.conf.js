@@ -134,7 +134,7 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
     }),
-    /*
+    
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/ui-kit/cards/cards.pug`,
       filename: './cards.html',
@@ -155,8 +155,6 @@ module.exports = {
       filename: './index.html',
       inject: true
     }),
-      */
-
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
     // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best

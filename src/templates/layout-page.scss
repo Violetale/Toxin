@@ -1,0 +1,13 @@
+@import 'base.scss';
+h1,h2{
+    font-family: $font-main;    
+}
+h3,body{
+    font-family: $font-secondary;
+}
+.header{
+    width: 100%;
+}
+.footer{
+    width:100%;
+}

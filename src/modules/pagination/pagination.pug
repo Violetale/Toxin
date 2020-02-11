@@ -1,0 +1,11 @@
+mixin pagination(params={})
+    -const {pagText='1 – 12 из 100+ вариантов аренды'}= params;
+    div.pagination   
+       a.pagination__item.pagination__item_active(href="#") 1
+        a.pagination__item(href="#") 2
+        a.pagination__item(href="#") 3
+        .pagination__item(href="#") ...
+        a.pagination__item(href="#") 15
+        a.pagination__item.pagination__item_active.pagination__item_arrow(href="#")
+                i.material-icons arrow_forward
+        p.pagination_text=pagText
