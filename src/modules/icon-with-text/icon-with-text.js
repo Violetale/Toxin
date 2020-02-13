@@ -1,0 +1,1 @@
+import './icon-with-text.scss';

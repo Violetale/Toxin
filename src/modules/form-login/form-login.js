@@ -1,1 +1,1 @@
-import './form-login.scss'
+import './form-login.scss';

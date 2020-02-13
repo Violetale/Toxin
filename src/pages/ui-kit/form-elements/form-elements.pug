@@ -8,6 +8,7 @@ block content
     include ./../../../modules/button/button.pug
     include ./../../../modules/field/field.pug
     include ./../../../modules/pagination/pagination.pug
+    include ./../../../modules/dropdown/dropdown.pug
 
     //
     main.form-elements
@@ -19,6 +20,7 @@ block content
                 //dropdown-guests
                 +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
                 +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
+                +dropdown({textLabel:'',open:'false',placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
             section.column_elements
             section.column_elements
                 +pagination
