@@ -5,20 +5,22 @@ import 'ion-rangeslider/js/ion.rangeSlider';
 import 'air-datepicker/dist/js/datepicker.js';
 import 'air-datepicker/dist/css/datepicker.css';
 
+
 import './assets/scss/fonts.scss';
 import './templates/base.scss';
-//import './templates/layout-page.scss';
+import './templates/layout-page.scss';
+
 import './modules/bullet-list/bullet-list.js';
-import './modules/button/button';
-import './modules/card-room/card-room';
-import './modules/checkbox/checkbox';
+import './modules/button/button.js';
+import './modules/card-room/card-room.js';
+import './modules/checkbox/checkbox.js';
 import './modules/checkbox-list/checkbox-list';
-import './modules/comment/comment';
-import './modules/datepicker/datepicker';
+import './modules/comment/comment.js';
+import './modules/datepicker/datepicker.js';
 import './modules/diagram/diagram';
-import './modules/dropdown/dropdown';
-import './modules/dropdown-date/dropdown-date';
-import './modules/field/field';
+import './modules/dropdown/dropdown.js';
+import './modules/dropdown-date/dropdown-date.js';
+import './modules/field/field.js';
 import './modules/font-example/font-example';
 import './modules/footer/footer';
 import './modules/form-login/form-login';
@@ -39,6 +41,7 @@ import './modules/rate-button/rate-button';
 import './modules/socials/socials';
 import './modules/subscription-text-field/subscription-text-field';
 import './modules/toggle/toggle';
+
 
 import './pages/ui-kit/colors-and-types/colors-and-types.js';
 import './pages/ui-kit/form-elements/form-elements.js'

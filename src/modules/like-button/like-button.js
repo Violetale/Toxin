@@ -1,1 +1,1 @@
-import './likebutton.scss';
+import './like-button.scss';
