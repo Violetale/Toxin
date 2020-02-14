@@ -1,6 +1,6 @@
-body{
+body.cards{
     background: #E5E5E5;
-}
+
 .cards{
     .wrapper-columns{
         padding:72px 62px;
@@ -8,4 +8,5 @@ body{
         grid-template-columns: 380px 380px 320px;
         grid-column-gap: 40px;
     }
+}
 }

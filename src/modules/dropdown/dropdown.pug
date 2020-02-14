@@ -1,10 +1,9 @@
 mixin dropdown(params={})
     -const{textLabel ='',open=false,placeholder='',buttons=false,items=[]}=params;
     -const openMod =(open)?' dropdown_opened':'';
-    div(class='dropdown'+' '+openMod)
+    div(class='dropdown'+openMod)
         .dropdown__label=textLabel
             .dropdown__placeholder=placeholder
-                if openMod
                 i.material-icons 
         div(class='dropdown__items')
             if items

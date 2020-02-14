@@ -1,1 +1,0 @@
-import './bulletlist.scss';

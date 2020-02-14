@@ -9,8 +9,7 @@ block content
     include ./../../../modules/field/field.pug
     include ./../../../modules/pagination/pagination.pug
     include ./../../../modules/dropdown/dropdown.pug
-
-    //
+    include ./../../../modules/range-slider/range-slider.pug
     main.form-elements
         +logo(true)
         .wrapper-columns
@@ -20,7 +19,8 @@ block content
                 //dropdown-guests
                 +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
                 +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
-                +dropdown({textLabel:'',open:'false',placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
+                +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
             section.column_elements
             section.column_elements
+                +range-slider({textLabel:'Range-slider'})
                 +pagination

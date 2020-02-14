@@ -1,19 +1,45 @@
 import $ from 'jquery';
 import 'normalize.css';
+import 'ion-rangeslider/css/ion.rangeSlider.css'
+import 'ion-rangeslider/js/ion.rangeSlider';
 import 'air-datepicker/dist/js/datepicker.js';
 import 'air-datepicker/dist/css/datepicker.css';
+
 import './assets/scss/fonts.scss';
 import './templates/base.scss';
-import './templates/layout-page.scss';
-// CSS (example)
-//
-function requireAll(requireContext) {
-  return requireContext.keys().map(requireContext);
-}
+//import './templates/layout-page.scss';
+import './modules/bullet-list/bullet-list.js';
+import './modules/button/button';
+import './modules/card-room/card-room';
+import './modules/checkbox/checkbox';
+import './modules/checkbox-list/checkbox-list';
+import './modules/comment/comment';
+import './modules/datepicker/datepicker';
+import './modules/diagram/diagram';
+import './modules/dropdown/dropdown';
+import './modules/dropdown-date/dropdown-date';
+import './modules/field/field';
+import './modules/font-example/font-example';
+import './modules/footer/footer';
+import './modules/form-login/form-login';
+import './modules/form-registration/form-registration';
+import './modules/form-search/form-search';
+import './modules/header/header';
+import './modules/icon/icon';
+import './modules/icon-with-text/icon-with-text';
+import './modules/icon-with-text-list/icon-text-list';
+import './modules/like-button/like-button';
+import './modules/logo/logo';
+import './modules/navigation/navigation';
+import './modules/pagination/pagination';
+import './modules/palette/palette';
+import './modules/radio/radio-button';
+import './modules/range-slider/range-slider.js';
+import './modules/rate-button/rate-button';
+import './modules/socials/socials';
+import './modules/subscription-text-field/subscription-text-field';
+import './modules/toggle/toggle';
 
-requireAll(require.context('./modules', true, /^\.\/(?!.*(?:__tests__)).*\.(jsx?)$/));  // pattern to take each .js(x) files except of the ones with __tests__ directory https://regex101.com/r/J8NWTj/1
-requireAll(require.context('./pages', true, /^\.\/(?!.*(?:__tests__)).*\.(jsx?)$/));
-/*function importAll(resolve) {
-    resolve.keys().forEach(resolve);
-  }
-importAll(require.context('../src/', true, /\.js$|\.scss$/));*/
+import './pages/ui-kit/colors-and-types/colors-and-types.js';
+import './pages/ui-kit/form-elements/form-elements.js'
+import './pages/ui-kit/cards/cards.js';
