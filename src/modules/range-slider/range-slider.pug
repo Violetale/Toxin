@@ -1,3 +1,7 @@
-mixin range-slider
-    .range-slider-container
-        input(class="range-slider" value="")
+mixin range-slider(params={})
+    -const {textTitle='',description=''}=params;
+    .range-slider
+        span.range-slider__title=textTitle
+        span.range-slider__value value
+        input(class="range-slider__input" value="")
+        p.range-slider__description 

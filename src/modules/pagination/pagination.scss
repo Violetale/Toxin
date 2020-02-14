@@ -1,17 +1,20 @@
 @import './../../assets/scss/vars.scss';
 .pagination{
     font-size: .9rem;
+    white-space: nowrap;
 }
 .pagination__item{
     display:inline-block;
     font-size: 12px;
     line-height: 15px;
-    width: 40px;
-    height: 40px;
+    width:40px;
+    height:20px;
     text-align: center;
     vertical-align: bottom;
     text-decoration: none;
     color: $dark-shade-50;
+    direction: ltr;
+    padding: 10px 0;
 
     &_active{
             border-radius:50%;

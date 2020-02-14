@@ -1,1 +1,61 @@
 @import '../../assets/scss/vars.scss';
+.range-slider{
+    position: relative;
+    &__title{
+        margin: 0;
+        line-height: 15px;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: bold;
+        font-style: normal;
+}
+    &__value{
+        position:absolute;
+        right:0;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        color: $dark-shade-50;
+    }
+    &__description{
+        line-height: 15px;
+        font-family: $font-secondary;
+        font-size: 0.75rem;
+        font-weight: normal;
+        font-style: normal;
+        color: $dark-shade-50;
+        }
+}
+
+.irs--flat {
+
+    .irs-line{
+    width: 266px;
+    height:6px;
+    }
+    .irs-bar{
+        background:$green-gradient;
+        height:6px;
+        border-radius: 3px;
+    }
+    .irs-handle {
+        top:20px;
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+        background: $green-gradient;
+        width: 16px;
+        height: 16px;
+        &>i:first-child{
+            display:none;
+        }
+    }
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  display: none;
+}
