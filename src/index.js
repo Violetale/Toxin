@@ -4,6 +4,8 @@ import 'ion-rangeslider/css/ion.rangeSlider.css'
 import 'ion-rangeslider/js/ion.rangeSlider';
 import 'air-datepicker/dist/js/datepicker.js';
 import 'air-datepicker/dist/css/datepicker.css';
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 
 import './assets/scss/fonts.scss';

@@ -10,17 +10,31 @@ block content
     include ./../../../modules/pagination/pagination.pug
     include ./../../../modules/dropdown/dropdown.pug
     include ./../../../modules/range-slider/range-slider.pug
+    //-миксины для размещения эл-ов на странице
+    mixin form-elements__item(params={})
+        -const {itemTitle=''}=params;
+        .form-elements__item
+            .form-elements__item__title=itemTitle
+            block
+    //-основное содержимое страницы
     main.form-elements
         +logo(true)
-        .wrapper-columns
+        .columns-container
             section.column_elements
-                +field({textLabel:'Text field',name:'email',type:'text',placeholder:'Email'})
-                +field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
+                +form-elements__item
+                    +field({textLabel:'Text field',name:'email',type:'text',placeholder:'Email'})
+                +form-elements__item
+                    +field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
                 //dropdown-guests
-                +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
-                +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
-                +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
+                +form-elements__item
+                    +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
+                +form-elements__item
+                    +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
+                +form-elements__item
+                    +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
             section.column_elements
             section.column_elements
-                +range-slider({textTitle:'range-slider',description:'Стоимость за сутки пребывания в номере'})
-                +pagination
+                +form-elements__item
+                    +range-slider({textTitle:'range slider',description:'Стоимость за сутки пребывания в номере'})
+                +form-elements__item({itemTitle:'Pagination'})
+                    +pagination

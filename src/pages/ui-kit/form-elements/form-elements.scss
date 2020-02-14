@@ -1,8 +1,15 @@
 .form-elements{
-    .wrapper-columns{
+    .columns-container{
         display:flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-around;
         max-width: 1440px;
+    }
+}
+.form-elements__item{
+    margin-bottom: 1.5rem;
+    &__title{
+        margin-bottom:1rem;
     }
 }
