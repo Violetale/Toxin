@@ -1,3 +1,4 @@
+@import './vars.scss';
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
@@ -111,7 +112,7 @@
      word-wrap: normal;
      white-space: nowrap;
      direction: ltr;
-   
+    color: $dark-shade-50;
      /* Support for all WebKit browsers. */
      -webkit-font-smoothing: antialiased;
      /* Support for Safari and Chrome. */

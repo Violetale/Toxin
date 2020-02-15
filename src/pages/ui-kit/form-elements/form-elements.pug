@@ -9,6 +9,7 @@ block content
     include ./../../../modules/field/field.pug
     include ./../../../modules/pagination/pagination.pug
     include ./../../../modules/dropdown/dropdown.pug
+    include ./../../../modules/dropdown-date/dropdown-date.pug
     include ./../../../modules/range-slider/range-slider.pug
     //-миксины для размещения эл-ов на странице
     mixin form-elements__item(params={})
@@ -30,6 +31,8 @@ block content
                     +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
                 +form-elements__item
                     +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
+                +form-elements__item
+                    +dropdown-date
                 +form-elements__item
                     +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
             section.column_elements

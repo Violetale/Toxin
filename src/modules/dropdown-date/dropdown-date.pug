@@ -1,10 +1,13 @@
-mixin dropdown-date()
+mixin dropdown-date(params={})
+    -const {items=[{textLabel:'',placeholder:''},{textLabel:'',placeholder:''}]}=params;
     .dropdown.dropdown-date
-        .dropdown-date__item
-            .dropdown__label 'Прибытие'
+        for item in items
+            .dropdown-date__item
+                input.datepicker-here
+                //-.dropdown__label 'Прибытие'
+                    .dropdown__placeholder 'ДД.ММ.ГГГГ'
+                i.material-icons expand_more
+        //-.dropdown-date__item
+            input.dropdown-date__item.datepicker-here-.dropdown__label 'Прибытие'
                 .dropdown__placeholder 'ДД.ММ.ГГГГ'
-                    i.material-icons expand_more
-        .dropdown-date__item
-            .dropdown__label 'Прибытие'
-                .dropdown__placeholder 'ДД.ММ.ГГГГ'
-                    i.material-icons expand_more
+            i.material-icons expand_more
