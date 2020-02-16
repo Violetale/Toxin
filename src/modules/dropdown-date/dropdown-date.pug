@@ -1,13 +1,7 @@
 mixin dropdown-date(params={})
-    -const {items=[{textLabel:'',placeholder:''},{textLabel:'',placeholder:''}]}=params;
+    -const {textLabel='',placeholder='',value=''}=params;
     .dropdown.dropdown-date
-        for item in items
-            .dropdown-date__item
-                input.datepicker-here
-                //-.dropdown__label 'Прибытие'
-                    .dropdown__placeholder 'ДД.ММ.ГГГГ'
+        .dropdown-date__item
+            label.dropdown-date__item__label=textLabel
+                input.datepicker-here(placeholder=value||placeholder,value=value)
                 i.material-icons expand_more
-        //-.dropdown-date__item
-            input.dropdown-date__item.datepicker-here-.dropdown__label 'Прибытие'
-                .dropdown__placeholder 'ДД.ММ.ГГГГ'
-            i.material-icons expand_more
