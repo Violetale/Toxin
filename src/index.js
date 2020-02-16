@@ -9,8 +9,6 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 
 import './assets/scss/fonts.scss';
-import './templates/base.scss';
-import './templates/layout-page.scss';
 
 import './modules/bullet-list/bullet-list.js';
 import './modules/button/button.js';
