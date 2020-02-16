@@ -1,1 +1,32 @@
 @import '../../assets/scss/vars.scss';
+.like-button{
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: $secondary-border-style;
+    color: $dark-shade-25;
+    width: 40px;
+    height: 20px;
+    display:flex;
+    padding:3px;
+    justify-content:space-evenly;
+    align-items: center;
+    span{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    i.material-icons{
+        font-size: 10px;
+        line-height: 9px;
+    }
+    &_clicked{
+        color: $purple;
+        box-shadow: 2px 1000px 1px #fff inset;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $purple-gradient;
+        background-clip: content-box, border-box;
+        background-origin: border-box;
+        i.material-icons{
+            color: $purple;
+        }
+
+    }
+}

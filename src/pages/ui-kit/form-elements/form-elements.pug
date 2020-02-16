@@ -1,4 +1,4 @@
-extends ./../../../templates/base.pug
+extends ./../../../templates/template.pug
 block vars
     -var title = 'Form elements'
 block content
@@ -11,6 +11,7 @@ block content
     include ./../../../modules/dropdown/dropdown.pug
     include ./../../../modules/dropdown-date/dropdown-date.pug
     include ./../../../modules/range-slider/range-slider.pug
+    include ./../../../modules/like-button/like-button.pug
     //-миксины для размещения эл-ов на странице
     mixin form-elements__item(params={})
         -const {itemTitle=''}=params;
@@ -36,6 +37,9 @@ block content
                 +form-elements__item
                     +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
             section.column_elements
+                +form-elements__item
+                    +like-button({clicked:false,count:11})
+                    +like-button({clicked:true,count:12})
             section.column_elements
                 +form-elements__item
                     +range-slider({textTitle:'range slider',description:'Стоимость за сутки пребывания в номере'})

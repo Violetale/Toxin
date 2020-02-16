@@ -10,6 +10,10 @@
     }
 }
 .form-elements__item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 1.5rem;
     &__title{
         margin-bottom:1rem;
