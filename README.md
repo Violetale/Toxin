@@ -20,3 +20,6 @@
 Страницы сайта:
 ## UI-KIT
 * [colors&types](https://violetale.github.io/Toxin/colors-and-types.html)
+* [form-elements](https://violetale.github.io/Toxin/form-elements.html)
+* [cards](https://violetale.github.io/Toxin/cards.html)
+* [headers&footers](https://violetale.github.io/Toxin/headers-and-footers.html)
