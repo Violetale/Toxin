@@ -1,13 +1,19 @@
 mixin button(params={})
-    - const{classButton,text='',arrowIcon=false}=params;
-    -const arrowMod = (arrowIcon)?" button-"+classButton+"_withArrow":"";
-    button(type='button',class='button'+' button_'+classButton+arrowMod)=text
+    - const{mods='',text='',arrowIcon=false}=params;
+    -
+     let modsClasses ='';
+        if params.mods
+            mods.split(',');
+            each item in mods
+                modsClasses=modsClasses+' '+className+'_'+item;
+    -const arrowMod = (arrowIcon)?" button"+"_withArrow":""; //-для удобства объявлеяется через переменную с юулевым знач
+    button(type='button',class='button'+' button_'+modsClasses+arrowMod)=text
         if arrowIcon
             i.material-icons arrow_forward
 //-кнопка с текстом
 //-принимет объект params с ключами
 //-text - текст внутри кнопки
-//-classButton -тип кнопки, может иметь следующие значения:
+//-mods -строка с модификаторами,перечисляемыми через запятую, может иметь следующие значения:
 //-full - кнопка,полностью залитая цветом
 //-border-белая кнопка с цветной границей
 //-bigFull-большая залитая цветом кнопка

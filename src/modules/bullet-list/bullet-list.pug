@@ -1,4 +1,5 @@
 mixin bulletList(params={})
-    -const {desc}=params;
+    -const {items=[]}=params;
     ul.bullet-list
-        li.bullet-list__item=desc
+        each item in items
+            li.bullet-list__item=

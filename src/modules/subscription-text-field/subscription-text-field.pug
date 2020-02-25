@@ -1,3 +1,5 @@
-include ./../field.field.pug
-+field({textLabel:''})
-i.material-icons forward_arrow
+include ./../field/field.pug
+mixin subscription-text-field(params={})
+    -const {textLabel='',name='',type='text',value=''}=params;
+    +field({textLabel:textLabel,name:name,type:type,value:value})
+    i.material-icons forward_arrow

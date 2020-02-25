@@ -1,0 +1,5 @@
+mixin social-icons(params={})
+    -const {classesIcons=["fa-twitter","fa-facebook-square","fa-instagram"]}=params;
+    div.social-icons
+        for classIcon in classesIcons
+            i(class='fa '+classIcon)

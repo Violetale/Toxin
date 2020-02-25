@@ -1,12 +1,11 @@
 mixin field(params={})
   -const{textLabel='',name='', type='text',value="",placeholder='',disabled,masked=false}=params;
-  -const maskedMod=(masked)?' textinput_masked':'';
-  label.textfield_wrap
-      p=textLabel
+  -const maskedMod=(masked)?' text-input_masked':'';
+  label.text-field__label=textLabel
       if masked
-        input(class='textfield'+maskedMod,type=type,name=name,value=value,placeholder='ДД.ММ.ГГ',disabled=disabled)
+        input(class='text-field'+maskedMod,type=type,name=name,value=value,placeholder='ДД.ММ.ГГ',disabled=disabled)
       else
-        input(class='textfield',type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)  
+        input(class='text-field',type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)  
 //-пример вызова   
 //-+field({textLabel:'123',name:'1',type:'text',value:'1'})
 
