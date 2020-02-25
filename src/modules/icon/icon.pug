@@ -1,4 +1,13 @@
-mixin icon(class)
-    i(class='icon'+''+'icon_'+class)
+mixin icon(params={})
+    const{mods=''}=params;
+    -const className = 'icon';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }
     //-перечень возможных значений для параметра class:
     //-arrow - стрелка

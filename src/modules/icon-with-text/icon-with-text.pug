@@ -1,8 +1,9 @@
 mixin icon-with-text(params)
     -const {icon,title,description}=params;
-    li.icon-with-text-list__item
-                .icon-with-text-list__item__icon
-                    //icon    
-                .icon-with-text-list__item__text
-                    .icon-with-text-list__item__text__title=title
-                    .icon-with-text-list__item__text__description=description
+    ul.icon-with-text_-wrap
+        li.icon-with-text-list__item
+                    .icon-with-text-list__item__icon
+                        //icon    
+                    .icon-with-text-list__item__text
+                        .icon-with-text-list__item__text__title=title
+                        .icon-with-text-list__item__text__description=description

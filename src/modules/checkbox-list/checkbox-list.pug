@@ -1,11 +1,19 @@
 include './../../primitives/checkbox/checkbox.pug'
 include './../../primitives/icon/icon.pug'
-mixin checkboxlist()
-    -const {textLabel,items=[],expandable='false'}=params;
-    -const expandableMod = (expandable)?' checkbox_expandable':'';
-    div(class='checkbox-list'+expandable)
-        .checkbox_label=textLabel
-        if expandable 
+mixin checkboxlist(params={})
+    -const {textLabel,items=[],mods=''}=params;
+    -const className = 'checkbox-list';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+            }
+    //--const expandableMod = (expandable)?' checkbox_expandable':'';
+    div(class=className+modsClasses)
+        .checkbox-list_label=textLabel
             i.material-icons expand_more
         
         ul.checkbox-list__list

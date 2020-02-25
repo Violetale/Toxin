@@ -1,0 +1,11 @@
+mixin navigation(params={})
+    -const {mods=''}=params;
+    -const className = 'button';
+        -
+        let modsClasses = '';
+            if (mods){
+                const modsList= mods.split(',');
+                for(let i = 0; i < modsList.length;i++){
+                    modsClasses=modsClasses+' '+className+'_'+modsList[i];
+                }
+            }

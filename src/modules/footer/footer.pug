@@ -1,0 +1,11 @@
+mixin footer(params={})
+-const {mods=''}=params;
+-const className = 'footer-page';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }

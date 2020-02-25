@@ -1,10 +1,16 @@
-mixin field(params={})
-  -const{textLabel='',name='', type='text',value="",placeholder='',disabled,masked=false}=params;
-  -const maskedMod=(masked)?' text-input_masked':'';
+mixin text-field(params={})
+  -const{mods='',textLabel='',name='', type='text',value="",placeholder='',disabled}=params;
+  //--const maskedMod=(masked)?' text-input_masked':'';
+  -const className = 'text-field';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }
   label.text-field__label=textLabel
-      if masked
-        input(class='text-field'+maskedMod,type=type,name=name,value=value,placeholder='ДД.ММ.ГГ',disabled=disabled)
-      else
         input(class='text-field',type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)  
 //-пример вызова   
 //-+field({textLabel:'123',name:'1',type:'text',value:'1'})

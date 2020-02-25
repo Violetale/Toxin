@@ -1,6 +1,17 @@
-mixin logo(isGray)
+mixin logo(params={})
+  -const {mods=''}=params
+  -const className = 'дщпщ';
+    -
+      let modsClasses = '';
+          if (mods){
+              const modsList= mods.split(',');
+              for(let i = 0; i < modsList.length;i++){
+                  modsClasses=modsClasses+' '+className+'_'+modsList[i];
+              }
+          }
   div.logo__container
-    if isGray
+    //-переписать зависимость ссылок от класса
+    //-if isGray
       img(class='logo logo_gray',src='./assets/img/logogray.svg', alt ='logogray')
-    else
-      img(class='logo logo_with-text', src='./assets/img/logo.svg',alt='logo')
+    //-else
+      //-img(class='logo logo_with-text', src='./assets/img/logo.svg',alt='logo')

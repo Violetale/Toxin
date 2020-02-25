@@ -6,9 +6,9 @@ mixin form-login(params)
         .form-login__title
             h3.form-login__title__header=textTitle
         .form-login__fields
-            +field({name:'email',type:'email',placeholder:'Email'})
-            +field({name:'password',type:'password',placeholder:'Пароль'})
+            +text-field({name:'email',type:'email',placeholder:'Email'})
+            +text-field({name:'password',type:'password',placeholder:'Пароль'})
         +button({classButton:'bigFull',text:'Войти',arrowIcon:true})
         footer.form-login__footer
             span Нет аккаунта на Toxin? 
-            +button({classButton:'border',text:'Создать'})
+            +button({mods:'border',text:'Создать'})
