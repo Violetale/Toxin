@@ -1,9 +1,16 @@
 mixin checkbox(params={})
-  -const{textLabel='',name,value,checked=false,rich=false,header=''}=params;
-  -const richMod = (rich)?' checkbox_rich':'';
+  -const{textLabel='',name,value,checked=false,mods='',header=''}=params;
+  //--const richMod = (rich)?' checkbox_rich':'';
+  -
+     let modsClasses = '';
+        if mods
+            modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+item;
+            }
   label.checkbox__wrap
     input(type='checkbox',name=name,checked=checked, value=value)
       if rich
         p.checkbox__header=header
     p.checkbox__description=textLabel
-+checkbox({textLabel:'text',name:1,value:2,checked:true,rich:false})
+//-+checkbox({textLabel:'text',name:1,value:2,checked:true,rich:false})

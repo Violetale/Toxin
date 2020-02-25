@@ -2,13 +2,15 @@ mixin button(params={})
     - const{mods='',text='',arrowIcon=false}=params;
     -const className = 'button';
     -
-     let modsClasses ='';
-        if params.mods
-            mods.split(',');
-            each item in mods
-                modsClasses=modsClasses+' '+className+'_'+item;
+     let modsClasses = '';
+        if mods
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
     -const arrowMod = (arrowIcon)?" button"+"_withArrow":""; //-для удобства объявлеяется через переменную с юулевым знач
-    button(type='button',class='button'+' button_'+modsClasses+arrowMod)=text
+    
+    button(type='button',class='button'+modsClasses+arrowMod)=text
         if arrowIcon
             i.material-icons arrow_forward
 //-кнопка с текстом
