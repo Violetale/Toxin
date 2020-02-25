@@ -1,5 +1,6 @@
 mixin button(params={})
     - const{mods='',text='',arrowIcon=false}=params;
+    -const className = 'button';
     -
      let modsClasses ='';
         if params.mods
@@ -19,5 +20,5 @@ mixin button(params={})
 //-bigFull-большая залитая цветом кнопка
 //-link -кнопка без границы и градиента, похожа на обычную ссылку
 //-Пример вызова:
-//-+button({classButton:'full',text:'Click me'})-//
+//-+button({mods:'full',text:'Click me'})-//
     
