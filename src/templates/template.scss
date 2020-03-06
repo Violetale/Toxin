@@ -8,11 +8,30 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   h1,h2{
-    font-family: $font-titles;    
+    font-family: $font-titles;
+    font-weight: bold; 
 }
-  h3,body{
-    font-family: $font-main;
+h3,body{
+  font-family: $font-main;
 }
+h1{
+  font-size: .875rem;
+  line-height:1.875rem ;
+}
+h2{
+  font-size: 1.1875rem‬;
+  line-height: 1.1875rem‬;
+}
+h3{
+  font-size: .75rem;
+  line-height: .9375rem;
+}
+body{
+  font-size:.875rem ;
+  line-height: 1.5rem;
+}
+  
+//переписать код ниже
   .container-columns{
     display:flex;
     flex-direction: row;
