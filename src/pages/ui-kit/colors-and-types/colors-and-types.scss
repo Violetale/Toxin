@@ -2,19 +2,15 @@
 @import './../../../templates/template.scss';
 body{
     background-color: #FFFFFF;
+    margin: 0 auto;
+    width:100%;
+    max-width: 1440px;
 }
- main{
-        width:100%;
-        max-width: 1440px;
-        margin:0 auto;
- }
-
 .container-columns{  
-    padding: 67px;
-    
+    padding-top: 67px;
     .column{
          &:first-child{
-            margin-left: 120px;
+            margin-left: 150px;
             flex-basis:320px;
             display:flex;
             flex-direction: column;
