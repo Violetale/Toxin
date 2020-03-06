@@ -1,5 +1,5 @@
 include ./../field/field.pug
 mixin subscription-text-field(params={})
     -const {textLabel='',name='',type='text',value=''}=params;
-    +field({textLabel:textLabel,name:name,type:type,value:value})
+    +text-field({textLabel:textLabel,name:name,type:type,value:value})
     i.material-icons forward_arrow

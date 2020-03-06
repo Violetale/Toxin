@@ -1,1 +1,15 @@
 @import '../../assets/scss/vars.scss';
+.social-icons__item{
+    list-style: none;
+    display: inline-block;
+}
+.social-icon{
+    height: $icon-font-size;
+    width: $icon-font-size;
+}
+.social-icons__item{
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }

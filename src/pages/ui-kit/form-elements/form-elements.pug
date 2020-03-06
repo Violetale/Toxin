@@ -29,14 +29,14 @@ block content
         .columns-container
             section.column_elements
                 +form-elements__item
-                    +field({textLabel:'Text field',name:'email',type:'text',placeholder:'Email'})
+                    +text-field({textLabel:'Text field',name:'email',type:'text',placeholder:'Email'})
                 +form-elements__item
-                    +field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
+                    +text-field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
                 //dropdown-guests
                 +form-elements__item
-                    +field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
+                    +text-field({textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
                 +form-elements__item
-                    +field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
+                    +text-field({textLabel:'subscription text field',name:'email',type:'text',value:'',placeholder:'Email',arrowIcon:true})
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})
                     +dropdown-date({placeholder:'ДД.ММ.ГГГГ'})
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})

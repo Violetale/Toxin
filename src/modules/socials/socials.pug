@@ -1,5 +1,7 @@
 mixin social-icons(params={})
-    -const {classesIcons=["fa-twitter","fa-facebook-square","fa-instagram"]}=params;
-    div.social-icons
-        for classIcon in classesIcons
-            i(class='fa '+classIcon)
+    -const {links=['twitter.svg','facebook.svg','instagram.svg']}=params;
+    ul.social-icons
+        for item in links
+            li.social-icons__item
+                a(href="#")
+                    img(class="social-icon" src="assets/img/social-icons/"+item)

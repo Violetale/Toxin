@@ -5,7 +5,7 @@
     height: 44px;
     .dropdown__label{
     position:relative;
-    font-family: $font-secondary;
+    font-family: $font-main;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -14,7 +14,7 @@
     color: $dark-shade-100;
     
     .dropdown__placeholder{
-        font-family: $font-secondary;
+        font-family: $font-main;
         font-style: normal;
         font-weight: normal;
         padding-left:15px;

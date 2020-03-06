@@ -87,19 +87,6 @@
           url('./../fonts/Quicksand/quicksand-700.ttf') format('truetype'),
           url('./../fonts/Quicksand/quicksand-700.svg') format('svg');    
    }
-   @font-face {
-     font-family: 'Font Awesome 5 Brands';
-     font-style: normal;
-     font-weight: 400;
-     src: url('./../fonts/Fa-brands/fa-brands-400.eot'); 
-     src: local('Font Awesome 5 Brands'),
-          local('Font Awesome 5 Brands-Regular'),
-          url('./../fonts/Fa-brands/fa-brands-400.eot#iefix') format('embedded-opentype'),
-          url('./../fonts/Fa-brands/fa-brands-400.woff2') format('woff2'),
-          url('./../fonts/Fa-brands/fa-brands-400.woff') format('woff'),
-          url('./../fonts/Fa-brands/fa-brands-400.ttf') format('truetype'),
-          url('./../fonts/Fa-brands/fa-brands-400.svg') format('svg'); 
-   }
   .material-icons {
      font-family: 'Material Icons';
      font-weight: normal;
@@ -124,10 +111,11 @@
      /* Support for IE. */
      font-feature-settings: 'liga';
    }
-   .fa{
-     font-family: 'Font Awesome 5 Brands';
-     font-style: normal;
-     font-weight: normal;
+   .fab{
+     font-family: 'Font Awesome';
+     background: $purple-gradient;
+    background-clip: text;
+    color: transparent;
      font-size: 24px;
      line-height: 23px;
      color: $purple;
