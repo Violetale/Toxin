@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'normalize.css';
+import MaskInput from 'mask-input';
 import 'ion-rangeslider/css/ion.rangeSlider.css'
 import 'ion-rangeslider/js/ion.rangeSlider';
 import 'air-datepicker/dist/js/datepicker.js';

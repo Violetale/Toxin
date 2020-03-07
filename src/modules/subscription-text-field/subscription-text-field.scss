@@ -1,4 +1,16 @@
 @import '../../assets/scss/vars.scss';
-i.material-icons{
-   //color:$purple;
+.subscription-text-field__label{
+   position: relative;
+   //width: 320px;
+}
+.subscription-text-field{
+      width: 320px;
+    height: 44px;
+    padding: 12px 15px;
+   &+.material-icons{
+      position: absolute;
+      top:0.5rem;
+      right:0.5rem;
+      color:$purple;
+ }
 }
