@@ -10,8 +10,8 @@ mixin text-field(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-  label.text-field__label=textLabel
-        input(class='text-field',type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)
+    label(class=className+'__label')=textLabel
+      input(class=className+' '+modsClasses,type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)
         
 //-пример вызова   
 //-+field({textLabel:'123',name:'1',type:'text',value:'1'})

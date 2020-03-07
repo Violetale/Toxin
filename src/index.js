@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import 'normalize.css';
-import MaskInput from 'mask-input';
 import 'ion-rangeslider/css/ion.rangeSlider.css'
 import 'ion-rangeslider/js/ion.rangeSlider';
 import 'air-datepicker/dist/js/datepicker.js';
@@ -47,3 +46,4 @@ import './modules/toggle/toggle.js';
 import './pages/ui-kit/colors-and-types/colors-and-types.js';
 import './pages/ui-kit/form-elements/form-elements.js'
 import './pages/ui-kit/cards/cards.js';
+//по мере работы подключить оставшиеся странички

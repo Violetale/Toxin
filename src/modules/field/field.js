@@ -1,6 +1,5 @@
 import './field.scss';
-const maskInput = new MaskInput(document.querySelector('.text-field-masked'), {
-    mask: 'ДД.ММ.ГГГГ',
-    alwaysShowMask: true,
-    maskChar: '_',
-  });
+import 'jquery.maskedinput/src/jquery.maskedinput';
+
+const maskedFields = $('.text-field_masked');
+maskedFields.mask('99.99.9999');

@@ -33,8 +33,8 @@ block content
                 +form-elements__item
                     +text-field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
                 //dropdown-guests
-                +form-elements__item
-                    +text-field({mods:'masked',textLabel:'Masked text field',name:'email',type:'text',masked:'true'})
+                +form-elements__item({itemTitle:'Masked text field'})
+                    +text-field({mods:'masked',placeholder:'ДД.ММ.ГГГГ'})
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})
                     +dropdown-date({placeholder:'ДД.ММ.ГГГГ'})
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})
