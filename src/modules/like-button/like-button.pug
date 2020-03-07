@@ -12,6 +12,6 @@ mixin like-button(params={})
         }
 
         
-    div.like-button(class=clickedMod)
+    div(class=className + " " +modsClasses)
         i.material-icons favorite
         span.like-button__count(data-value=count)=count

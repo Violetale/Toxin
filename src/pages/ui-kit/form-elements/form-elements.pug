@@ -25,7 +25,7 @@ block content
                 block
     //-основное содержимое страницы
     main.form-elements
-        +logo(true)
+        +logo(mods='gray')
         .columns-container
             section.column_elements
                 +form-elements__item
@@ -48,8 +48,8 @@ block content
 
             section.column_elements
                 +form-elements__item({itemTitle:'like button',halfColumn:true})
-                    +like-button({clicked:false,count:11})
-                    +like-button({clicked:true,count:12})
+                    +like-button({count:11})
+                    +like-button({mods:'clicked',count:12})
                 +form-elements__item
                     +social-icons
                 +form-elements__item

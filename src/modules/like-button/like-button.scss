@@ -21,7 +21,7 @@
     &_clicked{
         color: $purple;
         box-shadow: 2px 1000px 1px #fff inset;
-        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $purple-gradient;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $primary-gradient;
         background-clip: content-box, border-box;
         background-origin: border-box;
         i.material-icons{
