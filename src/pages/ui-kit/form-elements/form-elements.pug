@@ -53,8 +53,7 @@ block content
                 +form-elements__item({itemTitle:'like button',halfColumn:true})
                     +like-button({count:11})
                     +like-button({mods:'clicked',count:12})
-                +form-elements__item
-                    
+                
                 +form-elements__item
                     +comment({linkAvatar:'assets/img/user/murad.png', username:'Мурад Сарафанов',commentDate:'5 дней назад',commentText:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
             section.column_elements
@@ -62,3 +61,5 @@ block content
                     +range-slider({textTitle:'range slider',description:'Стоимость за сутки пребывания в номере'})
                 +form-elements__item({itemTitle:'Pagination'})
                     +pagination
+                +form-elements__item({itemTitle:'bullet list'})
+                   +bullet-list({items:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']}) 
