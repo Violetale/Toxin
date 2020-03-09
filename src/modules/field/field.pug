@@ -11,7 +11,7 @@ mixin text-field(params={})
             }
         }
     label(class=className+'__label')=textLabel
-      input(class=className+' '+modsClasses,type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)
+      input(class=className+modsClasses,type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)
         
 //-пример вызова   
 //-+field({textLabel:'123',name:'1',type:'text',value:'1'})

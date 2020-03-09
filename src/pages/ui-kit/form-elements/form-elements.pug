@@ -15,6 +15,7 @@ block content
     include ./../../../modules/subscription-text-field/subscription-text-field.pug
     include ./../../../modules/socials/socials.pug
     include ./../../../modules/comment/comment.pug
+    include ./../../../modules/checkbox/checkbox.pug
     //-миксины для размещения эл-ов на странице,соц.иконки потом удалить
     mixin form-elements__item(params={})
         -const {itemTitle='',halfColumn=false}=params;
@@ -45,6 +46,10 @@ block content
                     +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
 
             section.column_elements
+                +form-elements__item({itemTitle:'chexbox buttons'})
+                    +checkbox({textLabel:'Можно курить'})
+                    +checkbox({textLabel:'Можно с питомцами',checked:true})
+                    +checkbox({textLabel:'Можно пригласить гостей (до 10 человек)',checked:true})
                 +form-elements__item({itemTitle:'like button',halfColumn:true})
                     +like-button({count:11})
                     +like-button({mods:'clicked',count:12})

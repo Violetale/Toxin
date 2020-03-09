@@ -1,0 +1,43 @@
+@import '../../assets/scss/vars.scss';
+.checkbox{
+    display:none;
+    &__label{
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+        width:100%;
+        cursor:pointer;
+        padding-left: 22px;
+        vertical-align: center;
+    }
+    &__box{
+        position: absolute;
+        top:0;
+        left:0;
+        content:"";
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        background: #FFFFFF;
+        border:$main-border-style;
+        color: $purple;
+        &::after{
+        position: absolute;
+        top:4px;
+        left:5px;
+        background-image:url("/assets/img/checkbox.svg");
+        width:10px;
+        height:10px;
+    }
+    }
+}
+input.checkbox+.checkbox__box::after{
+    content:none;
+}
+input.checkbox:checked+.checkbox__box::after{
+    content:"";
+}
+input.checkbox:checked+.checkbox__box{
+    border: 1px solid $purple;
+}
