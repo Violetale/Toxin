@@ -1,5 +1,12 @@
 @import '../../assets/scss/vars.scss';
 .bullet-list{
-    list-style-image:url('/assets/img/ellipse.svg');
-    padding:20px;
+    list-style:none;
+    li{
+        margin-left:10px;
+        ::after{
+            background-image: url('assets/img/ellipse.svg');
+        }
+    }
+    
+
 }

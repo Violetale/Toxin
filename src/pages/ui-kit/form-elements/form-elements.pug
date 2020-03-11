@@ -29,10 +29,10 @@ block content
         +logo({mods:'gray'})
         .columns-container
             section.column_elements
-                +form-elements__item
-                    +text-field({textLabel:'Text field',name:'email',type:'text',placeholder:'Email'})
-                +form-elements__item
-                    +text-field({textLabel:'Text field',name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
+                +form-elements__item({itemTitle:'Text field'})
+                    +text-field({name:'email',type:'text',placeholder:'Email'})
+                +form-elements__item({itemTitle:'Text field'})
+                    +text-field({name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
                 //dropdown-guests
                 +form-elements__item({itemTitle:'Masked text field'})
                     +text-field({mods:'masked',placeholder:'ДД.ММ.ГГГГ'})
