@@ -1,5 +1,5 @@
 mixin checkbox(params={})
-  -const{textLabel='',name,value,checked=false,mods='',header=''}=params;
+  -const{textLabel='',name,value,checked=false,mods='',headerLabel=''}=params;
   -const className = 'checkbox';
     -
      let modsClasses = '';
@@ -12,5 +12,7 @@ mixin checkbox(params={})
     label(class=className+'__label')
       input(class=className+modsClasses, type='checkbox',name=name,checked=checked, value=value)
       span(class=className+'__box')
-      span=textLabel
+      if(mods=='rich')
+        h3(class=className+'__header')=headerLabel
+      p=textLabel
 //-+checkbox({textLabel:'text',name:1,value:2,checked:true,mods:'rich'})
