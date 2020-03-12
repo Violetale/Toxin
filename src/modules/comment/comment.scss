@@ -6,6 +6,7 @@
     font-size: 14px;
     line-height: 24px;
     font-family: $font-main;
+    color:$dark-shade-75;
     .like-button{
         position: absolute;
         top:61px;
@@ -22,6 +23,7 @@
     position: absolute;
     top:0;
     left:58px;
+    font-weight: bold;
 }
 .comment__date{
     position: absolute;
