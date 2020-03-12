@@ -1,0 +1,35 @@
+@import '../../assets/scss/vars.scss';
+.comment{
+    position: relative;
+    width: 711px;
+    height: 133px;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: $font-main;
+    .like-button{
+        position: absolute;
+        top:61px;
+        left:4px;
+    }
+}
+.comment__user-avatar{
+    //отредактировать после того как будут обрезаны картинки аватарки
+    position: absolute;
+    width:48px;
+    height: 48px;
+}
+.comment__username{
+    position: absolute;
+    top:0;
+    left:58px;
+}
+.comment__date{
+    position: absolute;
+    top:24px;
+    left:58px;
+}
+.comment__comment-text{
+    position: absolute;
+    top:61px;
+    left:58px;
+}

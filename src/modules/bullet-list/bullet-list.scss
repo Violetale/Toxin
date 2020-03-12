@@ -3,8 +3,8 @@
     list-style:none;
     li{
         margin-left:10px;
-        ::after{
-            background-image: url('assets/img/ellipse.svg');
+        ::before{
+            //background-image: url('assets/img/ellipse.svg');
         }
     }
     
