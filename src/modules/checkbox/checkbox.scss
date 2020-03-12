@@ -1,18 +1,29 @@
 @import '../../assets/scss/vars.scss';
 .checkbox{
-    display:none;
-    &__label{
-        position: relative;
-        box-sizing: border-box;
-        display: block;
-        width:100%;
-        cursor:pointer;
-        padding-left: 22px;
-        vertical-align: center;
+    color:$dark-shade-50;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width:100%;
+    min-height:22px ;
+    cursor:pointer;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-family: $font-main;
+    
+    &__input{
+        display:none;
     }
+    &__text-label{
+        margin:0;
+       position: absolute;
+       left:30px;
+        font-size: 14px;
+        line-height: 18px;
+        }
     &__box{
         position: absolute;
-        top:0;
+        top:2px;
         left:0;
         content:"";
         box-sizing: border-box;
@@ -20,7 +31,7 @@
         width: 20px;
         height: 20px;
         background: #FFFFFF;
-        border:$main-border-style;
+        border:$secondary-border-style;
         color: $purple;
         &::after{
         position: absolute;
@@ -30,14 +41,38 @@
         width:10px;
         height:10px;
     }
-    }
 }
-input.checkbox+.checkbox__box::after{
+}
+    //стили с модификатором rich
+    .rich-checkbox-wrap{
+        width:320px;
+        min-height: 50px;
+        margin-bottom: 10px;
+        .checkbox{
+            margin-bottom: 0;
+        }
+        .checkbox__description{
+            color: $dark-shade-50;
+          margin-left: 30px;
+          font-size: .75rem;
+        line-height: .875rem;
+        }
+    }
+    .checkbox_rich{
+        .checkbox__text-label{
+            color: $dark-shade-75;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            
+        }
+    }
+.checkbox__input+.checkbox__box::after{
     content:none;
 }
-input.checkbox:checked+.checkbox__box::after{
+.checkbox__input:checked+.checkbox__box::after{
     content:"";
 }
-input.checkbox:checked+.checkbox__box{
+.checkbox__input:checked+.checkbox__box{
     border: 1px solid $purple;
 }

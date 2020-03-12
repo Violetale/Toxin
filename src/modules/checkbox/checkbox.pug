@@ -1,5 +1,5 @@
 mixin checkbox(params={})
-  -const{textLabel='',name,value,checked=false,mods='',headerLabel=''}=params;
+  -const{textLabel='',name,value,checked=false,mods='',desc=''}=params;
   -const className = 'checkbox';
     -
      let modsClasses = '';
@@ -9,10 +9,18 @@ mixin checkbox(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-    label(class=className+'__label')
-      input(class=className+modsClasses, type='checkbox',name=name,checked=checked, value=value)
-      span(class=className+'__box')
-      if(mods=='rich')
-        h3(class=className+'__header')=headerLabel
-      p=textLabel
+   
+    if(mods=='rich')
+      div(class='rich-checkbox-wrap')
+        label(class=className+modsClasses)
+          input(class=className+'__input', type='checkbox',name=name,checked=checked, value=value)
+          span(class=className+'__box')
+          p.checkbox__text-label=textLabel
+        div.checkbox__description=desc
+    else 
+      label(class=className+modsClasses)
+        input(class=className+'__input', type='checkbox',name=name,checked=checked, value=value)
+        span(class=className+'__box')
+        p.checkbox__text-label=textLabel
+      
 //-+checkbox({textLabel:'text',name:1,value:2,checked:true,mods:'rich'})
