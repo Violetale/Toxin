@@ -1,10 +1,20 @@
 @import '../../assets/scss/vars.scss';
 .bullet-list{
+    margin: 0;
     list-style:none;
+    padding-inline-start:0;
     li{
-        margin-left:10px;
-        ::before{
-            //background-image: url('assets/img/ellipse.svg');
+        position: relative;
+       padding-left:20px;
+        &::before{
+            position: absolute;
+            left:0;
+            top:7px;
+            content:'';
+            width:10px;
+            height: 10px;
+             border-radius: 10px;
+            background: $dark-shade-25;
         }
     }
     
