@@ -13,7 +13,10 @@ mixin checkboxlist(params={})
             }
     div(class=className+modsClasses)
         .checkbox-list_label=textLabel
-            i.material-icons expand_more
+            if(mods=='open')
+                i.material-icons expand_less
+            else
+                i.material-icons expand_more
         
         ul.checkbox-list__list
             li.checkbox-list__list__item
