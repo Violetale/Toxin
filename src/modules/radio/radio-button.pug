@@ -1,8 +1,20 @@
-mixin radio(params={})
-    -const{textLabel,name,value}=params;
-    label.radio_wrap=textLabel
-        input(
+mixin radio-button(params={})
+    -const{mods='',textLabel='',name='',value='',checked=false}=params;
+    -const className = 'radio-button';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }
+    label.radio-button
+        input(class="radio-button__input"
             type='radio',
             name=name,
             value=value,
+            checked=checked
         )
+        span.radio-button__box
+        span.radio-button__label=textLabel

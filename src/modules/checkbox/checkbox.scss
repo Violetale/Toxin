@@ -36,10 +36,14 @@
         &::after{
         position: absolute;
         top:4px;
-        left:5px;
-        //background-image:url("/assets/img/checkbox.svg");
-        width:10px;
-        height:10px;
+        left:6px;
+        width:6px;
+        height:8px;
+        border-width: 0 2px 2px 0;
+        border-style: solid;
+        border-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        border-image-slice: 1;
+        transform: rotate(45deg);
     }
 }
 }
@@ -67,6 +71,7 @@
             
         }
     }
+    //cтили при перемене состояний
 .checkbox__input+.checkbox__box::after{
     content:none;
 }

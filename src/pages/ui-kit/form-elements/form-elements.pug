@@ -16,6 +16,7 @@ block content
     include ./../../../modules/socials/socials.pug
     include ./../../../modules/comment/comment.pug
     include ./../../../modules/checkbox/checkbox.pug
+    include ./../../../modules/radio/radio-button.pug
     //-миксины для размещения эл-ов на странице,соц.иконки потом удалить
     mixin form-elements__item(params={})
         -const {itemTitle='',halfColumn=false}=params;
@@ -50,6 +51,11 @@ block content
                     +checkbox({textLabel:'Можно курить'})
                     +checkbox({textLabel:'Можно с питомцами',checked:true})
                     +checkbox({textLabel:'Можно пригласить гостей (до 10 человек)',checked:true})
+                +form-elements__item({itemTitle:'radio buttons'})
+                    .radio-buttons
+                        +radio-button({textLabel:'Мужчина',name:'sex',value:'male',checked:true})
+                        +radio-button({textLabel:'Женщина',name:'sex',value:'female'})
+                +form-elements__item({itemTitle:'toggle'})
                 +form-elements__item({itemTitle:'like button',halfColumn:true})
                     +like-button({count:11})
                     +like-button({mods:'clicked',count:12})
