@@ -1,0 +1,20 @@
+@import '../../assets/scss/vars.scss';
+.checkbox-list{
+    width: 320px;
+    position: relative;
+    i.material-icons{
+        position: absolute;
+        top: -5px;
+        right: 0;
+    }
+}
+.checkbox-list__label{
+    font-weight: bold;
+        font-size: .75rem;
+        line-height: .9375rem;
+        text-transform: uppercase;
+        color: $dark-shade-100;
+}
+.checkbox-list__list{
+    list-style: none;
+}

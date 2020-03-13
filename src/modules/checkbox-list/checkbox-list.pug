@@ -1,7 +1,7 @@
-include './../../primitives/checkbox/checkbox.pug'
-include './../../primitives/icon/icon.pug'
-mixin checkboxlist(params={})
-    -const {textLabel,mods=''}=params;
+//-include './../../primitives/checkbox/checkbox.pug'
+//-include './../../primitives/icon/icon.pug'
+mixin checkbox-list(params={})
+    -const {textLabel='',mods=''}=params;
     -const className = 'checkbox-list';
     -
      let modsClasses = '';
@@ -12,7 +12,7 @@ mixin checkboxlist(params={})
             }
             }
     div(class=className+modsClasses)
-        .checkbox-list_label=textLabel
+        .checkbox-list__label=textLabel
             if(mods=='open')
                 i.material-icons expand_less
             else

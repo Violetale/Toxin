@@ -16,6 +16,7 @@ block content
     include ./../../../modules/socials/socials.pug
     include ./../../../modules/comment/comment.pug
     include ./../../../modules/checkbox/checkbox.pug
+    include ./../../../modules/checkbox-list/checkbox-list.pug
     include ./../../../modules/radio/radio-button.pug
     //-миксины для размещения эл-ов на странице,соц.иконки потом удалить
     mixin form-elements__item(params={})
@@ -73,6 +74,19 @@ block content
             .column_elements
         .columns-container
             .column_elements
+                +form-elements__item
+                    +checkbox-list({textLabel:'expandable checkbox list'})
+                +form-elements__item
+                    +checkbox-list({textLabel:'expandable checkbox list',mods:'open'})
+                        //-добавить модификаторы
+                        +checkbox({textLabel:'Завтрак'})
+                        +checkbox({textLabel:'Письменный стол',checked:true})
+                        +checkbox({textLabel:'Стул для кормления',checked:true})
+                        +checkbox({textLabel:'Кроватка',checked:true})
+                        +checkbox({textLabel:'Телевизор'})
+                        +checkbox({textLabel:'Шампунь'})
+                        +checkbox({textLabel:'Телевизор'})
+                        +checkbox({textLabel:'Шампунь'})
             .column_elements
                 +form-elements__item({itemTitle:'rich chexbox buttons'})
                     +checkbox({textLabel:'Широкий коридор',mods:'rich',desc:'Ширина коридоров в номере не менее 91 см.',})
