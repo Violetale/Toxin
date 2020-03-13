@@ -9,6 +9,7 @@
         max-width: 1440px;
     }
 }
+
 .form-elements__item{
     width:320px;
     margin-bottom: 1.5rem;
@@ -38,5 +39,11 @@
             & div:first-child{
                 margin-right:10px;
             }
+    }
+}
+//стили для столбца с компонентом comment
+.column-elemnts_two-column{
+    .form-elements__item{
+    width:712px;
     }
 }
