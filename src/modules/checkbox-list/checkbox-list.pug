@@ -11,8 +11,8 @@ mixin checkbox-list(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
             }
-    div(class=className+modsClasses)
-        .checkbox-list__label=textLabel
+    div(class=className+'__wrap')
+        div(class=className+modsClasses)=textLabel
             if(mods=='open')
                 i.material-icons expand_less
             else

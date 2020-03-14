@@ -1,20 +1,26 @@
 @import '../../assets/scss/vars.scss';
-.checkbox-list{
+.checkbox-list__wrap{
     width: 320px;
     position: relative;
+    
     i.material-icons{
         position: absolute;
         top: -5px;
         right: 0;
     }
 }
-.checkbox-list__label{
+.checkbox-list__list{
+    display: none;
+    list-style: none;
+}
+.checkbox-list{
+    cursor: pointer;
     font-weight: bold;
         font-size: .75rem;
         line-height: .9375rem;
         text-transform: uppercase;
         color: $dark-shade-100;
-}
-.checkbox-list__list{
-    list-style: none;
+        &_open+.checkbox-list__list{
+            display: block;
+        }
 }
