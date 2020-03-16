@@ -16,6 +16,9 @@
     #{$hover}{
         opacity: 0.5;
     }
+    &_hover{
+        opacity: 0.5;
+    }
     &_full{
         background: $primary-gradient;
         color:white;
@@ -44,6 +47,9 @@
         border-radius: 0;
         color: $purple;
         #{$hover}{
+            color: $dark-shade-50;
+        }
+        &.button_hover{
             color: $dark-shade-50;
         }
 

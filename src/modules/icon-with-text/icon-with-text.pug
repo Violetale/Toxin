@@ -1,9 +1,9 @@
-mixin icon-with-text(params)
-    -const {icon,title,description}=params;
-    ul.icon-with-text_-wrap
-        li.icon-with-text-list__item
-                    .icon-with-text-list__item__icon
-                        //icon    
-                    .icon-with-text-list__item__text
-                        .icon-with-text-list__item__text__title=title
-                        .icon-with-text-list__item__text__description=description
+mixin icon-text(params={})
+    -const {iconCode='',title='',description=''}=params;
+    ul.icon--text_list
+        li.icon-text-list__item
+                    .icon-text-__icon
+                        i.material-icons=iconCode
+                    .icon-text__text
+                        .icon-text__text__title=title
+                        .icon-text__text__description=description

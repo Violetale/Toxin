@@ -1,5 +1,5 @@
-mixin toggle(params)
-    -const{checked='false'}=params;
+mixin toggle(params={})
+    -const{textLabel='',checked=false}=params;
     -const className = 'toggle-button';
     -
      let modsClasses = '';
@@ -9,6 +9,6 @@ mixin toggle(params)
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-    label(class=className+'__wrap')
+    label(class=className+'__wrap')=textLabel
         input(type='checkbox' checked=checked)
-        span.slider-round
+        span.slider.round

@@ -18,6 +18,8 @@ block content
     include ./../../../modules/checkbox/checkbox.pug
     include ./../../../modules/checkbox-list/checkbox-list.pug
     include ./../../../modules/radio/radio-button.pug
+    include ./../../../modules/toggle/toggle.pug
+    include ./../../../modules/icon-with-text/icon-with-text.pug
     //-миксины для размещения эл-ов на странице,соц.иконки потом удалить
     mixin form-elements__item(params={})
         -const {itemTitle='',halfColumn=false}=params;
@@ -57,6 +59,8 @@ block content
                         +radio-button({textLabel:'Мужчина',name:'sex',value:'male',checked:true})
                         +radio-button({textLabel:'Женщина',name:'sex',value:'female'})
                 +form-elements__item({itemTitle:'toggle'})
+                        +toggle({textLabel:'Получать спецпредложения',checked:true})
+                        +toggle({textLabel:'Получать спецпредложения'})
                 +form-elements__item({itemTitle:'like button',halfColumn:true})
                     +like-button({count:11})
                     +like-button({mods:'clicked',count:12})
@@ -65,6 +69,14 @@ block content
             .column_elements
                 +form-elements__item
                     +range-slider({textTitle:'range slider',description:'Стоимость за сутки пребывания в номере'})
+                +form-elements__item({itemTitle:'Buttons'})
+                    +button({mods:'full',text:'Click me'})
+                    +button({mods:'full,hover',text:'Click me'})
+                    +button({mods:'border',text:'Click me'})
+                    +button({mods:'border,hover',text:'Click me'})
+                    +button({mods:'link',text:'Click me'})
+                    +button({mods:'link,hover',text:'Click me'})
+                    +button({mods:'bigFull',text:'Click me',arrowIcon:true})
                 +form-elements__item({itemTitle:'Pagination'})
                     +pagination
                 
@@ -78,7 +90,6 @@ block content
                     +checkbox-list({textLabel:'expandable checkbox list'})
                 +form-elements__item
                     +checkbox-list({textLabel:'expandable checkbox list',mods:'open'})
-                        //-добавить модификаторы
                         +checkbox({textLabel:'Завтрак'})
                         +checkbox({textLabel:'Письменный стол',checked:true})
                         +checkbox({textLabel:'Стул для кормления',checked:true})
