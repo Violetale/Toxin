@@ -1,1 +1,36 @@
 @import './../../assets/scss/vars.scss';
+.icon-text{
+    &__list{
+        position:relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid $dark-shade-10;
+    list-style: none;
+    width: 280px;
+    color:$dark-shade-75;
+    li{
+        display:flex;
+        padding-top:20px;
+        padding-bottom: 20px;
+    }
+}
+    &__icon{
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        i.material-icons{
+            color:transparent;
+            font-size: 48px;
+            line-height: 41px;
+            background:$primary-gradient;
+            background-clip: text;
+        }
+    }
+    &__text{
+        font-family: $font-main;
+        font-size: 14px;
+        line-height: 24px;
+        &__title{
+            font-weight: bold;
+        }
+    }
+}
