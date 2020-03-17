@@ -3,6 +3,7 @@
     padding:40px 30px;
     background: #FFFFFF;
     width: 380px;
+    height: 646px;
     border: $main-border-style;
     box-sizing: border-box;
     box-shadow: $main-box-shadow-style;
@@ -19,4 +20,9 @@
         line-height: 30px;
         color:$dark-shade-100;
 }
+    .form__footer{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
 }

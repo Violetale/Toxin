@@ -7,13 +7,14 @@ block content
     include ./../../../modules/datepicker/datepicker.pug
     include ./../../../modules/form-login/form-login.pug
     include ./../../../modules/card-room/card-room.pug
+    include ./../../../modules/form-registration/form-registration.pug
     //include ./../../../modules/
     main.cards
         +logo({mods:'gray'})
         .columns-container
             .column-elements
                 +form-search({textTitle:'Найдём номера под ваши пожелания'})
-            //form-reg
+                +form-registration({textTitle:'Регистрация аккаунта'})
             .column-elements
                 +form-login({textTitle:'Войти'})
             .column-elements

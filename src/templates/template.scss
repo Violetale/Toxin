@@ -23,6 +23,7 @@ h2{
   line-height: 1.1875rem‬;
 }
 h3{
+  margin:0;
   font-size: .75rem;
   line-height: .9375rem;
 }
@@ -33,6 +34,15 @@ body{
 button{
   font-size: .75rem;
   line-height: .9375rem;
+}
+label{
+  font-family: $font-main;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+/* identical to box height */
+
+  text-transform: uppercase;  
 }
   
 //переписать код ниже

@@ -1,12 +1,23 @@
+include ./../../modules/field/field.pug
+include ./../../modules/radio/radio-button.pug
+include ./../../modules/toggle/toggle.pug
+include ./../../modules/button/button.pug
 mixin form-registration(params={})
-    -const{}=params;
-    //field name
-    //field surname
-    //radio male female
-    //drop date 
-    //p data from enter
-    //field email
-    //field password
-    //toggle
-    //nigfull btn
+    -const {textTitle=''}=params;
+    form(class='form-registration')
+        h3.form-registation__title=textTitle
+        +text-field({name:'name',placeholder:'Имя'})
+        +text-field({name:'surname',placeholder:'Фамилия'})
+        .radio-buttons
+            +radio-button({textLabel:'Мужчина',name:'sex',value:'male',checked:true})
+            +radio-button({textLabel:'Женщина',name:'sex',value:'female'})
+        +dropdown-date({textLabel:'Дата Рождения'})
+        p данные для входа в сервис
+        +text-field({name:'email',type:'email',placeholder:'Email'})
+        +text-field({name:'password',type:'password',placeholder:'Пароль'})
+        +toggle({textLabel:'Получать спецпредложения'})
+        +button({mods:'bigFull',text:'перейти к оплате',arrowIcon:true})
+        .form__footer
+            p Уже есть аккаунт на Toxin?
+            +button({mods:'border',text:'войти'})
     //p havw account and borderbtn

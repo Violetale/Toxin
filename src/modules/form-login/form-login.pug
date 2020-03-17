@@ -3,12 +3,10 @@ include ./../../modules/button/button.pug
 mixin form-login(params)
     -const {textTitle=''}=params;
     form.form(class="form-login")
-        .form-login__title
-            h3.form-login__title__header=textTitle
-        .form-login__fields
-            +text-field({name:'email',type:'email',placeholder:'Email'})
-            +text-field({name:'password',type:'password',placeholder:'Пароль'})
-        +button({classButton:'bigFull',text:'Войти',arrowIcon:true})
-        footer.form-login__footer
+        h3.form-login__title=textTitle
+        +text-field({name:'email',type:'email',placeholder:'Email'})
+        +text-field({name:'password',type:'password',placeholder:'Пароль'})
+        +button({mods:'bigFull',text:'Войти',arrowIcon:true})
+        .form-login__footer
             span Нет аккаунта на Toxin? 
             +button({mods:'border',text:'Создать'})
