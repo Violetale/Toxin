@@ -5,16 +5,36 @@
     background-color: #FFFFFF;
     border: $main-border-style;
     box-shadow: $main-box-shadow-style;
-    span{
-        display: inline-block;
-        width:30%;
-        //text-align: center;
-        vertical-align: middle;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $font-main;
+    color:$dark-shade-50;
+    &__photo{
+        max-width: 100%;
     }
-    .reviews{
-        text-align: right;
+    &__details{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        &__number{
+        font-family: $font-titles;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color:black;
+        border-bottom: 1px solid $dark-shade-10;
+        }
+        &__luxe{
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color:$purple;
+            margin-left:5px;
+        }
     }
-}
-.photo-room{
-    max-width: 100%;
+    &__rating{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

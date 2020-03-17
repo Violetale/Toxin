@@ -4,8 +4,8 @@ mixin card-room(params={})
         img.card-room__photo(src=photoLink,alt='Photo of the room')
         div.card-room__details
             span.card-room__details__number='№'+numberRoom
-            if isLuxe
-                span.card-room__details__luxe люкс
+                if isLuxe
+                    span.card-room__details__luxe люкс
             span.room-price=price+'₽ в сутки'
         .card-room__rating
             //ratebutton
