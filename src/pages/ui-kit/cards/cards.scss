@@ -1,14 +1,16 @@
 @import './../../../templates/template.scss';
 @import '../../../assets/scss/vars.scss';
-body.cards{
-    background: #E5E5E5;
-
 .cards{
-    .wrapper-columns{
+    .columns-container{
         padding:72px 62px;
         display:grid;
         grid-template-columns: 380px 380px 320px;
         grid-column-gap: 40px;
     }
+    .column-elements{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
-}
+

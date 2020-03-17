@@ -1,11 +1,11 @@
 mixin card-room(params={})
     -const {photoLink='#',numberRoom='',price='',isLuxe=false,rate=0,reviews=0}=params;
     .card-room
-        img.photo-room(src=photoLink,alt='Photo of the room')
-        div.cars-room__details
-            span.room-number='№'+numberRoom
+        img.card-room__photo(src=photoLink,alt='Photo of the room')
+        div.card-room__details
+            span.card-room__details__number='№'+numberRoom
             if isLuxe
-                span.room-is-luxe люкс
+                span.card-room__details__luxe люкс
             span.room-price=price+'₽ в сутки'
         .card-room__rating
             //ratebutton

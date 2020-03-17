@@ -9,14 +9,14 @@ block content
     include ./../../../modules/card-room/card-room.pug
     //include ./../../../modules/
     main.cards
-        +logo(true)
-        .wrapper-columns
-            section.column-elements
+        +logo({mods:'gray'})
+        .columns-container
+            .column-elements
                 +form-search({textTitle:'Найдём номера под ваши пожелания'})
             //form-reg
-            section.column-elements
+            .column-elements
                 +form-login({textTitle:'Войти'})
-            section.column-elements
+            .column-elements
                 +datepicker
                 +card-room({photoLink:'assets/img/rooms/room888.jpg',numberRoom:'888',price:'9990',isLuxe:true,rate:5,reviews:145})
                 +card-room({photoLink:'assets/img/rooms/room840.jpg'})

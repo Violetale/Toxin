@@ -7,7 +7,8 @@ mixin form-search(params)
         .form-search__title
             h3.form-search__title__header=textTitle
         .form-search__inputs
-            //+dropdown-date
-            +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
-        +button({classButton:'bigFull',text:'Подобрать номер',arrowIcon:'true'})
+            +dropdown-date({textLabel:'Прибытие'})
+            +dropdown-date({textLabel:'Выезд'})
+            +dropdown({textLabel:'Гости',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
+        +button({mods:'bigFull',text:'Подобрать номер',arrowIcon:'true'})
 
