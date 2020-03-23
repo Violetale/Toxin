@@ -1,0 +1,14 @@
+@import './../../assets/scss/vars.scss';
+.form-reservation{
+padding:30px;
+background: #FFFFFF;
+width: 380px;
+height: 374px;
+border: $main-border-style;
+box-sizing: border-box;
+box-shadow: $main-box-shadow-style;
+border-radius: 4px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}

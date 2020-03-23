@@ -1,7 +1,7 @@
 mixin dropdown-date(params={})
     -const {textLabel='',placeholder='ДД.ММ.ГГГГ',value=''}=params;
     .dropdown.dropdown-date
-        .dropdown-date__item
-            label.dropdown-date__item__label=textLabel
-                input.datepicker-here(placeholder=value||placeholder,value=value)
-                i.material-icons expand_more
+        label.dropdown-date__label
+            p=textLabel
+            input.datepicker-here(placeholder=value||placeholder,value=value)
+            i.material-icons expand_more

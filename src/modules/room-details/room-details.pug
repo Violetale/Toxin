@@ -1,0 +1,16 @@
+include ./../dropdown-date/dropdown-date.pug 
+include ./../button/button.pug
+mixin room-details(params={})
+    -const {roomNumber='',roomPrice='',}=params;
+    form.form.form-reservation
+        .form-reservation__header
+            .form-reservation__roomNumber=roomNumber
+            .form-reservation__price=roomPrice
+            //dropdown-date 2 
+            //guests
+            //цена за бронь на т lytq
+            //скидка
+            //сбор за доп услуги
+            //итого  
+        +button({mods:'bigFull',textLabel:'Забронировать',arrowIcon:true})
+        

@@ -1,5 +1,5 @@
 mixin dropdown(params={})
-    -const{mods='',extLabel ='',placeholder='',buttons=false,items=[]}=params;
+    -const{mods='',textLabel ='',placeholder='',buttons=false,items=[]}=params;
     //--const openMod =(open)?' dropdown_opened':'';
     -const className = 'dropdown';
     -
@@ -10,19 +10,20 @@ mixin dropdown(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-    .iqdropdown.dropdown
-        p.dropdown__selection
-        i.material-icons expand_more
-        .dropdown-menu.iqdropdown-menu
-            for item in items
-                div.dropdown__menu.iqdropdown-menu
-                    for item in items
-                        - const { label, name, nouns } = item;
-                        div.dropdown__option.iqdropdown-menu-option(data-id = name)
-                            input.dropdown__input.visuallyhidden(
-                                type = "number"
-                                name = name
-                                data-nouns = nouns
-                            )
-                            div
-                                p.dropdown__item.iqdropdown-item= label
+    .dropdown__label=textLabel
+        .iqdropdown.dropdown
+            p.dropdown__selection
+            i.material-icons expand_more
+            .dropdown-menu.iqdropdown-menu
+                for item in items
+                    div.dropdown__menu.iqdropdown-menu
+                        for item in items
+                            - const { label, name, nouns } = item;
+                            div.dropdown__option.iqdropdown-menu-option(data-id = name)
+                                input.dropdown__input.visuallyhidden(
+                                    type = "number"
+                                    name = name
+                                    data-nouns = nouns
+                                )
+                                div
+                                    p.dropdown__item.iqdropdown-item= label

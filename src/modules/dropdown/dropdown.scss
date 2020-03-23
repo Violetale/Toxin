@@ -1,8 +1,9 @@
 @import '../../assets/scss/vars.scss';
 .dropdown{
+    display: inline-block;
     cursor: pointer;
     width: 320px;
-    height: 44px;
+}
     .dropdown__label{
     position:relative;
     font-family: $font-main;
@@ -39,7 +40,6 @@
             }
         }
     }
-}
     .dropdown__item{
         width:100%;
         div{
