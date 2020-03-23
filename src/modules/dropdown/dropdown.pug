@@ -1,29 +1,31 @@
 mixin dropdown(params={})
-    -const{mods='',textLabel ='',placeholder='',buttons=false,items=[]}=params;
-    //--const openMod =(open)?' dropdown_opened':'';
+    -const{mods='',textLabel ='',placeholder='',buttons=false}=params;
+    //-возможные модификации guests и furniture
     -const className = 'dropdown';
     -
-     let modsClasses = '';
+        let modsClasses = '';
         if (mods){
             const modsList= mods.split(',');
             for(let i = 0; i < modsList.length;i++){
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
+        let items=[];
+        if (mods=='guests'){
+            items=['Взрослые','Дети','Младенцы'];
+        }else{
+            items=['Спальни','Кровати','Ванные комнаты'];
+        }
+
     .dropdown__label=textLabel
-        .iqdropdown.dropdown
+        .custom.iqdropdown(class=modsClasses)
             p.dropdown__selection
             i.material-icons expand_more
-            .dropdown-menu.iqdropdown-menu
+            .iqdropdown-menu
                 for item in items
-                    div.dropdown__menu.iqdropdown-menu
-                        for item in items
-                            - const { label, name, nouns } = item;
-                            div.dropdown__option.iqdropdown-menu-option(data-id = name)
-                                input.dropdown__input.visuallyhidden(
-                                    type = "number"
-                                    name = name
-                                    data-nouns = nouns
-                                )
-                                div
-                                    p.dropdown__item.iqdropdown-item= label
+                    div(
+                        class="iqdropdown-menu-option"
+                        data-id="minor"
+                        data-defaultcount="0"
+                        data-mincount="0")  
+                    p.iqdropdown-item=item

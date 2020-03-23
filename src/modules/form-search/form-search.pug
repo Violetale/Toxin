@@ -8,6 +8,6 @@ mixin form-search(params)
         .form-search__inputs
             +dropdown-date({textLabel:'Прибытие'})
             +dropdown-date({textLabel:'Выезд'})
-            +dropdown({textLabel:'Гости',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
+            +dropdown({mods:'guests',textLabel:'Гости',open:false,placeholder:'Количество гостей',buttons:true})
         +button({mods:'bigFull',text:'Подобрать номер',arrowIcon:'true'})
 
