@@ -1,0 +1,14 @@
+mixin rate-button(params={})
+    -const {rate=0,stars=5}=params;
+    -let starsBorder=stars-rate;
+    -let fullStars=rate;
+    div.rate-buttons
+        while (fullStars>0) 
+            i.material-icons star 
+            -fullStars--;
+        while (starsBorder>0)
+            i.material-icons star_border 
+            -starsBorder--;
+        
+
+        

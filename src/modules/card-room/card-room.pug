@@ -1,3 +1,4 @@
+include ./../rate-button/rate-button.pug
 mixin card-room(params={})
     -const {photoLink='#',numberRoom='',price='',isLuxe=false,rate=0,reviews=0}=params;
     .card-room
@@ -8,5 +9,5 @@ mixin card-room(params={})
                     span.card-room__details__luxe люкс
             span.room-price=price+'₽ в сутки'
         .card-room__rating
-            //ratebutton
+            +rate-button({rate:rate})
             span.reviews=reviews+' '+' отзывов'
