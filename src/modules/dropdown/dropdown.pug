@@ -1,5 +1,6 @@
+include ./../button/button.pug
 mixin dropdown(params={})
-    -const{mods='',textLabel ='',placeholder='',buttons=false}=params;
+    -const{mods='',textLabel ='',placeholder='',controls=false}=params;
     //-возможные модификации guests и furniture
     -const className = 'dropdown';
     -
@@ -17,15 +18,19 @@ mixin dropdown(params={})
             items=['Спальни','Кровати','Ванные комнаты'];
         }
 
-    .dropdown__label=textLabel
-        .custom.iqdropdown(class=modsClasses)
-            p.dropdown__selection
+    .dropdown
+        p.dropdown__label=textLabel
+        .iqdropdown(class=modsClasses)
+            p.dropdown-selection
             i.material-icons expand_more
             .iqdropdown-menu
                 for item in items
-                    div(
-                        class="iqdropdown-menu-option"
-                        data-id="minor"
-                        data-defaultcount="0"
-                        data-mincount="0")  
-                    p.iqdropdown-item=item
+                    div(class="iqdropdown-menu-option",data-id=name)  
+                        p.iqdropdown-item=item
+                if(controls)
+                    .controls
+                        .button-reset.hidden
+                            +button({mods:'link',text:'Очистить'})
+                        .button-apply
+                            +button({mods:'link',text:'Применить'})
+                
