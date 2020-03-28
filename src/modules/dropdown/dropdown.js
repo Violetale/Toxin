@@ -4,21 +4,28 @@ import $ from 'jquery';
 //функция, устанавливающая в data-атрибуты каждого dropdown-item
 // значения, необходимые для вывода в dropdown-selection
 //посредством showResult
-const setValue = function(dropdown,itemNem,itemCount){
+$(function(){
+  const nouns={};//-написать
+  let resultString="";
+  const showResult = function(dropdown){
+    let selection = $(dropdown).find('.dropdown-selection');
+    $(selection).text("");
+    let items = $(dropdown).find('.iqdropdown-menu-option');
+    $(items).each(function(idx,elem){
+      let count = $(elem).find('.counter').text();
+      if(count!==0){
+      resultString +=count;
+      }
+    })
+    $(selection).text(resultString);
+}
 
-}
-const showItem=function(){}
-const showResult = function(dropdown){
-    let items = dropdown.find('.dropdown__item')
-}
 $('.dropdown').each(function(){
   let dropdown = $(this);
   let controls = $(dropdown).find('.controls');
   $(".iqdropdown").iqDropdown({
     onChange: function(itemName, itemCount, totalItems) {
-      setValue(dropdown,itemName,itemCount);
-      showItem(dropdown);
-      //
+      showResult(dropdown);
       if(totalItems){
         $(controls).find('.button-reset').removeClass('hidden');
       }else{
@@ -27,6 +34,8 @@ $('.dropdown').each(function(){
   }
 });
 });
-
+//-событие apply 
+//-событие принять
 
     //скрипты для поведения кнопок поведения
+});
