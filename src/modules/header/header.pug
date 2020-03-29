@@ -1,0 +1,31 @@
+include ./../logo/logo.pug
+include ./../button/button.pug
+mixin header(params={})
+    -const {mods='',navList=[],userName='',navButtons=[]}=params; 
+    //-доступные знначения mods: 
+    //-logged - вид хедера для вошедшего в систему пользователя
+    //-перечень кнопок в хеадере при наличии таковых
+    //-пример: {'border':'Login','bigFull':'register'}
+    -
+        let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+             for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }
+
+    .header
+        .header__logo
+            +logo
+        .header__nav
+            ul.nav-ul
+                for item in navList
+                    li.nav-ul__item
+                        a(href='#')=item
+        if (mods=="logged")
+            p.header__user-name=userName
+        else
+            .header__buttons
+            +button({mods:navButtons[0][0],text:navButtons[0][1]})
+            +button({mods:navButtons[1][0],text:navButtons[1][1]})
