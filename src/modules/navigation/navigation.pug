@@ -1,11 +1,33 @@
 mixin navigation(params={})
     -const {mods=''}=params;
-    -const className = 'button';
-        -
+    //-доступные значения mods:'mobile'
+    -const className = 'navigation';
+    -
         let modsClasses = '';
             if (mods){
                 const modsList= mods.split(',');
                 for(let i = 0; i < modsList.length;i++){
-                    modsClasses=modsClasses+' '+className+'_'+modsList[i];
+                     modsClasses=modsClasses+' '+className+'_'+modsList[i];
+                    }
                 }
+    ul(class=className+modsClasses)
+                block 
+
+mixin navigation-item(params={})
+    -const {mods='',ancor='',href="#"}=params;
+        //-доступные значения mods: withSub,active
+    -const className = 'navigation-item';
+    -
+         let modsClasses = '';
+            if (mods){
+                const modsList= mods.split(',');
+                for(let i = 0; i < modsList.length;i++){
+                    modsClasses=modsClasses+' '+className+'_'+modsList[i];
+                 }
             }
+        
+    li(class=className+modsClasses)
+        a(class=className+"__link" ,href=href)=ancor
+            - if (mods.indexOf('withSub')!==-1)
+                i.material-icons expand_more
+

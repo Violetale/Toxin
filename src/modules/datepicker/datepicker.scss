@@ -1,4 +1,79 @@
-.datepicker-here{
+@import '../../assets/scss/vars.scss';
+.datepicker{
+    padding:20px;
+    &-here{
     width: 320px;
     height: 369px;
+    font-size: 12px;
+    line-height: 15px;
+    //color: $dark-shade-50;
+    }
+    &--nav{
+        border-bottom: none;
+    }
+    &--nav-action{
+        i{
+        color:$purple;
+        }
+    }
+    &--content{
+        font-family: $font-main;
+    }
+    &--cell-day.-other-month-, .datepicker--cell-year.-other-decade-{
+        color:$dark-shade-25;
+    }
+    &--cell.-selected-.-focus-{
+        background: $primary-gradient;
+        border-radius: 22px;
+    }
+    &--cell.-current-{
+        background:$green-gradient;
+        border-radius: 22px;
+        color: #FFFFFF;
+    }
+    &--cell{
+        &.-in-range- {
+            background: $primary-gradient;
+            opacity: 0.25;
+        }
+
+    &.-focus- {
+        background: $primary-gradient;
+        border-radius: 22px;
+      }
+    
+      &.-current- {
+        background: $primary-gradient;
+        border-radius: 22px;
+        &.-focus- {
+            background: $primary-gradient;
+            border-radius: 22px;
+        }
+    
+        &.-in-range- {
+            background: $primary-gradient;
+            opacity: 0.25;
+        }
+      }
+    }
+      &--cell.-selected-, .datepicker--cell.-selected-.-current-{
+        background: $primary-gradient;
+        border-radius: 22px;
+      }
+    
+    
+
+    
+    .controls{
+        margin-top:20px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        .button-reset button{
+            color:$dark-shade-50;
+        }
+        .button-apply button{
+            color: $purple;
+        }
+    }
 }

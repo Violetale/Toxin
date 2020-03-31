@@ -46,4 +46,5 @@ import './modules/toggle/toggle.js';
 import './pages/ui-kit/colors-and-types/colors-and-types.js';
 import './pages/ui-kit/form-elements/form-elements.js'
 import './pages/ui-kit/cards/cards.js';
+import './pages/ui-kit/headers-and-footers/headers-and-footers.js';
 //по мере работы подключить оставшиеся странички

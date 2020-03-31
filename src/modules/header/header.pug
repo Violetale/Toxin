@@ -1,11 +1,13 @@
 include ./../logo/logo.pug
 include ./../button/button.pug
+include ./../navigation/navigation.pug
 mixin header(params={})
     -const {mods='',navList=[],userName='',navButtons=[]}=params; 
     //-доступные знначения mods: 
     //-logged - вид хедера для вошедшего в систему пользователя
     //-перечень кнопок в хеадере при наличии таковых
     //-пример: {'border':'Login','bigFull':'register'}
+    -const className = "header";
     -
         let modsClasses = '';
         if (mods){
@@ -15,17 +17,20 @@ mixin header(params={})
             }
         }
 
-    .header
+    .header(class=className+modsClasses)
         .header__logo
             +logo
         .header__nav
-            ul.nav-ul
-                for item in navList
-                    li.nav-ul__item
-                        a(href='#')=item
+           +navigation
+                +navigation-item({mods:'active',ancor:'Home'})
+                +navigation-item({ancor:'About Us'})
+                +navigation-item({mods:'withSub',ancor:'Services'})
+                +navigation-item({ancor:'Careers'})
+                +navigation-item({ancor:'News'})
+                +navigation-item({ancor:'Documentation'})
         if (mods=="logged")
             p.header__user-name=userName
         else
             .header__buttons
-            +button({mods:navButtons[0][0],text:navButtons[0][1]})
-            +button({mods:navButtons[1][0],text:navButtons[1][1]})
+                +button({mods:navButtons[0][0],text:navButtons[0][1]})
+                +button({mods:navButtons[1][0],text:navButtons[1][1]})

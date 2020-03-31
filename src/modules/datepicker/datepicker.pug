@@ -1,3 +1,4 @@
+include ./../button/button.pug
 mixin datepicker(params={})
     -const {}= params;
-    div(class="datepicker-here")
+    div(data-range="true" class="datepicker-here")

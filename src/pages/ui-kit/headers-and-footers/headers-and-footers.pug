@@ -1,12 +1,16 @@
 extends ./../../../templates/template.pug
 include ./../../../modules/header/header.pug
 include ./../../../modules/footer/footer.pug
+include ./../../../modules/logo/logo.pug
 block content
-    .column-elements
-        +header({
-            navList:['Home','About us','Services','News','Documentation'],
-            navButtons:[['border','Login'],['bigFull','register']]})
-        +header({
-            mods:'logged',
-            navList:['Home','About us','Services','News','Documentation'],
-            userName:'Cosmin Negoita'})
+    +logo({mods:'gray'})
+    main.headers-and-footers
+
+        .column-elements
+            +header({
+                navList:['Home','About us','Services','News','Documentation'],
+                navButtons:[['border','Login'],['bigFull','register']]})
+            +header({
+                mods:'logged',
+                navList:['Home','About us','Services','News','Documentation'],
+                userName:'Cosmin Negoita'})

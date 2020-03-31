@@ -1,2 +1,11 @@
 @import './../../../templates/template.scss';
 @import '../../../assets/scss/vars.scss';
+.headers-and-footers{
+    height:100vh;
+    .column-elements{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
