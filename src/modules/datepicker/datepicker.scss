@@ -1,15 +1,20 @@
 @import '../../assets/scss/vars.scss';
 .datepicker{
     padding:20px;
-    &-here{
+    box-sizing:border-box;
+    border: $main-border-style;
+    box-shadow: $main-box-shadow-style;
     width: 320px;
-    height: 369px;
+    //height: 369px;
     font-size: 12px;
     line-height: 15px;
-    //color: $dark-shade-50;
-    }
     &--nav{
         border-bottom: none;
+        &-title{
+            line-height:24px;
+            font-family:$font-titles;
+            color: $dark-shade-100;
+        }
     }
     &--nav-action{
         i{
@@ -17,37 +22,41 @@
         }
     }
     &--content{
-        font-family: $font-main;
+        
     }
     &--cell-day.-other-month-, .datepicker--cell-year.-other-decade-{
         color:$dark-shade-25;
     }
     &--cell.-selected-.-focus-{
         background: $primary-gradient;
-        border-radius: 22px;
+        border-radius: 50%;
     }
     &--cell.-current-{
         background:$green-gradient;
-        border-radius: 22px;
+        border-radius: 50%;
         color: #FFFFFF;
     }
     &--cell{
+        font-family: $font-main;
+        height:40px;
+        color:$dark-shade-50;
         &.-in-range- {
             background: $primary-gradient;
             opacity: 0.25;
         }
+    }
 
-    &.-focus- {
+    .-focus- {
         background: $primary-gradient;
-        border-radius: 22px;
+        border-radius: 50%;
       }
     
-      &.-current- {
-        background: $primary-gradient;
-        border-radius: 22px;
+    .-current- {
+        background: $green-gradient;
+        border-radius:50%;
         &.-focus- {
             background: $primary-gradient;
-            border-radius: 22px;
+            border-radius: 50%;
         }
     
         &.-in-range- {
@@ -55,17 +64,23 @@
             opacity: 0.25;
         }
       }
-    }
+    
       &--cell.-selected-, .datepicker--cell.-selected-.-current-{
         background: $primary-gradient;
-        border-radius: 22px;
+        border-radius: 50%;
       }
     
-    
+    &--day-name{
+        font-family: $font-main;
+        width:40px;
+        height: 40px;
+        color: $purple;
+        font-weight:bold;
+      }
 
     
     .controls{
-        margin-top:20px;
+        margin-top: 20px;
         padding: 0 15px;
         display: flex;
         justify-content: space-between;
