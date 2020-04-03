@@ -1,0 +1,8 @@
+include ./../dropdown/dropdown.pug
+mixin dropdown-furniture()
+    //-переписать под furniture
+    +dropdown({mods:'furniture',textLabel:'Удобства',items:
+            [{name:'adults',label:'Взрослые',nouns: ['гость', 'гостя', 'гостей']},
+            {name:'clidren',label:'Дети',nouns:['гость', 'гостя', 'гостей']},
+            {name:'babies',label:'Малденцы',nouns:['младенец', 'младенца', 'младенцев']}],
+            defaultText:'Сколько гостей?',contros:true})

@@ -1,5 +1,8 @@
 @import './../../assets/scss/vars.scss';
 .header{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 700px 200px;
     max-width: 1440px;
     height: 70px;
     .logo-container{

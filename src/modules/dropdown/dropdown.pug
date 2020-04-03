@@ -1,7 +1,6 @@
 include ./../button/button.pug
 mixin dropdown(params={})
-    -const{mods='',textLabel ='',placeholder='',controls=false}=params;
-    //-возможные модификации guests и furniture
+    -const{mods='',textLabel ='',items='',defaultText='',controls=false}=params;
     -const className = 'dropdown';
     -
         let modsClasses = '';
@@ -11,22 +10,16 @@ mixin dropdown(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-        let items=[];
-        if (mods=='guests'){
-            items=['Взрослые','Дети','Младенцы'];
-        }else{
-            items=['Спальни','Кровати','Ванные комнаты'];
-        }
-
     .dropdown
         p.dropdown__label=textLabel
-        .iqdropdown(class=modsClasses)
-            p.dropdown-selection
-            i.material-icons expand_more
+        .iqdropdown(class=modsClasses data-defaultText=defaultText)
+            p.iqdropdown-selection
+                i.material-icons expand_more
             .iqdropdown-menu
                 for item in items
-                    div(class="iqdropdown-menu-option",data-id=name)  
-                        p.iqdropdown-item=item
+                    -const {name,label,nouns}=item
+                    div(class="iqdropdown-menu-option",data-id=name,data-nouns=nouns)  
+                        p.iqdropdown-item=label
                 if(controls)
                     .controls
                         .button-reset.hidden
