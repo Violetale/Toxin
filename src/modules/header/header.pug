@@ -18,19 +18,20 @@ mixin header(params={})
         }
 
     .header(class=className+modsClasses)
-        .header__logo
-            +logo
-        .header__nav
-           +navigation
-                +navigation-item({mods:'active',ancor:'Home'})
-                +navigation-item({ancor:'About Us'})
-                +navigation-item({mods:'withSub',ancor:'Services'})
-                +navigation-item({ancor:'Careers'})
-                +navigation-item({ancor:'News'})
-                +navigation-item({ancor:'Documentation'})
-        if (mods=="logged")
-            p.header__user-name=userName
-        else
-            .header__buttons
-                +button({mods:navButtons[0][0],text:navButtons[0][1]})
-                +button({mods:navButtons[1][0],text:navButtons[1][1]})
+        .header__nav-bar
+            .header__logo
+                +logo
+            .header__nav
+                +navigation
+                        +navigation-item({mods:'active',ancor:'Home'})
+                        +navigation-item({ancor:'About Us'})
+                        +navigation-item({mods:'withSub',ancor:'Services'})
+                        +navigation-item({ancor:'Careers'})
+                        +navigation-item({ancor:'News'})
+                        +navigation-item({ancor:'Documentation'})
+            if (mods=="logged")
+                p.header__user-name=userName
+            else
+                .header__buttons
+                    +button({mods:navButtons[0][0],text:navButtons[0][1]})
+                    +button({mods:navButtons[1][0],text:navButtons[1][1]})
