@@ -1,12 +1,39 @@
+include ./../logo/logo.pug
+include ./../socials/socials.pug
 mixin footer(params={})
-    -const {mods=''}=params;
+    -const {mods='',footerText='',copyright='Copyright © 2018 Toxin UI Kit. All rights reserved.'}=params;
+    //-mods: withWidgets
     -const className = 'footer';
-        -
-            let modsClasses = '';
-            if (mods){
-                const modsList= mods.split(',');
-                for(let i = 0; i < modsList.length;i++){
-                    modsClasses=modsClasses+' '+className+'_'+modsList[i];
+    -
+        let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
                 }
             }
-    .footer(class=className+modsClasses)
+    div(class=className+modsClasses)
+        if (mods!=='withWidgets')
+            .footer-bar
+                +logo
+                div.footer-text=footerText
+                +social-icons
+        else
+        .footer-container
+            .footer-bar
+                .footer_-brand
+                    +logo
+                    div.footer-text=footerText
+               
+                .footer-bar__nav='nav'
+                        
+                .footer-bar__about='about'
+                .footer-bar__support='support'
+                .subscribe
+            .footer__footer
+                div.footer__copy=copyright
+                +social-icons
+        
+
+
+

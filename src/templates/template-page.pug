@@ -1,4 +1,4 @@
-extends base.pug
+extends template.pug
 block vars
     -
         //sets for header
@@ -9,29 +9,29 @@ block vars
         const vacancies ={text:"",link:"#"};
         const news ={text:"",link:"#"};
         const agreement ={text:"",link:"#"};
-        const logIn={text:'',button:''};//текст и класс-модификатор кнопки
-        const signIn={text:'',button:''};//текст и класс-модификатор кнопки
+        const logIn={text:'',buttonMods:''};//текст и класс-модификатор кнопки
+        const signIn={text:'',buttonMods:''};//текст и класс-модификатор кнопки
         //sets for footer
-        const footerLogo
+        const footerLogo='';
         const copyright = 'Copyright © 2018 Toxin отель. Все права защищены. ';
         const footerText ='Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»';
         const footerNav ={
             title:'Навигация',
-            navItems=[{text:"",link:""},{text:"",link:""},{text:"",link:""},{text:"",link:""}]
+            navItems=[{text:"",link:"#"},{text:"",link:"#"},{text:"",link:"#"},{text:"",link:"#"}]
         };//Элементы навигации в футере
         const footerAboutUs ={
             title:'О нас',
-            navItems=[{text:"",link:""},{text:"",link:""},{text:"",link:""},{text:"",link:""}]
+            navItems=[{text:"#",link:"#"},{text:"#",link:"#"},{text:"#",link:"#"},{text:"#",link:"#"}]
         };//Элементы навигации в футере;
         const footerSupportService={
             title:'Служба поддержки',
-            navItems=[{text:"",link:""},{text:"",link:""},{text:"",link:""},{text:"",link:""}]
+            navItems=[{text:"",link:"#"},{text:"",link:"#"},{text:"",link:"#"},{text:"",link:"#"}]
         };//Элементы навигации в футере
         const subscription ={
             title:'Подписка',
             text:"Получайте специальные предложения и новости сервиса"};//Элемент с подпиской 
         const socialButtons = ["fa-twitter","fa-facebook-square","fa-instagram"]; //названия классов кнопок?
-block main 
+block content
 
 //include
 
