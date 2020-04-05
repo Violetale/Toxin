@@ -1,16 +1,1 @@
-extends ./../templates/template.pug
-block content
-    include ./../modules/dropdown-guests/dropdown-guests.pug
-    include ./../modules/header/header.pug
-    include ./../modules/footer/footer.pug
-    +dropdown-guests
-    +header({
-                    navList:['Home','About us','Services','News','Documentation'],
-                    navButtons:[['border','Login'],['bigFull','register']]})
-    +header({
-                    mods:'logged',
-                    navList:['Home','About us','Services','News','Documentation'],
-                    userName:'username usersurname'})
-
-    +footer({footerText:footerText})
-    +footer({mods:"withWidgets",footerText:footerText})
+include ./ui-kit/cards/cards.pug
