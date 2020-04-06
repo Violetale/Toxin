@@ -2,12 +2,22 @@ include ./../rate-button/rate-button.pug
 mixin card-room(params={})
     -const {photoLink='#',numberRoom='',price='',isLuxe=false,rate=0,reviews=0}=params;
     .card-room
-        img.card-room__photo(src=photoLink,alt='Photo of the room')
-        div.card-room__details
-            span.card-room__details__number='№'+numberRoom
-                if isLuxe
-                    span.card-room__details__luxe люкс
-            span.room-price=price+'₽ в сутки'
-        .card-room__rating
-            +rate-button({rate:rate})
-            span.reviews=reviews+' '+' отзывов'
+        .card-room__photo
+            img.room-photo(src=photoLink,alt='Photo of the room')
+            .card-room__photo-slider
+                img.photo-slider__ellipse(src='assets/img/ellipse.svg')
+                img.photo-slider__ellipse(src='assets/img/ellipse-border.svg')
+                img.photo-slider__ellipse(src='assets/img/ellipse-border.svg')
+                img.photo-slider__ellipse(src='assets/img/ellipse-border.svg')
+                
+        .card-room__details-container
+            div.card-room__details
+                span.card-room__details__number='№'+numberRoom
+                    if isLuxe
+                        span.card-room__details__luxe люкс
+                p.room-price= price+'₽ '
+                    span.thin-text='в сутки'
+            .card-room__rating
+                +rate-button({rate:rate})
+                p.reviews=reviews
+                    span.thin-text=' Отзывов'

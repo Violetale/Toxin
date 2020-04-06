@@ -50,10 +50,19 @@ label{
 ul{
   padding-inline-start:0;
 }
+p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
   
 //переписать код ниже
   .container-columns{
     display:flex;
     flex-direction: row;
     justify-content:space-between;
+  }
+  .thin-text{
+    font-weight: normal;
   }
