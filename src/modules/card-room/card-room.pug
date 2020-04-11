@@ -15,8 +15,8 @@ mixin card-room(params={})
                 span.card-room__details__number='№'+numberRoom
                     if isLuxe
                         span.card-room__details__luxe люкс
-                p.room-price= price+'₽ '
-                    span.thin-text='в сутки'
+                p.room-price= price+'₽'
+                    span.thin-text=' в сутки'
             .card-room__rating
                 +rate-button({rate:rate})
                 p.reviews=reviews

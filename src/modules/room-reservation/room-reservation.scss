@@ -16,18 +16,41 @@ justify-content: space-between;
     justify-content: space-between;
 }
 &__roomNumber{
+    font-size: 24px;
+    line-height: 17px;
     color: $dark-shade-100;
     font-weight: bold;
 }
-&____price{
+&__luxe{
+    text-transform: uppercase;
+    color: $purple;
+    font-size: 12px;
+    line-height: 15px;
+}
+&__price{
     color:$dark-shade-50;
     font-weight: bold;
 }
-.price-details__item{
+.price-details{
+    &__item{
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     line-height: 24px;
+}
+    &__name{
+        position: relative;
+        width: 239px;
+        p{
+            width: 214px;
+        }
+        .icon-info{
+            display: inline;
+            position: absolute;
+            top:0.2rem;
+            right: 0;
+        }
+    }
 }
 &__resultPrice{
     display: flex;
@@ -42,7 +65,4 @@ justify-content: space-between;
                 flex-grow: 1;
             }
         }
-    .icon-info{
-        display: inline;
-    }
 }

@@ -6,23 +6,26 @@ mixin room-reservation(params={})
         .form-reservation__header
             .form-reservation__roomNumber='№ 888'
                     span.form-reservation__luxe=' Люкс'
-            .form-reservation__price='9990 ₽' 
-                span.thin-text='в сутки'
+            p.form-reservation__price='9990₽' 
+                span.thin-text=' в сутки'
         +dropdown-date({textLabel:'Прибытие'})
         +dropdown-date({textLabel:'Выезд'})
         +dropdown-guests
         div.form-reservation__price-details
             .price-details__item
-                .price-details__name='9990₽ х 4 суток ' 
+                .price-details__name
+                    p='9990₽ х 4 суток ' 
                 .price-details__price= '39 960₽'
             .price-details__item
-                .price-details__name='Сбор за услуги: скидка 2 179₽'
+                .price-details__name
+                    p='Сбор за услуги: скидка 2 179₽'
                     img(class='icon-info' src='assets/img/info.svg' alt='Icon-info')
-                p.price-details__price= '0₽'
+                .price-details__price= '0₽'
             .price-details__item
-                p.price-details__name='Сбор за дополнительные услуги'
+                .price-details__name
+                    p='Сбор за дополнительные услуги'
                     img(class='icon-info' src='assets/img/info.svg' alt='Icon-info')
-                p.price-details__price='300₽'
+                .price-details__price='300₽'
         div.form-reservation__resultPrice
             span='Итого'
             span.rectangle
