@@ -12,7 +12,7 @@ mixin card-room(params={})
                 
         .card-room__details-container
             div.card-room__details
-                span.card-room__details__number='№'+numberRoom
+                span.card-room__details__number=numberRoom
                     if isLuxe
                         span.card-room__details__luxe люкс
                 p.room-price= price+'₽'
