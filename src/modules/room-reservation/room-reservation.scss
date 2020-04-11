@@ -16,10 +16,12 @@ justify-content: space-between;
     justify-content: space-between;
 }
 &__roomNumber{
-    font-size: 24px;
-    line-height: 17px;
     color: $dark-shade-100;
     font-weight: bold;
+    &::before{
+        content:"№";
+        font-size:14px;
+    }
 }
 &__luxe{
     text-transform: uppercase;
