@@ -8,7 +8,7 @@ block content
     include ./../../../modules/form-login/form-login.pug
     include ./../../../modules/card-room/card-room.pug
     include ./../../../modules/form-registration/form-registration.pug
-    include ./../../../modules/room-details/room-details.pug
+    include ./../../../modules/room-reservation/room-reservation.pug
     //include ./../../../modules/
     main.cards
         +logo({mods:'gray'})
@@ -17,7 +17,7 @@ block content
                 +form-search({textTitle:'Найдём номера под ваши пожелания'})
                 +form-registration({textTitle:'Регистрация аккаунта'})
             .column-elements
-                +room-details
+                +room-reservation
                 +form-login({textTitle:'Войти'})
             .column-elements
                 +datepicker

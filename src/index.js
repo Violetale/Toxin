@@ -41,7 +41,7 @@ import './modules/rate-button/rate-button.js';
 import './modules/socials/socials.js';
 import './modules/subscription-text-field/subscription-text-field.js';
 import './modules/toggle/toggle.js';
-import './modules/room-details/room-details.js'
+import './modules/room-reservation/room-reservation.js'
 
 
 import './pages/ui-kit/colors-and-types/colors-and-types.js';

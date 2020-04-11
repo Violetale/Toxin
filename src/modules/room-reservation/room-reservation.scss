@@ -1,0 +1,48 @@
+@import './../../assets/scss/vars.scss';
+.form-reservation{
+padding:30px;
+background: #FFFFFF;
+width: 380px;
+height: 511px;
+border: $main-border-style;
+box-sizing: border-box;
+box-shadow: $main-box-shadow-style;
+border-radius: 4px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+&__header{
+    display: flex;
+    justify-content: space-between;
+}
+&__roomNumber{
+    color: $dark-shade-100;
+    font-weight: bold;
+}
+&____price{
+    color:$dark-shade-50;
+    font-weight: bold;
+}
+.price-details__item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 24px;
+}
+&__resultPrice{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color:$dark-shade-100;
+        .rectangle{
+                content:'';
+                border-bottom: 1px dashed $dark-shade-25;
+                margin:0 5px;
+                height: 19px;
+                flex-grow: 1;
+            }
+        }
+    .icon-info{
+        display: inline;
+    }
+}
