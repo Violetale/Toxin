@@ -37,6 +37,7 @@
     &__details{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         border-bottom: 1px solid $dark-shade-10;
         padding-bottom: 12px;
         &__number{

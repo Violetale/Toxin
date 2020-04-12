@@ -1,7 +1,27 @@
 mixin dropdown-date(params={})
-    -const {textLabel='',placeholder='ДД.ММ.ГГГГ',value=''}=params;
-    .dropdown.dropdown-date
-        label.dropdown-date__label
-            p=textLabel
-            input.datepicker-here(placeholder=value||placeholder,value=value)
-            i.material-icons expand_more
+    -const {mods='',textLabel_one='',textLabel_two='',placeholder='ДД.ММ.ГГГГ',value=''}=params;
+    //определиться со способом передачи параметров
+    -const className = 'dropdown-date';
+    -
+     let modsClasses = '';
+        if (mods){
+            const modsList= mods.split(',');
+            for(let i = 0; i < modsList.length;i++){
+                modsClasses=modsClasses+' '+className+'_'+modsList[i];
+            }
+        }
+    .dropdown.dropdown-date(class=modsClasses)
+        if(mods==='twoFields')
+            label.dropdown-date__label
+                p=textLabel_one
+                input.datepicker-here(placeholder=value||placeholder,value=value)
+                i.material-icons expand_more
+            label.dropdown-date__label
+                p=textLabel_two
+                input.datepicker-here(placeholder=value||placeholder,value=value)
+                i.material-icons expand_more
+        else 
+            label.dropdown-date__label
+                p=textLabel_one
+                input.datepicker-here(placeholder=value||placeholder,value=value)
+                //-i.material-icons expand_more

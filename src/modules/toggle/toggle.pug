@@ -9,6 +9,7 @@ mixin toggle(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-    label(class=className+'__wrap')=textLabel
+    label(class=className+'__label')
+        p=textLabel
         input(type='checkbox' checked=checked)
         span.slider.round

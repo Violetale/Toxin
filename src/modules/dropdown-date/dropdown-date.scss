@@ -1,16 +1,36 @@
+@import './../../assets/scss/vars.scss';
 .dropdown-date{
-    width:150px;
     &__label{
         position: relative;
+        width:320px;
+        p{
+            color: $dark-shade-100;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+        }
         .material-icons{
             position: absolute;
-            top:1.5rem;
+            top:2rem;
             right:0.5rem;
         }
     }
     .datepicker-here{
-        width:150px;
+        margin-top: 5px;
+        box-sizing: border-box;
         height:44px;
-        
+        width: 100%;
+        border: $main-border-style;
+        border-radius: 4px;
+        padding-left: 15px;
+    }
+}
+//-стили для случая двух полей
+.dropdown-date_twoFields{
+    display: flex;
+    justify-content: space-evenly;
+    .dropdown-date__label{
+        width: 150px;
     }
 }
