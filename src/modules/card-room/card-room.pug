@@ -2,14 +2,17 @@ include ./../rate-button/rate-button.pug
 mixin card-room(params={})
     -const {photoLink='#',numberRoom='',price='',isLuxe=false,rate=0,reviews=0}=params;
     .card-room
-        .card-room__photo
+        .card-room__photo-section
             img.room-photo(src=photoLink,alt='Photo of the room')
-            .card-room__photo-slider
-                img.photo-slider__ellipse(src='assets/img/ellipse.svg')
-                img.photo-slider__ellipse(src='assets/img/ellipse-border.svg')
-                img.photo-slider__ellipse(src='assets/img/ellipse-border.svg')
-                img.photo-slider__ellipse(src='assets/img/ellipse-border.svg')
-                
+            .card-room__controls
+                i.material-icons.button-next chevron_left
+                i.material-icons.button-prev chevron_right
+            .card-room__slider
+                ul.card-room__slider-markers
+                    li.card-room__slider-marker.active(value=1)
+                    li.card-room__slider-marker(value=2)
+                    li.card-room__slider-marker(value=3)
+                    li.card-room__slider-marker(value=4)
         .card-room__details-container
             div.card-room__details
                 span.card-room__details__number=numberRoom

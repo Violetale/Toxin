@@ -17,11 +17,13 @@
         }
     }
     .datepicker-here{
+        outline: none;
+        border:none;
         margin-top: 5px;
         box-sizing: border-box;
         height:44px;
         width: 100%;
-        border: $main-border-style;
+        border: $secondary-border-style;
         border-radius: 4px;
         padding-left: 15px;
     }
