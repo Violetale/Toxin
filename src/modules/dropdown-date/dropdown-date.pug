@@ -1,6 +1,5 @@
 mixin dropdown-date(params={})
-    -const {mods='',textLabel_one='',textLabel_two='',placeholder='ДД.ММ.ГГГГ',value=''}=params;
-    //определиться со способом передачи параметров
+    -const {mods='', field_one={textLabel:"",placeholder:'ДД.ММ.ГГГГ',value:''},field_two={textLabel:"",placeholder:'ДД.ММ.ГГГГ',value:''}}=params;
     -const className = 'dropdown-date';
     -
      let modsClasses = '';
@@ -13,15 +12,15 @@ mixin dropdown-date(params={})
     .dropdown.dropdown-date(class=modsClasses)
         if(mods==='twoFields')
             label.dropdown-date__label
-                p=textLabel_one
-                input.datepicker-here(placeholder=value||placeholder,value=value)
+                p=field_one.textLabel
+                input.datepicker-here(placeholder=field_one.value||field_one.placeholder,value=field_one.value)
                 i.material-icons expand_more
             label.dropdown-date__label
-                p=textLabel_two
-                input.datepicker-here(placeholder=value||placeholder,value=value)
+                p=field_two.textLabel
+                input.datepicker-here(placeholder=field_two.value||field_two.placeholder,value=field_two.value)
                 i.material-icons expand_more
         else 
             label.dropdown-date__label
-                p=textLabel_one
-                input.datepicker-here(placeholder=value||placeholder,value=value)
+                p=field_one.textLabel
+                input.datepicker-here(placeholder=field_one.value||field_one.placeholder,value=field_one.value)
                 //-i.material-icons expand_more
