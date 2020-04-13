@@ -5,14 +5,14 @@ mixin card-room(params={})
         .card-room__photo-section
             img.room-photo(src=photoLink,alt='Photo of the room')
             .card-room__controls
-                i.material-icons.button-next chevron_left
-                i.material-icons.button-prev chevron_right
+                i.material-icons.button-prev chevron_left
+                i.material-icons.button-next chevron_right
             .card-room__slider
                 ul.card-room__slider-markers
-                    li.card-room__slider-marker.active(value=1)
-                    li.card-room__slider-marker(value=2)
-                    li.card-room__slider-marker(value=3)
-                    li.card-room__slider-marker(value=4)
+                    li.card-room__slider-marker.card-room__slider-marker_active(data-value=1)
+                    li.card-room__slider-marker(data-value=2)
+                    li.card-room__slider-marker(data-value=3)
+                    li.card-room__slider-marker(data-value=4)
         .card-room__details-container
             div.card-room__details
                 span.card-room__details__number=numberRoom
