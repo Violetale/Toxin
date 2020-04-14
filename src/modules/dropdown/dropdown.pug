@@ -1,6 +1,6 @@
 include ./../button/button.pug
 mixin dropdown(params={})
-    -const{mods='',textLabel ='',items='',defaultText='',controls=false}=params;
+    -const{mods='',textLabel ='',items=[],defaultText='',controls=false}=params;
     -const className = 'dropdown';
     -
         let modsClasses = '';
@@ -16,8 +16,8 @@ mixin dropdown(params={})
             p.iqdropdown-selection
                 i.material-icons expand_more
             .iqdropdown-menu
-                for item in items
-                    -const {name,label,nouns}=item
+                each item in items
+                    -const {name,label,nouns}=item;
                     div(class="iqdropdown-menu-option",data-id=name,data-nouns=nouns)  
                         p.iqdropdown-item=label
                 if(controls)

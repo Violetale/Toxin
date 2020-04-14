@@ -1,4 +1,4 @@
-include ./../../modules/dropdown/dropdown.pug
+include ./../../modules/dropdown-guests/dropdown-guests.pug
 include ./../../modules/dropdown-date/dropdown-date.pug
 include ./../../modules/button/button.pug
 mixin form-search(params)
@@ -7,6 +7,6 @@ mixin form-search(params)
         h3.form-search__title=textTitle
         .form-search__inputs
             +dropdown-date({mods:'twoFields',textLabel_one:'Прибытие',textLabel_two:'Выезд'})
-            +dropdown({mods:'guests',textLabel:'Гости',open:false,placeholder:'Количество гостей',buttons:true})
+            +dropdown-guests
         +button({mods:'bigFull',text:'Подобрать номер',arrowIcon:'true'})
 
