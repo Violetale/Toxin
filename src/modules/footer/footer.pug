@@ -1,7 +1,7 @@
 include ./../logo/logo.pug
 include ./../socials/socials.pug
 mixin footer(params={})
-    -const {mods='',footerText='',copyright='Copyright © 2018 Toxin UI Kit. All rights reserved.'}=params;
+    -const {mods='',footerText='',copyright=''}=params;
     //-mods: withWidgets
     -const className = 'footer';
     -
@@ -19,20 +19,20 @@ mixin footer(params={})
                 div.footer-text=footerText
                 +social-icons
         else
-        .footer-container
-            .footer-bar
-                .footer_-brand
-                    +logo
-                    div.footer-text=footerText
-               
-                .footer-bar__nav='nav'
-                        
-                .footer-bar__about='about'
-                .footer-bar__support='support'
-                .subscribe
-            .footer__footer
-                div.footer__copy=copyright
-                +social-icons
+            .footer-container
+                .footer-bar
+                    .footer_-brand
+                        +logo
+                        div.footer-text=footerText
+                
+                    .footer-bar__nav='nav'
+                            
+                    .footer-bar__about='about'
+                    .footer-bar__support='support'
+                    .footer-bar__subscribe
+                .footer__footer
+                    div.footer__copy=copyright
+                    +social-icons
         
 
 
