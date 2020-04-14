@@ -1,16 +1,23 @@
 @import '../../assets/scss/vars.scss';
+.room-statistic{
+    display:flex;
+    align-items: center;
+}
 .donut{
     &-container{
         width: 150px;
         height: 150px;
+        position: relative;
     }
-    position: relative;
+    
     width: 100%;
     height: 100%;
     &__inner-text{
         width:64px;
         height:45px;
         position:absolute;
+        left:2rem;
+        top:2rem;
         font-weight: bold;
         font-size: 24px;
         line-height: 30px;

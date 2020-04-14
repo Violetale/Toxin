@@ -1,46 +1,46 @@
 mixin diagram(params={})
-  -const {countBad=0,countNormal=0,countGood=0,countFine=0,donutRadius=0}=params;
+  -const {countBad=0,countSatisf=0,countGood=0,countFine=0}=params;
   -
-    const allCount=countBad+countNormal+countGood+countFine;
+    const donutRadius=16;
+    const allCount=countBad+countSatisf+countGood+countFine;
     let lengthCircle=3.14*2*donutRadius;
     function toPercent(count){
       return (count/allCount)*100;
     }
   -const percentBad=toPercent(countBad);
-  -const percentNormal=toPercent(countNormal);
+  -const percentSatisf=toPercent(countSatisf);
   -const percentGood= toPercent(countGood);
   -const percentFine=toPercent(countFine);
 
-  -const dashBad =percentBad+'%' +' '+(100-percentBad)+'%';
-  -const dashNormal =percentNormal+'%'+' '+(100-percentNormal)+'%';
-  -const dashGood =percentGood+'%' +' '+(100-percentGood)+'%' ;
-  -const dashFine =percentFine+'%' +' '+(100-percentFine)+'%' ;
+  -const dashBad =percentBad +' '+(100-percentBad);
+  -const dashSatisf =percentSatisf+' '+(100-percentSatisf);
+  -const dashGood =percentGood +' '+(100-percentGood) ;
+  -const dashFine =percentFine +' '+(100-percentFine) ;
 
   .room-statistic
     h3.room-statistic__header='Впечатления от номера' 
-  .donut-container
-    .donut__inner-text=allCount
-      |  голосов
-    svg.donut(width="100%" height="100%" viewBox="0 0 42 42")
-      linearGradient#gradient-good
-        stop(offset="0%", stop-color="#66D2EA")
-        stop(offset="100%", stop-color="#6FCF97")
-      linearGradient#gradient-fine
-        stop(offset="0%", stop-color="#FFBA9C")
-        stop(offset="100%", stop-color="#FFE39C")
-      linearGradient#gradient-normal
-        stop(offset="0%", stop-color="#8BA4F9")
-        stop(offset="100%", stop-color="#BC9CFF")
-      linearGradient#gradient-bad
-        stop(offset="0%", stop-color="#3D4975")
-        stop(offset="100%", stop-color="#909090")
-
-      circle.donut-hole(cx='21', cy='21', r=donutRadius, fill="#FFFFFF" )
-      circle.donut__segment_good(cx='21', cy='21', r=donutRadius, fill="transparent", stroke-dasharray=dashGood, stroke="url(#gradient-good)" , stroke-dashoffset="0%", stroke-width="5")
-      circle.donut__segment_fine(cx='21', cy='21', r=donutRadius, fill="transparent",  stroke-dasharray=dashFine, stroke="url(#gradient-fine)", stroke-dashoffset=(95-percentGood)+'%',stroke-width="5")
-      circle.donut__segment_bad(cx='21', cy='21', r=donutRadius, fill="transparent", stroke-dasharray=dashBad, stroke="url(#gradient-bad)", stroke-dashoffset=(95-(percentGood+percentFine))+'%', stroke-width="5")
-      circle.donut__segment_normal(cx='21', cy='21', r=donutRadius, fill="transparent", stroke-dasharray=dashNormal, stroke="url(#gradient-normal)", stroke-dashoffset=(95-(percentGood+percentFine+percentBad))+'%',stroke-width="5")
-      
+    .donut-container
+      .donut__inner-text=allCount
+        |  голосов
+      svg.donut(width="100%" height="100%" viewBox="0 0 42 42")
+        linearGradient#gradient-good
+          stop(offset="0%", stop-color="#66D2EA")
+          stop(offset="100%", stop-color="#6FCF97")
+        linearGradient#gradient-fine
+          stop(offset="0%", stop-color="#FFBA9C")
+          stop(offset="100%", stop-color="#FFE39C")
+        linearGradient#gradient-satisf
+          stop(offset="0%", stop-color="#8BA4F9")
+          stop(offset="100%", stop-color="#BC9CFF")
+        linearGradient#gradient-bad
+          stop(offset="0%", stop-color="#3D4975")
+          stop(offset="100%", stop-color="#909090")
+        circle.donut-hole(cx='21', cy='21', r=donutRadius, fill="#FFFFFF" )
+        circle.donut__segment_good(cx='21', cy='21', r=donutRadius, fill="transparent", stroke-dasharray=dashGood, stroke="url(#gradient-good)" , stroke-dashoffset=0, stroke-width="1.5")
+        circle.donut__segment_fine(cx='21', cy='21', r=donutRadius, fill="transparent",  stroke-dasharray=dashFine, stroke="url(#gradient-fine)", stroke-dashoffset=100-percentGood,stroke-width="1.5")
+        circle.donut__segment_bad(cx='21', cy='21', r=donutRadius, fill="transparent", stroke-dasharray=dashBad, stroke="url(#gradient-bad)", stroke-dashoffset=100-(percentGood+percentFine), stroke-width="1.5")
+        circle.donut__segment_Satisf(cx='21', cy='21', r=donutRadius, fill="transparent", stroke-dasharray=dashSatisf, stroke="url(#gradient-satisf)", stroke-dashoffset=100-(percentGood+percentFine+percentBad),stroke-width="1.5")
+        
     .donut__caption
       ul.donut__caption__list
         li.donut__caption__list__item Великолепно
