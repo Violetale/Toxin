@@ -1,6 +1,6 @@
 mixin navigation(params={})
     -const {mods=''}=params;
-    //-доступные значения mods:'mobile'
+    //-доступные значения mods:'mobile','vertical'
     -const className = 'navigation';
     -
         let modsClasses = '';
@@ -10,14 +10,12 @@ mixin navigation(params={})
                      modsClasses=modsClasses+' '+className+'_'+modsList[i];
                     }
                 }
-    ul(class=className+modsClasses)
-                block 
-
-mixin navigation-item(params={})
-    -const {mods='',ancor='',href="#"}=params;
-        //-доступные значения mods: withSub,active
-    -const className = 'navigation-item';
-    -
+    //-миксин для создания пунктов навигации
+    mixin navigation-item(params={})
+        -const {mods='',ancor='',href="#"}=params;
+            //-доступные значения mods: 'withSub','active'
+        -const className = 'navigation-item';
+        -
          let modsClasses = '';
             if (mods){
                 const modsList= mods.split(',');
@@ -26,8 +24,10 @@ mixin navigation-item(params={})
                  }
             }
         
-    li(class=className+modsClasses)
-        a(class=className+"__link" ,href=href)=ancor
+        div(class=className+modsClasses)
+            a(class=className+"__link" ,href=href)=ancor
             - if (mods.indexOf('withSub')!==-1)
                 i.material-icons expand_more
-
+    //-тело миксина navigation
+    div(class=className+modsClasses)
+                    block 

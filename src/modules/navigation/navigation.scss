@@ -1,16 +1,21 @@
 @import './../../assets/scss/vars.scss';
 .navigation{
-    list-style: none;
     font-size: 14px;
     line-height: 17px;
     display:flex;
-    justify-content: space-between;
+    align-items: center;
     &-item{
-        display: inline-block;
-        margin-right: 10px;
+        margin-right:20px;
+        &_withSub{
+            display: flex;
+        }
         &__link{
             text-decoration: none;
             color:$dark-shade-50;
+            i{
+               height: 100%;
+            }
+            
         }
         &_active{
             color:$dark-shade-75;
