@@ -1,6 +1,6 @@
 include ./../field/field.pug
 mixin subscription-text-field(params={})
-    -const {textLabel='',name='',type='text',value='',placeholder=''}=params;
+    -const {textLabel='',name='email',type='text',value='',placeholder=''}=params;
         label.subscription-text-field__label=textLabel
-            input(class='subscription-text-field',type=type,name=name,value=value,placeholder=placeholder,disabled=disabled)
+            input(class='subscription-text-field',type=type,name=name,value=value,placeholder=placeholder||value,disabled=disabled)
             i.material-icons arrow_forward
