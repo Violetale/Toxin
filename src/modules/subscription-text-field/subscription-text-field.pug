@@ -1,6 +1,7 @@
 include ./../field/field.pug
-mixin subscription-text-field(params={})
+mixin subscribe(params={})
     -const {textLabel='',name='email',type='text',value='',placeholder=''}=params;
-        label.subscription-text-field__label=textLabel
-            input(class='subscription-text-field',type=type,name=name,value=value,placeholder=placeholder||value,disabled=disabled)
+        label.subscribe-container
+            p.subscribe__label=textLabel
+            input(class='subscribe',type=type,name=name,value=value,placeholder=placeholder||value,disabled=disabled)
             i.material-icons arrow_forward

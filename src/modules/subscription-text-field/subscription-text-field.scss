@@ -1,16 +1,22 @@
 @import '../../assets/scss/vars.scss';
-.subscription-text-field__label{
+/*
+* TODO: refactore this code, rename sizes to rem 
+*/
+.subscribe-field{
    position: relative;
-   //width: 320px;
 }
-.subscription-text-field{
+.subscribe{
       width: 320px;
-    height: 44px;
-    padding: 12px 15px;
-   &+.material-icons{
-      position: absolute;
-      top:0.5rem;
-      right:0.5rem;
-      color:$purple;
+      height: 44px;
+      padding: 12px 15px;
+      border:none;
+      outline:none;
+      border: $secondary-border-style;
+
+      &+i.material-icons{
+         position: absolute;
+         bottom:0rem;
+         right:0.5rem;
+         color:$purple;
  }
 }
