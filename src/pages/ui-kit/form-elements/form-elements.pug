@@ -22,10 +22,11 @@ block content
     include ./../../../modules/icon-with-text/icon-with-text.pug
     //-миксины для размещения эл-ов на странице,соц.иконки потом удалить
     mixin form-elements__item(params={})
-        -const {itemTitle='',halfColumn=false}=params;
+        -const {itemTitle='',state='',halfColumn=false}=params;
         -const halfMod =(halfColumn)?' form-elements__item_half-column':'';
         .form-elements__item(class=halfMod)
             .form-elements__item__title=itemTitle
+            .form-elements__item__state=state
             .form-elements__item__blocks
                 block
     //-основное содержимое страницы
@@ -33,12 +34,12 @@ block content
         +logo({mods:'gray'})
         .columns-container
             .column_elements
-                +form-elements__item({itemTitle:'Text field'})
+                +form-elements__item({itemTitle:'Text field',state:'default'})
                     +text-field({name:'email',type:'text',placeholder:'Email'})
-                +form-elements__item({itemTitle:'Text field'})
+                +form-elements__item({itemTitle:'Text field',state:'hover/focus'})
                     +text-field({name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
                 //dropdown-guests
-                +form-elements__item({itemTitle:'Masked text field'})
+                +form-elements__item({itemTitle:'Masked text field',state:'default'})
                     +text-field({mods:'masked',placeholder:'ДД.ММ.ГГГГ'})
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})
                     +dropdown-date
