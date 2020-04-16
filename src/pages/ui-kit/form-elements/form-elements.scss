@@ -1,59 +1,72 @@
-@import './../../../templates/template.scss';
-@import '../../../assets/scss/vars.scss';
-.form-elements{
-    .columns-container{
-        display:flex;
+@import "./../../../templates/template.scss";
+@import "../../../assets/scss/vars.scss";
+.form-elements {
+    .columns-container {
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
         max-width: 1440px;
+        margin:0 auto;
     }
-}
 
-.form-elements__item{
-    position:relative;
-    width:320px;
-    margin-bottom: 1.5rem;
-    flex-basis: 320px;
-    &__title{
-        margin-bottom:1rem;
-        font-weight: bold;
-        font-size: .75rem;
-        line-height: .9375rem;
-        text-transform: uppercase;
-        color: $dark-shade-100;
-    }
-    &__state{
-        font-size: 12px;
-        line-height: 15px;
-        position: absolute;
-        top:0;
-        right:0;
-        text-transform: uppercase;
-        color: $dark-shade-50;
-    }
-    &__blocks{
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-}
-.form-elements__item_half-column{
-        display: inline-block;
-        max-width: 160px;
-        .form-elements__item__blocks{
+    &__item {
+        position: relative;
+        width: 320px;
+        margin-bottom: 1.5rem;
+        flex-basis: 320px;
+        &__title {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 0.75rem;
+            line-height: 0.9375rem;
+            text-transform: uppercase;
+            color: $dark-shade-100;
+        }
+        &__state {
+            font-size: 12px;
+            line-height: 15px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-transform: uppercase;
+            color: $dark-shade-50;
+        }
+        &__blocks {
+            flex-wrap: wrap;
             display: flex;
-            justify-content: flex-start;
-            & div:first-child{
-                margin-right:10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_wideColumn {
+            width: 712px;
+        }
+        &_wrap {
+            .form-elements__item__blocks {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: unset;
+                flex-direction: row;
+                height: 238px;
+                .button{
+                    margin-right: 20px;
+                }
             }
-    }
-}
-//стили для столбца с компонентом comment
-.column-elemnts_two-column{
-    .form-elements__item{
-    width:712px;
+        }
+        &_row{
+            display: block;
+            width:260px;
+        }
+        &_narrowColumn {
+            display: inline-block;
+            max-width: 160px;
+            .form-elements__item__blocks {
+                display: flex;
+                justify-content: flex-start;
+                & div:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 }
