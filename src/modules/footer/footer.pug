@@ -26,14 +26,16 @@ mixin footer(params={})
                     .footer-bar__brand
                         +logo
                         div.footer-text=footerText
-                
-                    .footer-bar__nav='nav'
-                            
-                    .footer-bar__about='about'
-                    .footer-bar__support='support'
+                    
+                    each navitem in footerNavItems
+                        .footer-bar__nav
+                            -const {header,items}=navitem;
+                            h3.footer-bar__nav__header=navitem.header
+                            each item in navitem.items
+                                a.footer-bar__nav__link(href="#")=item
                     .footer-bar__subscribe
                         h3.footer-bar__subscribe__header=subscribeHeader
-                        div.footer-bar__subscribe_-text=subscribeText
+                        div.footer-bar__subscribe__text=subscribeText
                         +subscription-text-field({placeholder:'Your email address'})
                 hr(class="separate")
                 .footer__footer
