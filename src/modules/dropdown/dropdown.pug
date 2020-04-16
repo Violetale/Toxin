@@ -1,4 +1,5 @@
 include ./../button/button.pug
+
 mixin dropdown(params={})
     -const{mods='',textLabel ='',items=[],defaultText='',controls=false}=params;
     -const className = 'dropdown';
@@ -10,20 +11,32 @@ mixin dropdown(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-    .dropdown
+    //-миксин для создания элемента вып.меню дропдауна
+    mixin dropdown-option(params={})
+        -const {name,label,names}=params;
+        div(class="dropdown__menu__option",data-id=name,data-names=names)
+            p.dropdown__menu__option__name=label 
+            .dropdown__mwenu__option__controls
+                span.button_decrement -
+                span.control__counter(data-count=0) 0
+                span.button_increment +
+
+    .dropdown-container
         p.dropdown__label=textLabel
-        .iqdropdown(class=modsClasses data-defaultText=defaultText)
-            p.iqdropdown-selection
+        .dropdown(class=modsClasses data-defaultText=defaultText)
+            p.dropdown__selection
                 i.material-icons expand_more
-            .iqdropdown-menu
+            .dropdown__menu
                 each item in items
-                    -const {name,label,nouns}=item;
-                    div(class="iqdropdown-menu-option",data-id=name,data-nouns=nouns)  
-                        p.iqdropdown-item=label
+                    -const {name,label,names}=item;
+                    +dropdown-option({name,label,names})
+            
                 if(controls)
                     .controls
                         .button-reset.hidden
                             +button({mods:'link',text:'Очистить'})
                         .button-apply
                             +button({mods:'link',text:'Применить'})
+    
+    
                 

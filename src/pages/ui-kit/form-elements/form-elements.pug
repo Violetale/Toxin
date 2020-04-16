@@ -12,7 +12,7 @@ block content
     include ./../../../modules/dropdown-date/dropdown-date.pug
     include ./../../../modules/range-slider/range-slider.pug
     include ./../../../modules/like-button/like-button.pug
-    include ./../../../modules/subscription-text-field/subscription-text-field.pug
+    include ./../../../modules/subscribe/subscribe.pug
     include ./../../../modules/socials/socials.pug
     include ./../../../modules/comment/comment.pug
     include ./../../../modules/checkbox/checkbox.pug
@@ -45,7 +45,7 @@ block content
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})
                     +dropdown-date({field_one:{placeholder:'ДД.ММ.ГГГГ',value:'19.08.2019'}})
                 +form-elements__item({itemTitle:'subscription text field'})
-                    +subscription-text-field({placeholder:'Email'})
+                    +subscribe({placeholder:'Email'})
                 +form-elements__item
                     +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
 

@@ -1,8 +1,11 @@
 import './dropdown.scss';
 import $ from 'jquery';
-
-$(function(){
  
+$(function(){
+    function dropdown(selectorElement){
+  /** 
+    **Функция для формирования корректного нейминга для элемента строки
+   */
   function correctNaming(itemName,itemCount){
     let nounsString=$(`[data-id=${itemName}]`).attr('data-nouns');
     let nouns = nounsString.split(',');
@@ -30,15 +33,12 @@ $(function(){
   function showSelection(selection,string){
       $(selection).html(string);
   }
+  /** 
+   **My metod, description
+   * TODO : refactore this metod according to maket main function
   
-$('.dropdown').each(function(){
-  let $dropdown = $(this);
-  let $controls = $($dropdown).find('.controls');
-  let $selection =$($dropdown).find('.iqdropdown-selection');
-  let $defaultText= $($dropdown).find('.iqdropdown').attr('data-defaultText');
-  
-  $(".iqdropdown").iqDropdown({
-    onChange(itemName, itemCount, totalItems){ 
+  function onChange(itemName,itemCount,totalItems){
+
       if(totalItems){
         $($controls).find('.button-reset').removeClass('hidden');
         
@@ -47,14 +47,19 @@ $('.dropdown').each(function(){
       }
       console.log(itemCount);
       let $text = setSelectionText(itemName,itemCount,totalItems,$defaultText);
-      $($selection).html($text);
+      showSelection($selection,$text);
   }
+}
   
 });
 showSelection($selection,$defaultText);
 });
+*/
 //-событие apply 
 //-событие принять
 
     //скрипты для поведения кнопок поведения
+}
+
 });
+

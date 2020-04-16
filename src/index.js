@@ -39,7 +39,7 @@ import './modules/radio/radio-button.js';
 import './modules/range-slider/range-slider.js';
 import './modules/rate-button/rate-button.js';
 import './modules/socials/socials.js';
-import './modules/subscription-text-field/subscription-text-field.js';
+import './modules/subscribe/subscribe.js';
 import './modules/toggle/toggle.js';
 import './modules/room-reservation/room-reservation.js'
 

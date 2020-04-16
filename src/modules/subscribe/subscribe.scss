@@ -2,7 +2,7 @@
 /*
 * TODO: refactore this code, rename sizes to rem 
 */
-.subscribe-field{
+.subscribe-container{
    position: relative;
 }
 .subscribe{
@@ -15,7 +15,7 @@
 
       &+i.material-icons{
          position: absolute;
-         bottom:0rem;
+         bottom:-0.3rem;
          right:0.5rem;
          color:$purple;
  }
