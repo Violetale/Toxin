@@ -8,7 +8,8 @@ block content
     include ./../../../modules/button/button.pug
     include ./../../../modules/field/field.pug
     include ./../../../modules/pagination/pagination.pug
-    include ./../../../modules/dropdown/dropdown.pug
+    include ./../../../modules/dropdown-guests/dropdown-guests.pug
+    include ./../../../modules/dropdown-furniture/dropdown-furniture.pug
     include ./../../../modules/dropdown-date/dropdown-date.pug
     include ./../../../modules/range-slider/range-slider.pug
     include ./../../../modules/like-button/like-button.pug
@@ -52,7 +53,8 @@ block content
                     +text-field({name:'email',type:'text',placeholder:'Email'})
                 +form-elements__item({itemTitle:'Text field',state:'hover/focus'})
                     +text-field({name:'email',type:'text',value:'This is pretty awesome',placeholder:'Email'})
-                //dropdown-guests
+                +form-elements__item({itemTitle:'Text field',state:'default'})
+                    +dropdown-guests
                 +form-elements__item({itemTitle:'Masked text field',state:'default'})
                     +text-field({mods:'masked',placeholder:'ДД.ММ.ГГГГ'})
                 +form-elements__item({itemTitle:'dropdown date',halfColumn:true})
@@ -62,7 +64,7 @@ block content
                 +form-elements__item({itemTitle:'subscription text field'})
                     +subscribe({placeholder:'Email'})
                 +form-elements__item
-                    +dropdown({textLabel:'',open:false,placeholder:'Количество гостей',buttons:true,items:['Взрослые','Дети','Младенцы']})
+                   //dropguest
 
             .column_elements
                 +form-elements__item({itemTitle:'chexbox buttons'})

@@ -13,30 +13,29 @@ mixin dropdown(params={})
         }
     //-миксин для создания элемента вып.меню дропдауна
     mixin dropdown-option(params={})
-        -const {name,label,names}=params;
+        -const {name,label,names,count=0}=params;
         div(class="dropdown__menu__option",data-id=name,data-names=names)
-            p.dropdown__menu__option__name=label 
-            .dropdown__mwenu__option__controls
-                span.button_decrement -
-                span.control__counter(data-count=0) 0
-                span.button_increment +
+            p.dropdown__menu__option__item=label 
+            .dropdown__menu__option__controls
+                .button.button_decrement -
+                .counter(data-count=count)=count
+                .button.button_increment +
 
     .dropdown-container
         p.dropdown__label=textLabel
         .dropdown(class=modsClasses data-defaultText=defaultText)
             p.dropdown__selection
-                i.material-icons expand_more
+            i.material-icons expand_more
             .dropdown__menu
                 each item in items
                     -const {name,label,names}=item;
-                    +dropdown-option({name,label,names})
-            
+                    +dropdown-option({name:name,label:label,names:names})
+
                 if(controls)
                     .controls
                         .button-reset.hidden
                             +button({mods:'link',text:'Очистить'})
                         .button-apply
                             +button({mods:'link',text:'Применить'})
-    
-    
-                
+
+

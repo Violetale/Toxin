@@ -1,9 +1,9 @@
-@import './../../assets/scss/vars.scss';
-.rate-buttons{
+@import "./../../assets/scss/vars.scss";
+.rate-buttons {
     display: inline-block;
-    width:120px;
-    i.material-icons{
-        color:transparent;
+    width: 120px;
+    i.material-icons {
+        color: transparent;
         background: $primary-gradient;
         background-clip: text;
     }

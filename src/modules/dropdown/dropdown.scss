@@ -1,72 +1,117 @@
-@import '../../assets/scss/vars.scss';
-.dropdown{
+@import "../../assets/scss/vars.scss";
+.dropdown {
     display: inline-block;
     cursor: pointer;
     width: 320px;
-    &__label{
-    font-family: $font-main;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $dark-shade-100;
+    position: relative;
+    &__label {
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $dark-shade-100;
     }
-    &-selection{
-        width: 100%;
-        height: 100%;
+    &__selection {
+        padding-left: 15px;
+        padding-top:13px;
+        font-size: 14px;
+        line-height: 18px;
+        
+        width: 320px;
+        height: 44px;
+        color: $dark-shade-75;
+        border: $secondary-border-style;
+        box-sizing: border-box;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+        i.material-icons {
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+        }
+    &__menu{
+        display: none;
     }
 }
-.dropdown{
+.dropdown {
     position: relative;
-        &__menu{
-            padding-bottom: 13px;
-        }
-        &__menu__option{
-            display:flex;
-            justify-content: space-between;
-        }
-        &__name{
+    &__menu {
+        padding:7px 7px 13px 15px;
+        box-sizing: border-box;
+        border: $main-border-style;
+        box-shadow: 0px 10px 20px $dark-shade-5;
+        border-top: none;
+        border-bottom-left-radius:  2px;
+        border-bottom-right-radius: 2px;
+    }
+    &__menu__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7px;
+        &__item {
+            font-size: 12px;
+            line-height: 15px;
             font-weight: bold;
+            text-transform: uppercase;
+            color: $dark-shade-100;
         }
-
-        .dropdown__menu__option__controls{
-            width:92px;
+        &__controls {
+            width: 92px;
+            height: 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            button, .counter{
-            border:none;
+            .button,
+            .counter {
+                border: none;
             }
 
-            .button{
+            .button {
                 width: 30px;
                 height: 30px;
-                border:$main-border-style;
-                padding:0;
-                &_decrement{
-                border-radius:22px;
-                }
-                &_increment{
-                border-radius:22px;
+                border: $main-border-style;
+                padding: 0;
+                border:$secondary-border-style;
+                border-radius: 22px;
                 }
             }
-            .counter{
-                padding:0;
+            .counter {
+                padding: 0;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                text-align: center;
+                text-transform: uppercase;
+                color: $dark-shade-100;
             }
-        }
-        }
-
-    .controls{
-        padding: 0 15px;
-        display: flex;
-        justify-content: space-between;
-        .hidden{
-            visibility: hidden;
-        }
-        .button-reset button{
-            color:$dark-shade-50;
         }
     }
-    //-стили для модификации furniture
+.dropdown_open{
+    .dropdown{
+        &__selection{
+            border:$main-border-style;
+        }
+        &__menu{
+            display: block;
+        }
+    }
+}
+
+.controls {
+    margin-top: 20px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    .hidden {
+        visibility: hidden;
+    }
+    .button-reset button {
+        color: $dark-shade-50;
+    }
+}
+//-стили для модификации furniture
