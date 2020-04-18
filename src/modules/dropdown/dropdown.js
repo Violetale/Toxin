@@ -8,11 +8,16 @@ $(function () {
   let $selection = $dropdown.find('.dropdown__selection');
   let $incrementButton = $dropdown.find('.button_increment');
   let $decrementButton = $dropdown.find('.button_decrement');
+  let $buttonApply = $dropdown.find('.button-apply');
+  let $buttonReset = $dropdown.find('.button-reset');
 
   //навешиваем обработчики
   $selection.on('click', toggleMark);
-  $incrementButton.on('click',incrementCounter);
-  $decrementButton.on('click',decrementCounter);
+  $incrementButton.on('click', incrementCounter);
+  $decrementButton.on('click', decrementCounter);
+  $buttonApply.on('click', apply);
+  $buttonReset.on('click', reset);
+  $(this).change(onChange);
 
 
   //-везде отображаем текст по умолчанию(переписать,где передаются статы)
@@ -20,6 +25,18 @@ $(function () {
     let $text = $(el).attr("data-defaultText");
     let $selection = $(el).find('.dropdown__selection');
     showSelection($selection, $text);
+    //находим набор каунтеров
+    let $counters = $(el).find('.counter');
+    console.log($counters);
+    //проходим по каждому элементу набора и деактивируем кнопки декремента там где counter=0
+    $counters.each(function (idx, counter) {
+      let count = Number($(counter).attr("data-count"));
+      let $decrementButton = $(counter).siblings('.button_decrement');
+      if (count == 0) {
+        disableButton($decrementButton);
+      }
+    });
+
   });
 
   //правильная иконка в selection
@@ -40,19 +57,55 @@ $(function () {
   }
 
   //инкремент счетчика
-  function incrementCounter(e){
-    let $counter=$(this).siblings('.counter');
-    let newCount= Number($counter.attr("data-count"))+1;
-    $counter.attr("data-count",newCount);
+  function incrementCounter(e) {
+    let $counter = $(this).siblings('.counter');
+    let count = Number($counter.attr("data-count"));
+    let newCount = count + 1;
+    console.log(newCount);
+    $counter.attr("data-count", newCount);
     $counter.html(newCount);
+    if (newCount == 1) {
+      $counter.siblings('.button_decrement').removeClass('disabled');
+      $counter.siblings('.button_decrement').on('click', decrementCounter);
+    }
+    $(this).closest('.dropdown').change();
   }
 
   //декремент счетчика
-  function decrementCounter(e){
-    let $counter=$(this).siblings('.counter');
-    let newCount= Number($counter.attr("data-count"))-1;
-    $counter.attr("data-count",newCount);
-    $counter.html(newCount);
+  function decrementCounter(e) {
+    let $counter = $(this).siblings('.counter');
+    let count = Number($counter.attr("data-count"));
+    if (count > 0) {
+      let newCount = count - 1;
+      $counter.attr("data-count", newCount);
+      $counter.html(newCount);
+      if (newCount == 0) {
+        disableButton($(this));
+      }
+    }
+
+  }
+
+  //деактивация кнопки
+  function disableButton(button) {
+    $(button).off('click', decrementCounter);
+    $(button).addClass('disabled');
+
+  }
+
+  //событие apply
+  function apply(e) {
+    let $dropdown = $(this).closest('.dropdown');
+    toggleMark($(this));
+  }
+
+  //событие reset,сбрасывает счётчики в дропдауне
+  function reset(e) {
+    let $counters = $(this).closest('.dropdown__menu').find('.counter');
+    $counters.each(function (idx, counter) {
+      $(counter).attr("data-count", 0);
+      $(counter).html("0");
+    });
   }
 
   //correct naming
@@ -84,6 +137,8 @@ $(function () {
     $(selection).text(string);
   }
 
+  
+  function onChange(itemName,itemCount,totalItems){}
   /*  
     function onChange(itemName,itemCount,totalItems){
   
@@ -103,9 +158,6 @@ $(function () {
   showSelection($selection,$defaultText);
   });
   */
-  //-событие apply 
-  //-событие принять
 
-  //скрипты для поведения кнопок поведения
 });
 

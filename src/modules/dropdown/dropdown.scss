@@ -74,10 +74,12 @@
             .button {
                 width: 30px;
                 height: 30px;
-                border: $main-border-style;
                 padding: 0;
                 border:$secondary-border-style;
                 border-radius: 22px;
+                }
+                .disabled{
+                    opacity: 0.38;
                 }
             }
             .counter {

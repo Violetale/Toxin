@@ -30,7 +30,6 @@ mixin dropdown(params={})
                 each item in items
                     -const {name,label,names}=item;
                     +dropdown-option({name:name,label:label,names:names})
-
                 if(controls)
                     .controls
                         .button-reset.hidden
