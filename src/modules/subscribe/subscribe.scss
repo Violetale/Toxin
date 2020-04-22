@@ -7,15 +7,14 @@
 }
 .subscribe{
       width: 320px;
-      height: 44px;
-      padding: 12px 15px;
+      padding: 0.857rem 1rem;
       border:none;
       outline:none;
       border: $secondary-border-style;
 
       &+i.material-icons{
          position: absolute;
-         bottom:-0.3rem;
+         top:0.5rem;
          right:0.5rem;
          color:$purple;
  }
