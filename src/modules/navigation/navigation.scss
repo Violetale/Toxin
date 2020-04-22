@@ -1,4 +1,13 @@
 @import './../../assets/scss/vars.scss';
+.button-mobile-menu{
+    color:$purple;
+    display: none;
+    cursor:pointer;
+    margin-right: 20px;
+    #{$hover}{
+        opacity:0.5;
+    }
+}
 .navigation{
     font-size: 14px;
     line-height: 17px;
@@ -24,3 +33,27 @@
         }
     }
 }
+@media #{$widthTablet}{   
+.button-mobile-menu{
+    display: block;
+}
+.header__nav{
+    position: relative;
+}
+.navigation{
+    display: none;
+        &.navigation_open{
+            background-color:#FFFFFF;
+            box-shadow: $main-box-shadow-style;
+            position: absolute;
+            left:-8rem;
+            display: flex;
+            flex-direction: column;
+            width:320px;
+            .navigation-item{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            }
+        }
+    }

@@ -1,18 +1,35 @@
 import './like-button.scss';
 import $ from 'jquery';
-$(document).ready(function(){
-    $('.like-button').on('click',like);
-    function like(e){
-        let self = $(this);
-        let likeCount = self.find('.like-button__count');
-        let likeCountVal =parseInt(likeCount.attr('data-value'));
-        if(self.hasClass('like-button_clicked')){
-            likeCountVal--;
-        }else{
-            likeCountVal++;
-        }
-        self.toggleClass('like-button_clicked');
-        likeCount.attr('data-value',likeCountVal);
-        likeCount.text(likeCountVal);
+
+class LikeButton {
+    constructor(node){
+        this.button = node;
+        this._bindEventListener();
+    }  
+    //функция навешивающая обработчик событий
+    _bindEventListener(){
+        $(this.button).on('click',this._like);
     }
+    _like(e){
+        let self=$(this);
+        let likeCounter=self.find('.like-button__counter');
+        let likeCounterVal=Number(likeCounter.attr('data-count'));
+
+        if(self.hasClass('like-button_clicked')){
+            likeCounterVal--;
+        }else{
+            likeCounterVal++;
+        }
+
+        self.toggleClass('like-button_clicked');
+        likeCounter.attr('data-count',likeCounterVal);
+        likeCounter.text(likeCounterVal);
+    }
+
+}
+//инициализация
+$(()=>{
+    $('.js-like-button').each((index,likebutton)=>{
+        new LikeButton(likebutton);
+    });
 });

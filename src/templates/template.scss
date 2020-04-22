@@ -61,6 +61,9 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+.thin-text{
+  font-weight: normal;
+}
   
 //переписать код ниже
   .container-columns{
@@ -68,6 +71,12 @@ p {
     flex-direction: row;
     justify-content:space-between;
   }
-  .thin-text{
-    font-weight: normal;
+  
+  @media #{$widthTablet}{
+    body{
+    font-size: 14px;
+    }
+    .container-columns{
+      flex-direction: column;
+    }
   }

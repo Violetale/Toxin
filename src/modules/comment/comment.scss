@@ -34,3 +34,8 @@
     top:61px;
     left:58px;
 }
+@media #{$widthTablet}{
+    .comment{
+        max-width: 320px;
+    }
+}

@@ -2,6 +2,7 @@ mixin like-button(params={})
     -const {mods='',count=0}=params;
     //--const clickedMod = (clicked)?' like-button_clicked':'';
     -const className = 'like-button';
+    -const jsClassName ='js-like-button';
     -
      let modsClasses = '';
         if (mods){
@@ -12,6 +13,6 @@ mixin like-button(params={})
         }
 
         
-    div(class=className + " " +modsClasses)
+    div(class=className + " " +modsClasses+" "+jsClassName)
         i.material-icons favorite
-        span.like-button__count(data-value=count)=count
+        span.like-button__counter(data-count=count)=count

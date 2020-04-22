@@ -1,6 +1,6 @@
 mixin navigation(params={})
     -const {mods=''}=params;
-    //-доступные значения mods:'mobile','vertical'
+    //-доступные значения mods:'mobile'
     -const className = 'navigation';
     -
         let modsClasses = '';
@@ -29,5 +29,6 @@ mixin navigation(params={})
             - if (mods.indexOf('withSub')!==-1)
                 i.material-icons expand_more
     //-тело миксина navigation
+    span.button-mobile-menu.material-icons menu
     div(class=className+modsClasses)
                     block 

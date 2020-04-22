@@ -70,3 +70,7 @@
         }
     }
 }
+@media #{$widthTablet}{
+    .form-elements__item_wideColumn{
+        width:auto;
+    }}

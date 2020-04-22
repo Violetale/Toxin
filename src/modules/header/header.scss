@@ -4,6 +4,7 @@
     width: 100%;
     background: #FFFFFF;
     box-shadow:$main-box-shadow-style;
+    
     &__nav-bar{
         height: 100%;
         display:flex;
@@ -21,13 +22,19 @@
     }
     
     button:first-child{
-        width: 79px;
+        width: 79px; //TODO translate to rem
         height: 34px;
         margin-right: 20px;
     }
     button:last-child{
-        width: 101px;
+        width: 101px; //TODO translate to rem
         height: 34px;   
     }
-    
+}
+@media #{$widthTablet}{
+    .header{
+        &__nav-bar{
+            justify-content: space-between;
+        }
+    }
 }
