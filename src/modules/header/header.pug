@@ -24,12 +24,9 @@ mixin header(params={})
                 +logo
             .header__nav
                 +navigation
-                        +navigation-item({mods:'active',ancor:'Home'})
-                        +navigation-item({ancor:'About Us'})
-                        +navigation-item({mods:'withSub',ancor:'Services'})
-                        +navigation-item({ancor:'Careers'})
-                        +navigation-item({ancor:'News'})
-                        +navigation-item({ancor:'Documentation'})
+                    each item in mainMenuItems
+                        -const {text,link,mods}=item;
+                        +navigation-item({mods:mods,ancor:text})
             if (mods=="logged")
                 .header__user-name=userName
             else
