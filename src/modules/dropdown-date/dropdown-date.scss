@@ -10,10 +10,15 @@
             line-height: 15px;
             text-transform: uppercase;
         }
+        input{
+            font-size: 14px;
+            line-height: 18px;
+            padding:15px 13px;
+        }
         .material-icons{
             position: absolute;
-            top:2rem;
-            right:0.5rem;
+            bottom: 7px;
+            right:5px;
         }
     }
     .datepicker-here{
@@ -30,9 +35,11 @@
 }
 //-стили для случая двух полей
 .dropdown-date_twoFields{
+    width: 320px;
     display: flex;
     justify-content: space-between;
-    .dropdown-date__label{
+    input{
+        box-sizing: border-box;
         width: 150px;
     }
 }

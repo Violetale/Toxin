@@ -9,16 +9,18 @@ mixin dropdown-date(params={})
                 modsClasses=modsClasses+' '+className+'_'+modsList[i];
             }
         }
-    .dropdown.dropdown-date(class=modsClasses)
-        if(mods==='twoFields')
+    .dropdown.dropdown-date(class=modsClasses+" js-date-dropdown" data-range=true)
+        if(mods=='twoFields')
             label.dropdown-date__label
                 p=field_one.textLabel
-                input.datepicker-here(placeholder=field_one.value||field_one.placeholder,value=field_one.value)
+                input(class="js-date-dropdown__start", placeholder=field_one.value||field_one.placeholder,value=field_one.value,data-range="true" data-multiple-dates-separator=" - ")
                 i.material-icons expand_more
             label.dropdown-date__label
                 p=field_two.textLabel
-                input.datepicker-here(placeholder=field_two.value||field_two.placeholder,value=field_two.value)
+                input(class="js-date-dropdown__end",placeholder=field_two.value||field_two.placeholder,value=field_two.value)
                 i.material-icons expand_more
+                
+         
         else 
             label.dropdown-date__label
                 p=field_one.textLabel
