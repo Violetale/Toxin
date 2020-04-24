@@ -1,59 +1,63 @@
-@import './../assets/scss/vars.scss';
+@import "./../assets/scss/vars.scss";
 body {
-    background-color: #FFFFFF;
-    margin: 0 auto;
-    width:100%;
-    max-width: 1440px;
-    padding: 0;
-    font-family: $font-main;
-    font-size: 16px ;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color:$dark-shade-75;
-  }
-  h1,h2{
-    font-family: $font-titles;
-    font-weight: bold; 
+  background-color: #ffffff;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+  font-family: $font-main;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $dark-shade-75;
 }
-h3,body{
+h1,
+h2 {
+  font-family: $font-titles;
+  font-weight: bold;
+}
+h3,
+body {
   font-family: $font-main;
 }
-h1{
-  font-size: .875rem;
-  line-height:1.875rem ;
+h1 {
+  font-size: 0.875rem;
+  line-height: 1.875rem;
 }
-h2{
-  margin:0;
+h2 {
+  margin: 0;
   font-size: 1.1875rem‬;
   line-height: 1.1875rem‬;
 }
-h3{
-  margin:0;
-  font-size: .75rem;
-  line-height: .9375rem;
+h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
 }
-h1,h2,h3{
-  color:$dark-shade-100;
+h1,
+h2,
+h3 {
+  color: $dark-shade-100;
 }
-body{
-  font-size:.875rem ;
+body {
+  font-size: 0.875rem;
   line-height: 1.5rem;
 }
-button{
-  font-size: .75rem;
-  line-height: .9375rem;
+button {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
 }
-label{
+label {
   font-family: $font-main;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-/* identical to box height */
+  /* identical to box height */
 
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
-ul{
-  padding-inline-start:0;
+ul {
+  padding-inline-start: 0;
 }
 p {
   margin-block-start: 0px;
@@ -61,22 +65,22 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-.thin-text{
+.thin-text {
   font-weight: normal;
 }
-  
+
 //переписать код ниже
-  .container-columns{
-    display:flex;
-    flex-direction: row;
-    justify-content:space-between;
-  }
-  
-  @media #{$widthTablet}{
-    body{
+.container-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media #{$widthTablet} {
+  body {
     font-size: 14px;
-    }
-    .container-columns{
-      flex-direction: column;
-    }
   }
+  .container-columns {
+    flex-direction: column;
+  }
+}

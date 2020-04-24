@@ -1,32 +1,33 @@
-@import './../../assets/scss/vars.scss';
-.dropdown-date{
-    &__label{
+@import "./../../assets/scss/vars.scss";
+.dropdown-date {
+    cursor: pointer;
+    &__label {
         position: relative;
-        width:320px;
-        p{
+        width: 320px;
+        p {
             color: $dark-shade-100;
             font-weight: bold;
             font-size: 12px;
             line-height: 15px;
             text-transform: uppercase;
         }
-        input{
+        input {
             font-size: 14px;
             line-height: 18px;
-            padding:15px 13px;
+            padding: 15px 20px 15px 13px;
         }
-        .material-icons{
+        .material-icons {
             position: absolute;
-            bottom: 7px;
-            right:5px;
+            bottom: 10px;
+            right: 10px;
         }
     }
-    .datepicker-here{
+    .datepicker-here {
         outline: none;
-        border:none;
+        border: none;
         margin-top: 5px;
         box-sizing: border-box;
-        height:44px;
+        height: 44px;
         width: 100%;
         border: $secondary-border-style;
         border-radius: 4px;
@@ -34,11 +35,11 @@
     }
 }
 //-стили для случая двух полей
-.dropdown-date_twoFields{
+.dropdown-date_twoFields {
     width: 320px;
     display: flex;
     justify-content: space-between;
-    input{
+    input {
         box-sizing: border-box;
         width: 150px;
     }
