@@ -69,7 +69,6 @@
     "jquery-ui": "^1.12.1",
     "jquery.maskedinput": "^1.4.1",
     "normalize.css": "^8.0.1",
-    "normalize.scss": "^0.1.0",
-    "vue": "^2.6.11"
+    "normalize.scss": "^0.1.0"
   }
 }

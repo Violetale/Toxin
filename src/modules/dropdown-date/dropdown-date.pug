@@ -1,6 +1,7 @@
 mixin dropdown-date(params={})
     -const {mods='', field_one={textLabel:"",placeholder:'ДД.ММ.ГГГГ',value:''},field_two={textLabel:"",placeholder:'ДД.ММ.ГГГГ',value:''}}=params;
     -const className = 'dropdown-date';
+    //-mods:'filterDate'
     -
         let modsClasses = '';
             if (mods){
@@ -9,8 +10,8 @@ mixin dropdown-date(params={})
                     modsClasses=modsClasses+' '+className+'_'+modsList[i];
                 }
             }
-    .dropdown-date(class=modsClasses+" js-dropdown-date" )
-        if(mods=='twoFields')
+    if(mods=='twoFields')
+        .dropdown-date(class=modsClasses+" js-dropdown-date" )
             label.dropdown-date__label
                 p=field_one.textLabel
                 input(class="js-dropdown-date__start", placeholder=field_one.value||field_one.placeholder, value=field_one.value, data-range="true" data-multiple-dates-separator=" - " readonly)
@@ -20,9 +21,17 @@ mixin dropdown-date(params={})
                 input(class="js-dropdown-date__end", placeholder=field_two.value||field_two.placeholder, value=field_two.value readonly)
                 i.material-icons expand_more
 
-
-        else 
+    else if(mods=='filterDate')
+        .dropdown-date(class=modsClasses)
             label.dropdown-date__label
                 p=field_one.textLabel
-                input.datepicker-here(placeholder=field_one.value||field_one.placeholder,value=field_one.value)
-                //-i.material-icons expand_more
+                input.datepicker-here(placeholder='ДД.ММ.ГГГГ - ДД.ММ.ГГГГ'||(field_one.value+' - '+field_two.value),value='' range=true data-multiple-dates-separator=" - ")
+                i.material-icons expand_more
+    else 
+        .dropdown-date(class=modsClasses)
+            label.dropdown-date__label
+                label.dropdown-date__label
+                p=field_one.textLabel
+                input( placeholder=field_one.value||field_one.placeholder, value=field_one.value readonly)
+                i.material-icons expand_more
+    

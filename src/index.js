@@ -14,7 +14,6 @@ import './modules/card-room/card-room.js';
 import './modules/checkbox/checkbox.js';
 import './modules/checkbox-list/checkbox-list.js';
 import './modules/comment/comment.js';
-import './modules/datepicker/datepicker.js';
 import './modules/diagram/diagram.js';
 import './modules/dropdown/dropdown.js';
 import './modules/dropdown-date/dropdown-date.js';
