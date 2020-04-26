@@ -1,11 +1,46 @@
 mixin pagination(params={})
-    -const {pagText='1 – 12 из 100+ вариантов аренды'}= params;
-    div.pagination   
-        a.pagination__item.pagination__item_active(href="#") 1
-        a.pagination__item(href="#") 2
-        a.pagination__item(href="#") 3
-        .pagination__item(href="#") ...
-        a.pagination__item(href="#") 15
-        a.pagination__item.pagination__item_active.pagination__item_arrow(href="#")
+    -const {pagText='1 – 12 из 100+ вариантов аренды',pagesCount=15}= params;
+
+     mixin pagination-item(params={})
+        -const {mods="", pagesNum=0, href=false}=params;
+        -const className = 'pagination__item';
+        -
+            let modsClasses = '';
+            if (mods){
+                const modsList = mods.split(',');
+                for ( let i = 0; i < modsList.length; i++){
+                    modsClasses=modsClasses+' '+className+'_'+modsList[i];
+                }
+            }
+            //-mods:'current','dots'
+        if(mods=='dots')
+            li.pagination__item(class=modsClasses)
+                span ...
+        else 
+            li.pagination__item(class=modsClasses)
+                a.pagination__item__link(href=href)=pagesNum
+
+    div.pagination 
+        ul.pagination__list
+            li.pagination__item.pagination__control.pagination__control_disabled.pagination__control_prev
+                i.material-icons arrow_back
+            +pagination-item({mods:'current',pagesNum:1})
+            +pagination-item({pagesNum:2})
+            +pagination-item({pagesNum:3})
+            +pagination-item({mods:'dots'})
+            +pagination-item({pagesNum:15})
+            li.pagination__item.pagination__control.pagination__control.pagination__control_next
                 i.material-icons arrow_forward
         p.pagination_text=pagText
+   
+
+
+//* a.pagination__item.pagination__item_active(href="#") 1
+    a.pagination__item(href="#") 2
+    a.pagination__item(href="#") 3
+    .pagination__item(href="#") ...
+    a.pagination__item(href="#") 15
+    a.pagination__item.pagination__item_active.pagination__item_arrow(href="#")
+        i.material-icons arrow_forward
+     *//
+

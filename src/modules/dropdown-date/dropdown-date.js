@@ -32,11 +32,14 @@ $(() => {
   $('.datepicker').append(controls);
 
   function apply(e) {
-    $(this).closest('.datepicker').hide();
+    $(this).closest('.datepicker').data('datepicker').hide();
   }
   $('.button-reset').on('click', reset);
   function reset(e) {
-    $(this).closest('.datepicker').clear();
+    let $datepicker= $(this).closest('.datepicker').data('datepicker');
+    $datepicker.clear();
+    $datepicker.find('input').val("");
+
   }
   $('.js-dropdown-date').each((index, elem) => {
     new DropdownDate(elem);
