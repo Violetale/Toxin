@@ -1,7 +1,7 @@
 @import './../../../templates/template.scss';
 @import '../../../assets/scss/vars.scss';
 .headers-and-footers{
-    min-height:100vh;
+    padding-top:30px;
     .column-elements{
         min-height: 100%;
         display: flex;

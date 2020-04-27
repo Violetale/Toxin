@@ -41,8 +41,7 @@ import './modules/subscribe/subscribe.js';
 import './modules/toggle/toggle.js';
 import './modules/room-reservation/room-reservation.js'
 
-
-import './pages/ui-kit/colors-and-types/colors-and-types.js';
+import './pages/ui-kit/colors-and-types/colors-and-types';
 import './pages/ui-kit/form-elements/form-elements.js'
 import './pages/ui-kit/cards/cards.js';
 import './pages/ui-kit/headers-and-footers/headers-and-footers.js';

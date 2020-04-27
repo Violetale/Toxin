@@ -1,53 +1,75 @@
-@import '../../../assets/scss/vars.scss';
-@import './../../../templates/template.scss';
-body{
-    background-color: #FFFFFF;
+@import "../../../assets/scss/vars.scss";
+@import "./../../../templates/template.scss";
+body {
+    background-color: #ffffff;
     margin: 0 auto;
-    width:100%;
+    width: 100%;
     max-width: 1440px;
+    padding-top: 30px;
 }
-.container-columns{  
-    padding-top: 67px;
-    .column{
-         &:first-child{
-            margin-left: 150px;
-            flex-basis:320px;
-            display:flex;
-            flex-direction: column;
-            justify-content: space-between;
-        
-            }
-        &:last-child{
-             margin-right: 124px;
-            }
-        }
+.colors-and-types {
+    padding-top: 30px;
+
+    .logo-container {
+        padding-left: 30px;
     }
 
-
-@media #{$widthDesckop}{
-    .container-columns{
-        width:100%;
-        justify-content: space-between;
-        padding:10%;
-        .column{
-            &:first-child{
-                margin-left: 0px;
-            }
-            &:last-child{
-                margin-right: 0px;
-            }
-        }
-    }
-
-}
-@media #{$widthTablet}{
-    .container-columns{
+    .columns-container {
+        padding-top: 67px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+
+        .column-elements {
+            box-sizing: border-box;
+
+            &:first-child {
+                margin-left: 150px;
+                min-width: 270px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &:last-child {
+                margin-left: 435px;
+            }
+        }
     }
-    .column:first-child{
-        margin-bottom: 40px;
+}
+
+@media #{$widthDesckop} {
+    .colors-and-types {
+        .columns-container {
+            width: 100%;
+            justify-content: space-between;
+            padding: 10%;
+
+            .column-elements {
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+@media #{$widthTablet} {
+    .colors-and-types {
+        .columns-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .column-elements {
+                &:first-child {
+                    margin-bottom: 40px;
+                }
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }

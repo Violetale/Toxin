@@ -34,8 +34,10 @@ class Pagination {
 
     togglePage(e) {
         let self = $(e.currentTarget);
+
         self.siblings('.pagination__item_current').removeClass('pagination__item_current');
         self.addClass('pagination__item_current');
+
         this.disableControlButton(self);
 
     }
@@ -47,12 +49,15 @@ class Pagination {
     nextPage(e) {
         let $currentItem = $('.pagination__item_current');
         let $nextItem = $currentItem.next('.pagination__item');
+
         if ($nextItem.text() == '...') {
             $nextItem = $nextItem.next('.pagination__item');
         }
         $currentItem.removeClass('pagination__item_current');
         $nextItem.addClass('pagination__item_current');
+
         this.disableControlButton($nextItem);
+
         if ($nextItem.text() == '15') {
             $(this).siblings('.pagination__control_next').addClass('pagination__control_disabled');
         } else if ($nextItem.text() == '2') {
@@ -62,11 +67,14 @@ class Pagination {
     prevPage(e) {
         let $currentItem = $('.pagination__item_current');
         let $prevItem = $currentItem.prev('.pagination__item');
+
         if ($prevItem.text() == '...') {
             $prevItem = $prevItem.prev('.pagination__item');
         }
+
         $currentItem.removeClass('pagination__item_current');
         $prevItem.addClass('pagination__item_current');
+
         this.disableControlButton($prevItem);
         
         if ($prevItem.text() == '1') {
@@ -79,7 +87,9 @@ class Pagination {
 }
 
 $(function () {
+
     $('.pagination').each(function (idx, elem) {
         new Pagination(elem);
     })
+    
 });
