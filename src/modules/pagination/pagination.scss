@@ -38,6 +38,7 @@
         }
     }
     &__control {
+        display: flex;
         cursor: pointer;
         background: $green-gradient;
         border-radius: 50%;

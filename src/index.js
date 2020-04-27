@@ -7,6 +7,7 @@ import 'air-datepicker/dist/css/datepicker.css';
 
 
 import './assets/scss/fonts.scss';
+import './assets/scss/reset.scss'
 
 import './modules/bullet-list/bullet-list.js';
 import './modules/button/button.js';

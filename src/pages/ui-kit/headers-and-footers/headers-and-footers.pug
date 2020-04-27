@@ -1,11 +1,12 @@
-extends ./../../../templates/template.pug
-include ./../../../modules/header/header.pug
-include ./../../../modules/footer/footer.pug
-include ./../../../modules/logo/logo.pug
-block content
+//-extends ./../../../templates/template.pug
+//-block vars
+     -var title="Headers and footers"
+//-block content
+    include ./../../../modules/header/header.pug
+    include ./../../../modules/footer/footer.pug
+    include ./../../../modules/logo/logo.pug
     +logo({mods:typeLogo})
     main.headers-and-footers
-
         .column-elements
             +header({
                 navList:['Home','About us','Services','News','Documentation'],
