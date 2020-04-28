@@ -1,22 +1,53 @@
-@import './../../../templates/template.scss';
-@import '../../../assets/scss/vars.scss';
+@import "./../../../templates/template.scss";
+@import "../../../assets/scss/vars.scss";
 //@import '../../../modules/dropdown-date/dropdown-date.scss';
-.cards{
-    padding-top:30px;
-    .columns-container{
-        padding:72px 62px;
-        display: flex;  
-    }
-    .column-elements{
-        margin-right:40px;
+.cards {
+    padding-top: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .columns-container {
+        padding: 72px 62px;
         display: flex;
-        flex-direction: column;
-        > *{
-            margin-bottom: 20px;
-            &::last-child{
-                margin-bottom: 0;
+        margin-left: 140px;
+
+        .column-elements {
+            margin-right: 40px;
+            display: flex;
+            flex-direction: column;
+
+            > * {
+                margin-bottom: 40px;
+
+                &::last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
 }
+@media #{$widthDesckop} {
+    .cards {
 
+        .columns-container {
+            flex-direction: column;
+            
+            .column-elements{
+                flex-direction: row;
+                > * {
+                margin-right: 40px;
+                }
+            }
+        }
+    }
+}
+@media #{$widthDesckop} {
+    .cards {
+
+        .columns-container {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
