@@ -1,6 +1,6 @@
 @import "./../../assets/scss/vars.scss";
 .form-search {
-    padding: 30px;
+    padding: 40px 30px 30px 30px;
     background: #ffffff;
     width: 380px;
     height: 374px;
@@ -22,7 +22,7 @@
         color: $dark-shade-100;
     }
     &__inputs{
-        .dropdown-container{
+        > div{
             margin-top: 20px;
         }
     }

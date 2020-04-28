@@ -44,8 +44,9 @@ body {
   line-height: 1.5rem;
 }
 button {
-  font-size: 0.75rem;
-  line-height: 0.9375rem;
+  font-family: $font-main;
+  font-size: 12px;
+  line-height: 15px;
 }
 label {
   font-family: $font-main;
@@ -55,6 +56,11 @@ label {
   /* identical to box height */
 
   text-transform: uppercase;
+}
+input{
+  border-radius: 4px;
+  box-sizing: border-box;
+  height:44px;
 }
 ul {
   margin: 0;
@@ -75,13 +81,4 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-@media #{$widthTablet} {
-  body {
-    font-size: 14px;
-  }
-  .container-columns {
-    flex-direction: column;
-  }
 }
