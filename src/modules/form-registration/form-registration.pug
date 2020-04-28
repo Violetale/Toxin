@@ -5,13 +5,13 @@ include ./../../modules/button/button.pug
 mixin form-registration(params={})
     -const {textTitle=''}=params;
     form(class='form-registration')
-        h3.form-registation__title=textTitle
+        .form-registration__title=textTitle
         +text-field({name:'name',placeholder:'Имя'})
         +text-field({name:'surname',placeholder:'Фамилия'})
         .radio-buttons
             +radio-button({textLabel:'Мужчина',name:'sex',value:'male',checked:true})
             +radio-button({textLabel:'Женщина',name:'sex',value:'female'})
-            +dropdown-date({field_one:{textLabel:"Дата Рождения"}})
+        +dropdown-date({field_one:{textLabel:"Дата Рождения"}})
         p данные для входа в сервис
         +text-field({name:'email',type:'email',placeholder:'Email'})
         +text-field({name:'password',type:'password',placeholder:'Пароль'})

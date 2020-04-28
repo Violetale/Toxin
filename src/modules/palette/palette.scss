@@ -11,18 +11,17 @@
     }
     
 
-    &__text{
+    &__desc{
         display: flex;
         flex-direction: column;
-        justify-content: stretch;
-        align-items: stretch;
-        text-align: start;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
         &__name{
             font-weight: bold;
             font-size: 19px;
-            line-height: 29px;
         }
-        &__text{
+        &__code{
             font-weight: normal;
             font-size: 19px;
             line-height: 29px;
