@@ -11,8 +11,28 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
         margin-left: 140px;
+        margin-bottom: 100px;
+        &:nth-child(1){
+            background-color:red;
+        }
+        .column-elements{
+            &:nth-child(1){
+            margin-right: 126px;
+            }
+            &:nth-child(2){
+                margin-right: 130px;
+                width:220px;
+                >*{
+                    margin-bottom: 40px;
+                }
+            }
+            &:nth-child(3){
+                >*{
+                    margin-bottom: 40px;
+                }
+            }
+        }
     }
 
     &__item {

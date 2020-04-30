@@ -48,7 +48,7 @@ block content
     main.form-elements
         +logo({mods:'grey'})
         .columns-container
-            .column_elements
+            .column-elements
                 +form-elements__item({itemTitle:'Text field',state:'default'})
                     +text-field({name:'email',type:'text',placeholder:'Email'})
                 +form-elements__item({itemTitle:'Text field',state:'hover/focus'})
@@ -63,10 +63,8 @@ block content
                     +dropdown-date({mods:'filterDate'})
                 +form-elements__item({itemTitle:'subscription text field'})
                     +subscribe({placeholder:'Email'})
-                +form-elements__item
-                   //dropguest
 
-            .column_elements
+            .column-elements
                 +form-elements__item({itemTitle:'chexbox buttons'})
                     +checkbox({textLabel:'Можно курить'})
                     +checkbox({textLabel:'Можно с питомцами',checked:true})
@@ -79,14 +77,14 @@ block content
                     +toggle({textLabel:'Получать спецпредложения',checked:true})
                     +toggle({textLabel:'Получать спецпредложения'})
                 +form-elements__item({mods:'narrowColumn',itemTitle:'like button'})
-                    +like-button({count:11})
+                    +like-button({count:2})
                     +like-button({mods:'clicked',count:12})
                 +form-elements__item({mods:'row',itemTitle:'rate button'})
                     +rate-button({rate:4})
                     +rate-button({rate:5})
 
 
-            .column_elements
+            .column-elements
                 +form-elements__item
                     +range-slider({textTitle:'range slider',description:'Стоимость за сутки пребывания в номере'})
                 +form-elements__item({mods:'wrap',itemTitle:'Buttons'})
@@ -101,11 +99,19 @@ block content
                     +pagination
 
         .columns-container
-            .column_elements
-            .column_elements
-            .column_elements
+            .column-elements
+                +form-elements__item
+                   +dropdown-furniture
+                +form-elements__item
+                   +dropdown-furniture
+            .column-elements
+                +form-elements__item
+                   +dropdown-guests
+            .column-elements
+                +form-elements__item
+                   +dropdown-guests
         .columns-container
-            .column_elements
+            .column-elements
                 +form-elements__item
                     +checkbox-list({textLabel:'expandable checkbox list'})
                 +form-elements__item
@@ -118,21 +124,21 @@ block content
                         +checkbox({textLabel:'Шампунь'})
                         +checkbox({textLabel:'Телевизор'})
                         +checkbox({textLabel:'Шампунь'})
-            .column_elements
+            .column-elements
                 +form-elements__item({itemTitle:'rich chexbox buttons'})
                     +checkbox({textLabel:'Широкий коридор',mods:'rich',desc:'Ширина коридоров в номере не менее 91 см.',})
                     +checkbox({textLabel:'Помощник для инвалидов',mods:'rich',desc:'На 1 этаже вас встретит специалист и проводит до номера.'})
 
-            .column_elements
+            .column-elements
                 +form-elements__item({itemTitle:'bullet list'})
                     +bullet-list({items:['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']})
         .columns-container
-            .column_elements
+            .column-elements
                 +form-elements__item
                     +icon-text({iconCode:'insert_emoticon',title:'Комфорт',description:'Шумопоглощающие стены'})
                     +icon-text({iconCode:'location_city',title:'Удобство',description:'Окно в каждой из спален'})
 
-            .column_elements
+            .column-elements
                 +form-elements__item({mods:"wideColumn"})
                     +comment({linkAvatar:'assets/img/user/murad.png', username:'Мурад Сарафанов',commentDate:'5 дней назад',
                     commentText:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
