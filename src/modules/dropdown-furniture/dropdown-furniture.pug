@@ -1,8 +1,9 @@
 include ./../dropdown/dropdown.pug
-mixin dropdown-furniture()
+mixin dropdown-furniture(params={})
+    -const {mods=''}=params;
     //-переписать под furniture
-    +dropdown({mods:'furniture',textLabel:'Удобства',items:
-            [{name:'adults',label:'Взрослые',nouns: ['гость', 'гостя', 'гостей']},
-            {name:'clidren',label:'Дети',nouns:['гость', 'гостя', 'гостей']},
-            {name:'babies',label:'Малденцы',nouns:['младенец', 'младенца', 'младенцев']}],
-            defaultText:'Сколько гостей?',contros:true})
+    +dropdown({mods:'furniture'+','+mods,textLabel:'Удобства',items:
+            [{name:'bedrooms',label:'спальни',nouns: ['спальня', 'спальни', 'спален']},
+            {name:'beds',label:'кровати',nouns:['кровать', 'кровати', 'кроватей']},
+            {name:'bathrooms',label:'ванные комнаты',nouns:['вання комната', 'ванных комнаты', 'ванных комнат']}],
+            defaultText:'Удобства',controls:true})

@@ -17,24 +17,26 @@ $(function () {
   $decrementButton.on('click', decrementCounter);
   $buttonApply.on('click', apply);
   $buttonReset.on('click', reset);
-  $(this).change(onChange);
+  //-$(this).change(onChange);
 
 
   //-везде отображаем текст по умолчанию(переписать,где передаются статы)
   $dropdown.each(function (idx, el) {
+
     let $text = $(el).attr("data-defaultText");
     let $selection = $(el).find('.dropdown__selection');
     showSelection($selection, $text);
-    //находим набор каунтеров
     let $counters = $(el).find('.counter');
-    console.log($counters);
-    //проходим по каждому элементу набора и деактивируем кнопки декремента там где counter=0
+    
     $counters.each(function (idx, counter) {
+
       let count = Number($(counter).attr("data-count"));
       let $decrementButton = $(counter).siblings('.button_decrement');
+
       if (count == 0) {
         disableButton($decrementButton);
       }
+
     });
 
   });
@@ -52,8 +54,9 @@ $(function () {
 
   //переключение иконки 
   function toggleMark(e) {
-    setMark($dropdown);
-    $dropdown.toggleClass('dropdown_open');
+    let self = $(this);
+    setMark(self);
+    self.toggleClass('dropdown_open');
   }
 
   //инкремент счетчика
@@ -112,7 +115,7 @@ $(function () {
   function correctNaming(itemName, itemCount) {
     let nounsString = $(`[data-id=${itemName}]`).attr('data-nouns');
     let nouns = nounsString.split(',');
-    console.log(nouns);
+    
     if (itemCount == 0) {
       return '';
     } else if (itemCount == 1) {
