@@ -17,17 +17,18 @@ $(function () {
   $decrementButton.on('click', decrementCounter);
   $buttonApply.on('click', apply);
   $buttonReset.on('click', reset);
-  //-$(this).change(onChange);
+  //*-$(this).change(onChange); TODO переписать
 
 
   //-везде отображаем текст по умолчанию(переписать,где передаются статы)
   $dropdown.each(function (idx, el) {
+    let $el = $(el);
+    let $text = $el.attr("data-defaultText");
+    let $selection = $el.find('.dropdown__selection');
 
-    let $text = $(el).attr("data-defaultText");
-    let $selection = $(el).find('.dropdown__selection');
     showSelection($selection, $text);
-    let $counters = $(el).find('.counter');
-    
+    setMark($el);
+    let $counters = $el.find('.counter');
     $counters.each(function (idx, counter) {
 
       let count = Number($(counter).attr("data-count"));
@@ -43,30 +44,40 @@ $(function () {
 
   //правильная иконка в selection
   function setMark(dropdown) {
+
     let $mark = $(dropdown).find('i');
+    
     if ($(dropdown).hasClass('dropdown_open')) {
-      $mark.html('expand_more');
-    } else {
       $mark.html('expand_less');
+    } else {
+      $mark.html('expand_more');
     }
 
   }
 
   //переключение иконки 
   function toggleMark(e) {
-    let self = $(this);
-    setMark(self);
-    self.toggleClass('dropdown_open');
+    
+    let $dropdown = $(this).closest('.dropdown');
+
+    $dropdown.toggleClass('dropdown_open');
+
+    setMark($dropdown);
+
+    
   }
 
   //инкремент счетчика
   function incrementCounter(e) {
+
     let $counter = $(this).siblings('.counter');
     let count = Number($counter.attr("data-count"));
+
     let newCount = count + 1;
-    console.log(newCount);
+
     $counter.attr("data-count", newCount);
     $counter.html(newCount);
+    
     if (newCount == 1) {
       $counter.siblings('.button_decrement').removeClass('disabled');
       $counter.siblings('.button_decrement').on('click', decrementCounter);
@@ -76,12 +87,15 @@ $(function () {
 
   //декремент счетчика
   function decrementCounter(e) {
+
     let $counter = $(this).siblings('.counter');
     let count = Number($counter.attr("data-count"));
+
     if (count > 0) {
       let newCount = count - 1;
       $counter.attr("data-count", newCount);
       $counter.html(newCount);
+
       if (newCount == 0) {
         disableButton($(this));
       }
@@ -91,6 +105,7 @@ $(function () {
 
   //деактивация кнопки
   function disableButton(button) {
+
     $(button).off('click', decrementCounter);
     $(button).addClass('disabled');
 
@@ -98,8 +113,10 @@ $(function () {
 
   //событие apply
   function apply(e) {
+
     let $dropdown = $(this).closest('.dropdown');
     toggleMark($(this));
+
   }
 
   //событие reset,сбрасывает счётчики в дропдауне
@@ -161,6 +178,5 @@ $(function () {
   showSelection($selection,$defaultText);
   });
   */
-
 });
 

@@ -1,8 +1,9 @@
 include ./../dropdown/dropdown.pug
 mixin dropdown-furniture(params={})
-    -const {mods=''}=params;
+    -const {open=false}=params;
+    - openMod = open? ',open':'';
     //-переписать под furniture
-    +dropdown({mods:'furniture'+','+mods,textLabel:'Удобства',items:
+    +dropdown({mods:'furniture'+openMod,textLabel:'Удобства',items:
             [{name:'bedrooms',label:'спальни',nouns: ['спальня', 'спальни', 'спален']},
             {name:'beds',label:'кровати',nouns:['кровать', 'кровати', 'кроватей']},
             {name:'bathrooms',label:'ванные комнаты',nouns:['вання комната', 'ванных комнаты', 'ванных комнат']}],

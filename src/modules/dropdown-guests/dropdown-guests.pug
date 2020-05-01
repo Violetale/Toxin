@@ -1,7 +1,8 @@
 include ./../dropdown/dropdown.pug
 mixin dropdown-guests(params={})
-    -const {mods=''}=params
-    +dropdown({mods:'guests'+','+mods,textLabel:'Гости',items:[
+    -const {open=false}=params;
+    - openMod = open? ',open':'';
+    +dropdown({mods:'guests'+openMod,textLabel:'Гости',items:[
             {name:'adults',label:'Взрослые',nouns: 'гость,гостя,гостей'},
             {name:'clidren',label:'Дети',nouns:'гость,гостя,гостей'},
             {name:'babies',label:'Младенцы',nouns:'младенец,младенца,младенцев'}],
