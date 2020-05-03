@@ -38,8 +38,9 @@
     }
 }
 .dropdown {
-    position: relative;
+    
     &__menu {
+        position: relative;
         padding:7px 7px 13px 15px;
         box-sizing: border-box;
         border: $main-border-style;

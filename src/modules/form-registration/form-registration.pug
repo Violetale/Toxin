@@ -11,7 +11,7 @@ mixin form-registration(params={})
         .radio-buttons
             +radio-button({textLabel:'Мужчина',name:'sex',value:'male',checked:true})
             +radio-button({textLabel:'Женщина',name:'sex',value:'female'})
-        +dropdown-date({field_one:{textLabel:"Дата Рождения"}})
+        +dropdown-date({fields:['Дата рождения']})
         p данные для входа в сервис
         +text-field({name:'email',type:'email',placeholder:'Email'})
         +text-field({name:'password',type:'password',placeholder:'Пароль'})

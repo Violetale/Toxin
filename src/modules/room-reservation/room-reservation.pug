@@ -8,7 +8,7 @@ mixin room-reservation(params={})
                     span.form-reservation__luxe=' Люкс'
             p.form-reservation__price='9990₽' 
                 span.thin-text=' в сутки'
-        +dropdown-date({mods:'twoFields',field_one:{textLabel:"Прибытие",value:'19.08.2019'},field_two:{textLabel:"Выезд",value:'23.08.2019'}})
+        +dropdown-date({mods:'twoFields'})
         +dropdown-guests
         div.form-reservation__price-details
             .price-details__item

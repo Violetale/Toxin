@@ -1,7 +1,7 @@
 include ./../../modules/dropdown-guests/dropdown-guests.pug
 include ./../../modules/dropdown-date/dropdown-date.pug
 include ./../../modules/button/button.pug
-mixin form-search(params)
+mixin form-search(params={})
     -const {textTitle =""} = params;
     form.form(class="form-search")
         .form-search__title=textTitle

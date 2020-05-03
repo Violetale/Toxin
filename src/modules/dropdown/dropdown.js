@@ -17,7 +17,7 @@ $(function () {
   $decrementButton.on('click', decrementCounter);
   $buttonApply.on('click', apply);
   $buttonReset.on('click', reset);
-  //*-$(this).change(onChange); TODO переписать
+  $dropdown.change(onChange); 
 
 
   //-везде отображаем текст по умолчанию(переписать,где передаются статы)
