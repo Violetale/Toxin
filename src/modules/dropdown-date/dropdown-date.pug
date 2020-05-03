@@ -10,7 +10,7 @@ mixin dropdown-date(params={})
                     modsClasses=modsClasses+' '+className+'_'+modsList[i];
                 }
             }
-    
+
 
     if(mods=='twoFields')
         .dropdown-date(class=modsClasses+" js-dropdown-date" )
@@ -29,4 +29,3 @@ mixin dropdown-date(params={})
                 p=fields[0]
                 input.dropdown-date__input(placeholder=placeholder, value=values[0]||placeholder, data-range=range, data-multiple-dates-separator=range?" - ":null, data-inline=inline , readonly)
                 i.material-icons expand_more
-    

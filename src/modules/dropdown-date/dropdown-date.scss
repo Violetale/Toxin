@@ -1,10 +1,10 @@
 @import "./../../assets/scss/vars.scss";
 .dropdown-date {
-    margin-top:20px;
+    margin-top: 20px;
     cursor: pointer;
     &__label {
         position: relative;
-        
+
         p {
             color: $dark-shade-100;
             font-weight: bold;
@@ -49,50 +49,52 @@
         width: 150px;
     }
 }
-.dropdown-date_filterDate{
-    input.datepicker-here{
-        width:266px;
+.dropdown-date_filterDate {
+    input.datepicker-here {
+        width: 266px;
         box-sizing: border-box;
     }
 }
-.datepicker{
-    padding:20px;
-    box-sizing:border-box;
+.datepicker {
+    padding: 20px;
+    box-sizing: border-box;
     border: $main-border-style;
     box-shadow: $main-box-shadow-style;
     width: 320px;
     //height: 369px;
     font-size: 12px;
     line-height: 15px;
-    &--nav{
+    &--nav {
         border-bottom: none;
-        &-title{
-            line-height:24px;
-            font-family:$font-titles;
+        &-title {
+            line-height: 24px;
+            font-family: $font-titles;
             color: $dark-shade-100;
         }
     }
-    &--nav-action{
-        i{
-        color:$purple;
+    &--nav-action {
+        i.material-icons {
+            position: static;
+            color: $purple;
         }
     }
-    &--cell-day.-other-month-, .datepicker--cell-year.-other-decade-{
-        color:$dark-shade-25;
+    &--cell-day.-other-month-,
+    .datepicker--cell-year.-other-decade- {
+        color: $dark-shade-25;
     }
-    &--cell.-selected-.-focus-{
+    &--cell.-selected-.-focus- {
         background: $primary-gradient;
         border-radius: 50%;
     }
-    &--cell.-current-{
-        background:$green-gradient;
+    &--cell.-current- {
+        background: $green-gradient;
         border-radius: 50%;
-        color: #FFFFFF;
+        color: #ffffff;
     }
-    &--cell{
+    &--cell {
         font-family: $font-main;
-        height:40px;
-        color:$dark-shade-50;
+        height: 40px;
+        color: $dark-shade-50;
         &.-in-range- {
             background: $primary-gradient;
             opacity: 0.25;
@@ -102,47 +104,46 @@
     .-focus- {
         background: $primary-gradient;
         border-radius: 50%;
-      }
-    
+    }
+
     .-current- {
         background: $green-gradient;
-        border-radius:50%;
+        border-radius: 50%;
         &.-focus- {
             background: $primary-gradient;
             border-radius: 50%;
         }
-    
+
         &.-in-range- {
             background: $primary-gradient;
             opacity: 0.25;
         }
-      }
-    
-      &--cell.-selected-, .datepicker--cell.-selected-.-current-{
+    }
+
+    &--cell.-selected-,
+    .datepicker--cell.-selected-.-current- {
         background: $primary-gradient;
         border-radius: 50%;
-      }
-    
-    &--day-name{
+    }
+
+    &--day-name {
         font-family: $font-main;
-        width:40px;
+        width: 40px;
         height: 40px;
         color: $purple;
-        font-weight:bold;
-      }
+        font-weight: bold;
+    }
 
-    
-    .dropdown-date__controls{
+    .dropdown-date__controls {
         margin-top: 20px;
         padding: 0 15px;
         display: flex;
         justify-content: space-between;
-        .button-reset button{
-            color:$dark-shade-50;
+        .button-reset button {
+            color: $dark-shade-50;
         }
-        .button-apply button{
+        .button-apply button {
             color: $purple;
         }
     }
 }
-
