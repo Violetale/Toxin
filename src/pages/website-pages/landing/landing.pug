@@ -1,0 +1,10 @@
+extends ./../../../templates/template-page.pug
+block content
+    include ./../../../modules/header/header.pug
+    include ./../../../modules/footer/footer.pug
+    +header({
+                navList:mainMenuItems,
+                buttonsText:[buttonLogin,buttonRegister]})
+    main
+    +footer({mods:'withWidgets',footerText:footerText,copyright:copyright})
+

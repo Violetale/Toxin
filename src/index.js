@@ -45,4 +45,5 @@ import './pages/ui-kit/colors-and-types/colors-and-types';
 import './pages/ui-kit/form-elements/form-elements.js'
 import './pages/ui-kit/cards/cards.js';
 import './pages/ui-kit/headers-and-footers/headers-and-footers.js';
+import './pages/website-pages/landing/landing';
 //по мере работы подключить оставшиеся странички

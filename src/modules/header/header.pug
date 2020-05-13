@@ -24,7 +24,7 @@ mixin header(params={})
                 +logo
             .header__nav
                 +navigation
-                    each item in mainMenuItems
+                    each item in navList
                         -const {text,link,mods}=item;
                         +navigation-item({mods:mods,ancor:text})
             if (mods=="logged")

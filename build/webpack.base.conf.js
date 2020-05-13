@@ -151,10 +151,31 @@ module.exports = {
       inject: true
     }),
     new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/website-pages/index/index.pug`,
-      filename: './index.html',
+      template: `${PAGES_DIR}/website-pages/landing/landing.pug`,
+      filename: './landing.html',
       inject: true
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/website-pages/search-room/search-room.pug`,
+      filename: './search-room.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/website-pages/room-details/room-details.pug`,
+      filename: './room-details.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/website-pages/registration/registration.pug`,
+      filename: './registration.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/website-pages/sign-in/sign-in.pug`,
+      filename: './sign-in.html',
+      inject: true
+    }),
+    
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
     // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best

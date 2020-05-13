@@ -2,12 +2,13 @@ extends template.pug
 block vars
     -
         //sets for header
-        const mainMenuItems=[aboutUs,services,vacancies,news,agreement];//список элементов меню
+       //список элементов меню
         const aboutUs ={text:"О нас",link:"#"};
-        const services ={text:"Услуги",link:"#"};
+        const services ={text:"Услуги",link:"#",mods:'withSub'};
         const vacancies ={text:"Вакансии",link:"#"};
         const news ={text:"Новости",link:"#"};
-        const agreement ={text:"Соглашения",link:"#"};
+        const agreement ={text:"Соглашения",link:"#",mods:'withSub'};
+        const mainMenuItems=[aboutUs,services,vacancies,news,agreement];
         const buttonLogin ="войти";
         const buttonRegister="зарегистрироваться";
         const userName = 'Cosmin Negoita';
@@ -29,11 +30,3 @@ block vars
         const subscribe ={
             title:'Подписка',
             text:"Получайте специальные предложения и новости сервиса"};//Элемент с подпиской 
-block content
-
-//include
-
-//header
-
-//content
-//footer
