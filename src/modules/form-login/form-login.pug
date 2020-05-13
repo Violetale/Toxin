@@ -1,6 +1,6 @@
 include ./../../modules/field/field.pug
 include ./../../modules/button/button.pug
-mixin form-login(params)
+mixin form-login(params={})
     -const {textTitle=''}=params;
     form.form(class="form-login")
         h3.form-login__title=textTitle

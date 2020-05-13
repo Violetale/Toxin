@@ -1,1 +1,1 @@
-import './landing.scss';
+import './registration.scss';

@@ -2,6 +2,7 @@ include ./../../modules/field/field.pug
 include ./../../modules/radio/radio-button.pug
 include ./../../modules/toggle/toggle.pug
 include ./../../modules/button/button.pug
+include ./../../modules/dropdown-date/dropdown-date.pug
 mixin form-registration(params={})
     -const {textTitle=''}=params;
     form(class='form-registration')
@@ -20,4 +21,3 @@ mixin form-registration(params={})
         .form__footer
             p Уже есть аккаунт на Toxin?
             +button({mods:'border',text:'войти'})
-    //p havw account and borderbtn

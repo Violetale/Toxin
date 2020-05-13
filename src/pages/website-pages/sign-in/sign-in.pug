@@ -2,8 +2,10 @@ extends ./../../../templates/template-page.pug
 block content
     include ./../../../modules/header/header.pug
     include ./../../../modules/footer/footer.pug
+    include ./../../../modules/form-login/form-login.pug
     +header({
                 navList:mainMenuItems,
                 buttonsText:[buttonLogin,buttonRegister]})
     main
+        +form-login({textTitle:'Войти'})
     //-+footer({mods:'withWidgets',footerText:footerText,copyright:copyright,navItems:footerNavItems

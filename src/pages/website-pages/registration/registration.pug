@@ -2,9 +2,11 @@ extends ./../../../templates/template-page.pug
 block content
     include ./../../../modules/header/header.pug
     include ./../../../modules/footer/footer.pug
+    include ./../../../modules/form-registration/form-registration.pug
     +header({
                 navList:mainMenuItems,
                 buttonsText:[buttonLogin,buttonRegister]})
     main
-    //-+footer({mods:'withWidgets',footerText:footerText,copyright:copyright,navItems:footerNavItems
+        +form-registration({textTitle:'Регистрация аккаунта'})
+    //-+footer({mods:'withWidgets',footerText:footerText,copyright:copyright,navItems:footerNavItems})
 
