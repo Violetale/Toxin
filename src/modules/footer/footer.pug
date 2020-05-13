@@ -2,7 +2,7 @@ include ./../logo/logo.pug
 include ./../socials/socials.pug
 include ./../subscribe/subscribe.pug
 mixin footer(params={})
-    -const {mods='',footerText='',copyright=''}=params;
+    -const {mods='',footerText='',copyright='',navItems=[]}=params;
     //-mods: withWidgets
     -const className = 'footer';
     -
@@ -26,16 +26,15 @@ mixin footer(params={})
                     .footer-bar__brand
                         +logo
                         div.footer-text=footerText
-                    
-                    each navitem in footerNavItems
+                    each navItem in navItems
                         .footer-bar__nav
-                            -const {header,items}=navitem;
-                            h3.footer-bar__nav__header=navitem.title
-                            each item in navitem.items
+                            -const {title,items}=navItem;
+                            h3.footer-bar__nav__header=title
+                            each item in items
                                 a.footer-bar__nav__link(href="#")=item
                     .footer-bar__subscribe
-                        h3.footer-bar__subscribe__header=subscribe.title
-                        div.footer-bar__subscribe__text=subscribe.text
+                        //-h3.footer-bar__subscribe__header=subscribe.title
+                        //-div.footer-bar__subscribe__text=subscribe.text
                         +subscribe({placeholder:'Your email address'})
                 hr(class="separate")
                 .footer__footer
