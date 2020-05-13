@@ -11,6 +11,11 @@
         max-width: 1160px;
         margin: 0 auto;
         align-items: center;
+        .navigation__item{
+            #{$hover}{
+                opacity:0.9;
+            }
+        }
     }
     &__user-name {
         padding-left: 30px;
