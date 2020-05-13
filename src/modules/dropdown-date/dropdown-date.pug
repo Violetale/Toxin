@@ -28,4 +28,5 @@ mixin dropdown-date(params={})
                 label.dropdown-date__label
                 p=fields[0]
                 input.dropdown-date__input(placeholder=placeholder, value=values[0]||placeholder, data-range=range, data-multiple-dates-separator=range?" - ":null, data-inline=inline , readonly)
-                i.material-icons expand_more
+                if(range==="true")
+                    //i.material-icons expand_more

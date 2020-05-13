@@ -40,7 +40,8 @@
 .dropdown {
     
     &__menu {
-        position: relative;
+        width:320px;
+        position: absolute;
         padding:7px 7px 13px 15px;
         box-sizing: border-box;
         border: $main-border-style;
@@ -48,6 +49,8 @@
         border-top: none;
         border-bottom-left-radius:  2px;
         border-bottom-right-radius: 2px;
+        background-color: #ffffff;
+        z-index: 9999;
     }
     &__menu__option {
         display: flex;

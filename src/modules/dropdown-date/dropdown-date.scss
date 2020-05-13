@@ -20,6 +20,7 @@
             line-height: 18px;
             padding: 15px 13px;
             border: 1px solid $dark-shade-25;
+            color: $dark-shade-50;
         }
         .material-icons {
             position: absolute;
@@ -77,6 +78,9 @@
             position: static;
             color: $purple;
         }
+    }
+    &--cell-day{
+        font-weight: normal;
     }
     &--cell-day.-other-month-,
     .datepicker--cell-year.-other-decade- {

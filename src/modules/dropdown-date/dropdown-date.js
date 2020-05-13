@@ -24,7 +24,7 @@ $(() => {
 
       //-if datepicker is static showed then hide input with label
       if ($(this.$fields).attr('data-inline') === 'true') {
-        $(this.$fields).closest('.js-dropdown-date').css('display', 'none');
+        $(this.$fields).css('display', 'none');
       }
       //add buttons
       let buttonReset = "<div class='button-reset'><button class='button button_link'>Очистить</button></div>";
@@ -52,7 +52,7 @@ $(() => {
     onSelect(formattedDate, date, inst) {
       let separator = inst.views.days.opts.multipleDatesSeparator;
       const [firstDate, secondDate] = formattedDate.split(separator);
-      
+
       $(this.$start).val(firstDate);
       $(this.$end).val(secondDate);
     }
