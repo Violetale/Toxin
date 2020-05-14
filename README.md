@@ -26,3 +26,4 @@
 
 ## Pages
 * [landing](https://violetale.github.io/Toxin/landing.html)
+* [room-details](https://violetale.github.io/Toxin/room-details.html)
