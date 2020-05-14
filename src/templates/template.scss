@@ -72,6 +72,11 @@ p {
 form{
   padding: 40px 30px 30px 30px;
 }
+a {
+  #{$hover}{
+    color:$dark-shade-75;
+}
+}
 .thin-text {
   font-weight: normal;
 }
