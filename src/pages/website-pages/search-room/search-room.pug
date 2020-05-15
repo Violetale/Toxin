@@ -2,9 +2,46 @@ extends ./../../../templates/template-page.pug
 block content
     include ./../../../modules/header/header.pug
     include ./../../../modules/footer/footer.pug
+    include ./../../../modules/dropdown-date/dropdown-date.pug
+    include ./../../../modules/dropdown-guests/dropdown-guests.pug
+    include ./../../../modules/dropdown-furniture/dropdown-furniture.pug
+    include ./../../../modules/range-slider/range-slider.pug
+    include ./../../../modules/checkbox/checkbox.pug
+    include ./../../../modules/checkbox-list/checkbox-list.pug
+    include ./../../../modules/pagination/pagination.pug
+    include ./../../../modules/card-room/card-room.pug
+    
     +header({
                 navList:mainMenuItems,
                 buttonsText:[buttonLogin,buttonRegister]})
-    main
+    main.search-room
+        .filtres-container
+            +dropdown-date
+            +dropdown-guests
+            +range-slider({textTitle:'Диапазон цены',description:'Стоимость за сутки пребывания в номере'})
+            .checkbox-container
+                h3='Checkbox Buttons'
+                +checkbox({textLabel:'Можно курить'})
+                +checkbox({textLabel:'Можно с питомцами',checked:true})
+                +checkbox({textLabel:'Можно пригласить гостей (до 10 человек)',checked:true})
+            .availability-container
+                h3=''
+                +checkbox({textLabel:'Широкий коридор',mods:'rich',desc:'Ширина коридоров в номере не менее 91 см.',})
+                +checkbox({textLabel:'Помощник для инвалидов',mods:'rich',desc:'На 1 этаже вас встретит специалист и проводит до номера.'})
+            +dropdown-furniture
+            +checkbox-list({textLabel:'дополнительные удобства',mods:'open'})
+                        +checkbox({textLabel:'Завтрак'})
+                        +checkbox({textLabel:'Письменный стол',checked:true})
+                        +checkbox({textLabel:'Стул для кормления',checked:true})
+                        +checkbox({textLabel:'Кроватка',checked:true})
+                        +checkbox({textLabel:'Телевизор'})
+                        +checkbox({textLabel:'Шампунь'})
+                        +checkbox({textLabel:'Телевизор'})
+                        +checkbox({textLabel:'Шампунь'})
+        .results-container
+            h2.results__title='Номера, которые мы для вас подобрали'
+            .results__rooms
+            .pagination-container
+                +pagination
     +footer({mods:'withWidgets',footerText:footerText,copyright:copyright,navItems:footerNavItems,subscribe:subscribe})
 

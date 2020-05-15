@@ -1,7 +1,7 @@
-//-extends ./../../../templates/template.pug
-//-block vars
+extends ./../../../templates/template.pug
+block vars
      -var title="Headers and footers"
-//-block content
+block content
     include ./../../../modules/header/header.pug
     include ./../../../modules/footer/footer.pug
     include ./../../../modules/logo/logo.pug
@@ -15,5 +15,5 @@
                 mods:'logged',
                 navList:['Home','About us','Services','News','Documentation'],
                 userName:userName})
-            +footer({mods:'withWidgets',footerText:footerText,copyright:copyright})
+            +footer({mods:'withWidgets',footerText:footerText,copyright:copyright,navItems:footerNavItems,subscribe:subscribe})
             +footer({footerText:footerText,copyright:copyright})

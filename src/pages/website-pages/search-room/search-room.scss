@@ -1,8 +1,20 @@
-@import './../../../templates/template-page.scss';
-@import '../../../assets/scss/vars.scss';
+@import "./../../../templates/template-page.scss";
+@import "../../../assets/scss/vars.scss";
 
-main{
-    background: url('../../../assets/img/background-1.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+main.search-room {
+    padding: 30px 140px;
+    display:flex;
+    justify-content: space-between;
+    .filtres-container {
+        & > * {
+            margin-bottom: 30px;
+        }
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color:$dark-shade-100;
+    }
 }
