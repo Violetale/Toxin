@@ -74,6 +74,9 @@
                 color: $dark-shade-50;
                 display: block;
                 margin-bottom: 1rem;
+                #{$hover}{
+                    color: $dark-shade-100;
+                }
             }
         }
         &__subscribe {

@@ -11,6 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $dark-shade-75;
 }
+main {
+  width: 100%;
+}
 h1,
 h2 {
   font-family: $font-titles;
@@ -54,10 +57,10 @@ label {
   font-size: 12px;
   line-height: 15px;
 }
-input{
+input {
   border-radius: 4px;
   box-sizing: border-box;
-  height:44px;
+  height: 44px;
 }
 ul {
   margin: 0;
@@ -69,13 +72,13 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-form{
+form {
   padding: 40px 30px 30px 30px;
 }
 a {
-  #{$hover}{
-    color:$dark-shade-75;
-}
+  #{$hover} {
+    color: $dark-shade-75;
+  }
 }
 .thin-text {
   font-weight: normal;

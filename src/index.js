@@ -46,6 +46,7 @@ import './pages/ui-kit/form-elements/form-elements.js'
 import './pages/ui-kit/cards/cards.js';
 import './pages/ui-kit/headers-and-footers/headers-and-footers.js';
 import './pages/website-pages/landing/landing';
+import './pages/website-pages/room-details/room-details';
 import './pages/website-pages/registration/registration';
 import './pages/website-pages/sign-in/sign-in';
 //по мере работы подключить оставшиеся странички

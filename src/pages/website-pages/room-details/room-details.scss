@@ -1,8 +1,62 @@
-@import './../../../templates/template-page.scss';
-@import '../../../assets/scss/vars.scss';
+@import "./../../../templates/template-page.scss";
+@import "../../../assets/scss/vars.scss";
 
-main{
-    background: url('../../../assets/img/background-1.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+main.room-details {
+    .gallery{
+        display:flex;
+        .column-elements{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .container {
+        padding: 70px 140px;
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 24px;
+            color: $dark-shade-100;
+            margin-bottom: 23px;
+        }
+        .about-room {
+            display: flex;
+            flex-direction: column;
+            > * {
+                margin-bottom: 30px;
+            }
+            .details {
+                display: flex;
+                justify-content: space-between;
+            }
+                .reviews {
+                    &-container {
+                        width: 100%;
+                        max-width: 712px;
+                        .comment{
+                            margin-bottom: 23px;
+                        }
+                    }
+                    &__header {
+                        display: flex;
+                        justify-content: space-between;
+                        &__count{
+                            color: $dark-shade-50;
+                        }
+                    }
+                }
+            
+        }
+        .rules {
+            &-container{
+                display: flex;
+                justify-content: space-between;
+            }
+            &__cancel {
+                width: 100%;
+                max-width: 341px;
+            }
+        }
+    }
 }
