@@ -14,8 +14,8 @@ block content
         .gallery
             img(src="assets/img/rooms/image.jpg" alt="room-photo")
             .gallery__column-elements
-            img(src="assets/img/rooms/image2.jpg" alt="room-photo")
-            img(src="assets/img/rooms/image3.jpg" alt="room-photo")
+                img(src="assets/img/rooms/image2.jpg" alt="room-photo")
+                img(src="assets/img/rooms/image3.jpg" alt="room-photo")
         .container
             .about-room
                 .details
@@ -30,9 +30,9 @@ block content
                         h3.reviews__header__title='Отзывы посетителей номера'
                         p.reviews__header__count= '2 отзыва'
                     +comment({linkAvatar:'assets/img/user/murad.png', username:'Мурад Сарафанов',commentDate:'5 дней назад',
-                        commentText:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+                        commentText:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',clickedBtn:true,likeCount:12})
                     +comment({linkAvatar:'assets/img/user/patricia.png', username:'Патрисия Стёклышкова',commentDate:'Неделю назад',
-                        commentText:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+                        commentText:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',likeCount:2})
                 .rules-container
                     .rules__rules
                         h3.rules__title='Правила'

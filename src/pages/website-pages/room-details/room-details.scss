@@ -4,7 +4,7 @@
 main.room-details {
     .gallery{
         display:flex;
-        .column-elements{
+        &__column-elements{
             display: flex;
             flex-direction: column;
         }

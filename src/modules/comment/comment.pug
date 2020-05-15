@@ -1,9 +1,10 @@
 include ./../like-button/like-button.pug
 mixin comment(params={})
-    -const {linkAvatar='#',username='',commentDate='',commentText=''}=params;
+    -const {linkAvatar='#',username='',commentDate='',commentText='',clickedBtn=false,likeCount=0}=params;
+    -const clickedMod=clickedBtn?'clicked':'';
     .comment
         img(class="comment__user-avatar" src=linkAvatar alt="avatar")
         .comment__username= username
         .comment__date= commentDate
-        +like-button({mods:'clicked',count:12})
+        +like-button({mods:clickedMod,count:likeCount})
         .comment__comment-text=commentText
