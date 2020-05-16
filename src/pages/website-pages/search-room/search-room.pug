@@ -29,7 +29,7 @@ block content
                 +checkbox({textLabel:'Широкий коридор',mods:'rich',desc:'Ширина коридоров в номере не менее 91 см.',})
                 +checkbox({textLabel:'Помощник для инвалидов',mods:'rich',desc:'На 1 этаже вас встретит специалист и проводит до номера.'})
             +dropdown-furniture
-            +checkbox-list({textLabel:'дополнительные удобства',mods:'open'})
+            +checkbox-list({textLabel:'дополнительные удобства'})
                         +checkbox({textLabel:'Завтрак'})
                         +checkbox({textLabel:'Письменный стол',checked:true})
                         +checkbox({textLabel:'Стул для кормления',checked:true})
@@ -41,6 +41,19 @@ block content
         .results-container
             h2.results__title='Номера, которые мы для вас подобрали'
             .results__rooms
+                +card-room({photoLink:'assets/img/rooms/room888.jpg',numberRoom:'888',price:'9990',isLuxe:true,rate:5,reviews:145})
+                +card-room({photoLink:'assets/img/rooms/room840.jpg',numberRoom:'840',price:'9900',rate:4,reviews:65})
+                +card-room({photoLink:'assets/img/rooms/room980.jpg',numberRoom:'980',price:'8500',isLuxe:true,rate:3,reviews:35})
+                +card-room({photoLink:'assets/img/rooms/room856.jpg',numberRoom:'856',price:'7300',rate:5,reviews:19})
+                +card-room({photoLink:'assets/img/rooms/room740.jpg',numberRoom:'740',price:'6000',rate:4,reviews:44})
+                +card-room({photoLink:'assets/img/rooms/room982.jpg',numberRoom:'982',price:'5800',rate:3,reviews:56})
+                +card-room({photoLink:'assets/img/rooms/room678.jpg',numberRoom:'678',price:'5500',rate:5,reviews:45})
+                +card-room({photoLink:'assets/img/rooms/room450.jpg',numberRoom:'450',price:'5300',rate:4,reviews:39})
+                +card-room({photoLink:'assets/img/rooms/room350.jpg',numberRoom:'350',price:'5000',rate:3,reviews:77})
+                +card-room({photoLink:'assets/img/rooms/room666.jpg',numberRoom:'666',price:'5000',rate:5,reviews:25})
+                +card-room({photoLink:'assets/img/rooms/room444.jpg',numberRoom:'444',price:'5000',rate:3,reviews:15})
+                +card-room({photoLink:'assets/img/rooms/room352.jpg',numberRoom:'352',price:'5000',rate:3,reviews:55})
+
             .pagination-container
                 +pagination
     +footer({mods:'withWidgets',footerText:footerText,copyright:copyright,navItems:footerNavItems,subscribe:subscribe})

@@ -30,6 +30,7 @@ mixin header(params={})
             if (mods=="logged")
                 .header__user-name=userName
             else
+                .header__user-button.js-user-button.material-icons person_outline
                 .header__buttons
                     +button({mods:'border',text:buttonsText[0]})
                     +button({mods:'bigFull',text:buttonsText[1]})

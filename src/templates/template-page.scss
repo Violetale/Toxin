@@ -2,6 +2,13 @@
 .header{
     width: 100%;
 }
+
 .footer{
     width:100%;
+}
+@media #{$widthTablet} {
+    main{
+        padding:10% !important;
+        max-width: 100%;
+    }
 }
