@@ -50,4 +50,4 @@ import './pages/website-pages/room-details/room-details';
 import './pages/website-pages/search-room/search-room';
 import './pages/website-pages/registration/registration';
 import './pages/website-pages/sign-in/sign-in';
-//по мере работы подключить оставшиеся странички
+import './js/index'

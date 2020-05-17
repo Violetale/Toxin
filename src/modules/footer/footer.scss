@@ -12,6 +12,7 @@
     }
     .footer-bar {
         margin: 0 auto;
+        width:100%;
         max-width: 560px;
         height: 367px;
         display: flex;
@@ -98,4 +99,7 @@
         margin: 0 auto;
         height: 70px;
     }
+}
+@media #{$widthTablet} {
+    
 }
