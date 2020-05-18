@@ -1,6 +1,6 @@
 import './like-button.scss';
 import $ from 'jquery';
-
+$(function(){
 class LikeButton {
     constructor(node){
         this.button = node;
@@ -28,7 +28,6 @@ class LikeButton {
 
 }
 //инициализация
-$(()=>{
     $('.js-like-button').each((index,likebutton)=>{
         new LikeButton(likebutton);
     });

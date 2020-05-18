@@ -1,6 +1,6 @@
 import './range-slider.scss';
 import $ from 'jquery';
-$(document).ready(function(){
+$(function(){
   $('.range-slider__input').ionRangeSlider({
     type: 'double',
     min: 0,                        // минимальное значение

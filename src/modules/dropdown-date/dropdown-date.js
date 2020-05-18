@@ -1,7 +1,7 @@
 import './dropdown-date.scss';
 import $ from 'jquery';
 
-$(() => {
+$(function(){
 
   class DropdownDate {
     constructor(component) {

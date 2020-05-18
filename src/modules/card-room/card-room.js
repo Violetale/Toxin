@@ -1,7 +1,6 @@
 import './card-room.scss';
 import $ from 'jquery';
-;$(function(
-){
+$(function(){
     let $controls= $('.card-room__controls');
     let $btnPrev=$controls.find('.button-prev');
     let $btnNext=$controls.find('.button-next');
